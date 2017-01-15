@@ -1,0 +1,27 @@
+platform :ios, "8.0"
+inhibit_all_warnings!
+
+target 'ModuleProject' do
+
+  pod 'CYLTabBarController', '1.9.0'
+  
+  pod 'SVProgressHUD'
+  
+  pod 'XMNetworking'
+
+  pod 'YYText'
+
+  pod 'YYModel'
+
+  pod 'DZNEmptyDataSet'
+
+  pod 'SDCycleScrollView'
+
+  pod 'Masonry'
+
+  pod 'UITableView+FDTemplateLayoutCell'
+
+  pod 'MMPopupView'
+
+
+end

@@ -1,0 +1,31 @@
+//
+//  PrefixHeader.pch
+//  ModuleProject
+//
+//  Created by 李奕辰 on 2017/1/5.
+//  Copyright © 2017年 Twinkle. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "Macros.h"
+#import "ThirdMacros.h"
+#import "NSObject+YC_HUD.h"
+#import "NetworkTool.h"
+#import "YYText.h"
+#import "XMNetworking.h"
+#import "YYModel.h"
+
+//define this constant if you want to use Masonry without the 'mas_' prefix
+#define MAS_SHORTHAND
+//define this constant if you want to enable auto-boxing for default syntax
+#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
+
+// 计算cell行高
+#import "UITableView+FDTemplateLayoutCell.h"
+
+
+
+#endif /* PrefixHeader_pch */
