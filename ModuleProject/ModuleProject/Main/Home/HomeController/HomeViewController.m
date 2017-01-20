@@ -10,6 +10,8 @@
 #import "SDCycleScrollView.h"
 #import "Test3ViewController.h"
 #import "UINavigationBar+Awesome.h"
+#import "YC_RefreshGifHeader.h"
+#import "YC_RefreshGifFooter.h"
 
 #define NAVBAR_CHANGE_POINT 50
 
@@ -49,6 +51,38 @@
     }];
     // 仿网络请求
     [self NetworkData];
+    [self setupRefresh];
+}
+
+#pragma mark - 设置上拉加加载和下拉刷新
+- (void)setupRefresh
+{
+    self.tableView.mj_header = [YC_RefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    self.tableView.mj_footer = [YC_RefreshGifFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+}
+
+- (void)loadNewData
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+
+        // 拿到当前的下拉刷新控件，结束刷新状态
+        [self.tableView.mj_header endRefreshing];
+    });
+
+}
+
+- (void)loadMoreData
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+       [self.tableView.mj_footer endRefreshing];
+    });
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    YCLog(@"viewWillAppear");
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

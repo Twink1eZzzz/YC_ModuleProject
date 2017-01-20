@@ -10,6 +10,8 @@
 #import "commodityListModel.h"
 #import "FeEqualize.h"
 #import "UINavigationBar+Awesome.h"
+#import "YC_RefreshGifHeader.h"
+#import "YC_RefreshGifFooter.h"
 
 @interface Test3ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -38,13 +40,54 @@
     [self initSetting];
     // 网络请求
 //    [self NetworkData];
+    [self setupRefresh];
 }
 
-//- (void)viewWillDisappear:(BOOL)animated
-//{
-//    [super viewWillDisappear:animated];
-//    [self changeNavigationBarTranslationY:0];
-//}
+#pragma mark - 设置上拉加加载和下拉刷新
+- (void)setupRefresh
+{
+
+    YC_RefreshGifHeader *header = [YC_RefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+
+    YC_RefreshGifFooter *footer = [YC_RefreshGifFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+
+    // 隐藏时间
+    header.lastUpdatedTimeLabel.hidden = YES;
+
+    // 隐藏状态
+    header.stateLabel.hidden = YES;
+
+    footer.stateLabel.hidden = YES;
+
+    self.tableView.mj_header = header;
+    self.tableView.mj_footer = footer;
+}
+
+- (void)loadNewData
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+
+        // 拿到当前的下拉刷新控件，结束刷新状态
+        [self.tableView.mj_header endRefreshing];
+    });
+
+}
+
+- (void)loadMoreData
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.tableView.mj_footer endRefreshing];
+    });
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    YCLog(@"viewWillAppear");
+}
+
+
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {

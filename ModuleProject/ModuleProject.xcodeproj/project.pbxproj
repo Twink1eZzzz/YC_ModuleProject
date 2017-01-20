@@ -88,6 +88,8 @@
 		29D71FDF1E25C535002DDF0F /* FeWifiManHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D71FC51E25C535002DDF0F /* FeWifiManHub.m */; };
 		29D71FE01E25C535002DDF0F /* FeWifiManHub.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29D71FC61E25C535002DDF0F /* FeWifiManHub.xib */; };
 		29D71FE11E25C535002DDF0F /* FeZeroLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D71FC91E25C535002DDF0F /* FeZeroLoader.m */; };
+		29EDCE0B1E320BB6009776B2 /* YC_RefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 29EDCE0A1E320BB6009776B2 /* YC_RefreshGifHeader.m */; };
+		29EDCE0E1E320C57009776B2 /* YC_RefreshGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 29EDCE0D1E320C57009776B2 /* YC_RefreshGifFooter.m */; };
 		59DDD1486E7A0FA0B83B584C /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DDD13C8785DFF80313F722 /* TestViewController.m */; };
 		59DDD2433B6E92739F579033 /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DDDF9761B4117F37569F07 /* Test2ViewController.m */; };
 		59DDD65FD7506584FFFD88CE /* NSDictionary+XHLogHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DDD697795E18E54FACE6AB /* NSDictionary+XHLogHelper.m */; };
@@ -268,6 +270,10 @@
 		29D71FC61E25C535002DDF0F /* FeWifiManHub.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeWifiManHub.xib; sourceTree = "<group>"; };
 		29D71FC81E25C535002DDF0F /* FeZeroLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeZeroLoader.h; sourceTree = "<group>"; };
 		29D71FC91E25C535002DDF0F /* FeZeroLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeZeroLoader.m; sourceTree = "<group>"; };
+		29EDCE091E320BB6009776B2 /* YC_RefreshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YC_RefreshGifHeader.h; sourceTree = "<group>"; };
+		29EDCE0A1E320BB6009776B2 /* YC_RefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YC_RefreshGifHeader.m; sourceTree = "<group>"; };
+		29EDCE0C1E320C57009776B2 /* YC_RefreshGifFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YC_RefreshGifFooter.h; sourceTree = "<group>"; };
+		29EDCE0D1E320C57009776B2 /* YC_RefreshGifFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YC_RefreshGifFooter.m; sourceTree = "<group>"; };
 		312C9B88AAD87413D34F99A1 /* Pods-ModuleProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ModuleProject/Pods-ModuleProject.debug.xcconfig"; sourceTree = "<group>"; };
 		59DDD05ECC9C32AF9C806897 /* Test2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2ViewController.h; sourceTree = "<group>"; };
 		59DDD0C28B394FDEF4CDC6A5 /* KLTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTNavigationController.m; sourceTree = "<group>"; };
@@ -529,6 +535,7 @@
 		29BDA3781E1DEC5F0059B6C1 /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				29EDCE081E320A75009776B2 /* CustomControl */,
 				29BDA37A1E1DEC5F0059B6C1 /* Const */,
 				29BDA37D1E1DEC5F0059B6C1 /* Macros */,
 				29BDA3791E1DEC5F0059B6C1 /* Category */,
@@ -971,6 +978,17 @@
 			path = Zero;
 			sourceTree = "<group>";
 		};
+		29EDCE081E320A75009776B2 /* CustomControl */ = {
+			isa = PBXGroup;
+			children = (
+				29EDCE091E320BB6009776B2 /* YC_RefreshGifHeader.h */,
+				29EDCE0A1E320BB6009776B2 /* YC_RefreshGifHeader.m */,
+				29EDCE0C1E320C57009776B2 /* YC_RefreshGifFooter.h */,
+				29EDCE0D1E320C57009776B2 /* YC_RefreshGifFooter.m */,
+			);
+			path = CustomControl;
+			sourceTree = "<group>";
+		};
 		59DDD31DE7EEE80EBD9D4A9B /* KLTAnimateNav */ = {
 			isa = PBXGroup;
 			children = (
@@ -1238,6 +1256,7 @@
 				29D71FD41E25C535002DDF0F /* FeEqualize.m in Sources */,
 				29BDA4021E1E418C0059B6C1 /* UIView+Recursion.m in Sources */,
 				29BDA4031E1E418C0059B6C1 /* UIView+Screenshot.m in Sources */,
+				29EDCE0B1E320BB6009776B2 /* YC_RefreshGifHeader.m in Sources */,
 				29BDA3FA1E1E418C0059B6C1 /* UIView+CustomBorder.m in Sources */,
 				29BDA3CE1E1E41810059B6C1 /* UIImage+Orientation.m in Sources */,
 				29D71FE11E25C535002DDF0F /* FeZeroLoader.m in Sources */,
@@ -1279,6 +1298,7 @@
 				29BDA3CA1E1E41810059B6C1 /* UIImage+FileName.m in Sources */,
 				29BDA3C51E1E41810059B6C1 /* UIImage+animatedGIF.m in Sources */,
 				296562621E235AEA00693F88 /* Test3ViewController.m in Sources */,
+				29EDCE0E1E320C57009776B2 /* YC_RefreshGifFooter.m in Sources */,
 				29BDA3C91E1E41810059B6C1 /* UIImage+Color.m in Sources */,
 				29BDA3D31E1E41810059B6C1 /* UIImage+Vector.m in Sources */,
 				29BDA3CF1E1E41810059B6C1 /* UIImage+PDF.m in Sources */,

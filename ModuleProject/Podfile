@@ -3,25 +3,27 @@ inhibit_all_warnings!
 
 target 'ModuleProject' do
 
-  pod 'CYLTabBarController', '1.9.0'
+  pod 'CYLTabBarController', '1.10.0'
   
-  pod 'SVProgressHUD'
+  pod 'SVProgressHUD','2.1.2'
   
-  pod 'XMNetworking'
+  pod 'XMNetworking','1.0.2'
 
-  pod 'YYText'
+  pod 'YYText','1.0.7'
 
-  pod 'YYModel'
+  pod 'YYModel','1.0.4'
 
-  pod 'DZNEmptyDataSet'
+  pod 'DZNEmptyDataSet','1.8.1'
 
-  pod 'SDCycleScrollView'
+  pod 'SDCycleScrollView','1.65'
 
-  pod 'Masonry'
+  pod 'Masonry','1.0.2'
 
-  pod 'UITableView+FDTemplateLayoutCell'
+  pod 'UITableView+FDTemplateLayoutCell','1.4'
 
-  pod 'MMPopupView'
+  pod 'MMPopupView','1.7.2'
+
+  pod 'MJRefresh','3.1.12'
 
 
 end
