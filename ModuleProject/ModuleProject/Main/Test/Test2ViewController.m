@@ -27,10 +27,7 @@
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
 
-    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
-
 }
-
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

@@ -11,115 +11,117 @@
 @implementation UIView (Frame)
 #pragma mark - Shortcuts for the coords
 
-- (CGFloat)top
+
+- (CGFloat)YC_top
 {
     return self.frame.origin.y;
 }
 
-- (void)setTop:(CGFloat)y
+- (void)setYC_top:(CGFloat)YC_top
 {
     CGRect frame = self.frame;
-    frame.origin.y = y;
+    frame.origin.y = YC_top;
     self.frame = frame;
 }
 
-- (CGFloat)right
+
+- (CGFloat)YC_right
 {
     return self.frame.origin.x + self.frame.size.width;
 }
 
-- (void)setRight:(CGFloat)right
+- (void)setYC_right:(CGFloat)YC_right
 {
     CGRect frame = self.frame;
-    frame.origin.x = right - self.frame.size.width;
+    frame.origin.x = YC_right - self.frame.size.width;
     self.frame = frame;
 }
 
-- (CGFloat)bottom
+- (CGFloat)YC_bottom
 {
     return self.frame.origin.y + self.frame.size.height;
 }
 
-- (void)setBottom:(CGFloat)bottom
+- (void)setYC_bottom:(CGFloat)YC_bottom
 {
     CGRect frame = self.frame;
-    frame.origin.y = bottom - self.frame.size.height;
+    frame.origin.y = YC_bottom - self.frame.size.height;
     self.frame = frame;
 }
 
-- (CGFloat)left
+- (CGFloat)YC_left
 {
     return self.frame.origin.x;
 }
 
-- (void)setLeft:(CGFloat)x
+- (void)setYC_left:(CGFloat)YC_left
 {
     CGRect frame = self.frame;
-    frame.origin.x = x;
+    frame.origin.x = YC_left;
     self.frame = frame;
 }
 
-- (CGFloat)width
+- (CGFloat)YC_width
 {
     return self.frame.size.width;
 }
 
-- (void)setWidth:(CGFloat)width
+- (void)setYC_width:(CGFloat)YC_width
 {
     CGRect frame = self.frame;
-    frame.size.width = width;
+    frame.size.width = YC_width;
     self.frame = frame;
 }
 
-- (CGFloat)height
+- (CGFloat)YC_height
 {
     return self.frame.size.height;
 }
 
-- (void)setHeight:(CGFloat)height
+- (void)setYC_height:(CGFloat)YC_height
 {
     CGRect frame = self.frame;
-    frame.size.height = height;
+    frame.size.height = YC_height;
     self.frame = frame;
 }
 
 #pragma mark - Shortcuts for frame properties
 
-- (CGPoint)origin {
+- (CGPoint)YC_origin {
     return self.frame.origin;
 }
 
-- (void)setOrigin:(CGPoint)origin {
+- (void)setYC_origin:(CGPoint)YC_origin {
     CGRect frame = self.frame;
-    frame.origin = origin;
+    frame.origin = YC_origin;
     self.frame = frame;
 }
 
-- (CGSize)size {
+- (CGSize)YC_size {
     return self.frame.size;
 }
 
-- (void)setSize:(CGSize)size {
+- (void)setYC_size:(CGSize)YC_size {
     CGRect frame = self.frame;
-    frame.size = size;
+    frame.size = YC_size;
     self.frame = frame;
 }
 #pragma mark - Shortcuts for positions
 
-- (CGFloat)centerX {
+- (CGFloat)YC_centerX {
     return self.center.x;
 }
 
-- (void)setCenterX:(CGFloat)centerX {
-    self.center = CGPointMake(centerX, self.center.y);
+- (void)setYC_centerX:(CGFloat)YC_centerX {
+    self.center = CGPointMake(YC_centerX, self.center.y);
 }
 
-- (CGFloat)centerY {
+- (CGFloat)YC_centerY {
     return self.center.y;
 }
 
-- (void)setCenterY:(CGFloat)centerY {
-    self.center = CGPointMake(self.center.x, centerY);
+- (void)setYC_centerY:(CGFloat)YC_centerY {
+    self.center = CGPointMake(self.center.x, YC_centerY);
 }
 
 @end

@@ -118,7 +118,7 @@
     self.tableView.backgroundColor = [UIColor whiteColor];
     _equalizer = [[FeEqualize alloc] initWithView:self.view title:@"LOADING"];
     [self.view addSubview:_tableView];
-    [_tableView makeConstraints:^(MASConstraintMaker *make) {
+    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
     [self.view addSubview:_equalizer];

@@ -12,16 +12,23 @@
 #import "UINavigationBar+Awesome.h"
 #import "YC_RefreshGifHeader.h"
 #import "YC_RefreshGifFooter.h"
+#import "YYFPSLabel.h"
+#import "XMShareView.h"
+#import "WXApi.h"
+#import "ThirdMacros.h"
 
 #define NAVBAR_CHANGE_POINT 50
 
-@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,SDCycleScrollViewDelegate>
+@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,SDCycleScrollViewDelegate,WXApiDelegate>
 
 @property (strong, nonatomic) UITableView *tableView;
 
 @property (strong, nonatomic) UIView *headerView;
 
 @property (strong, nonatomic) SDCycleScrollView *HeaderCycleScrollView;
+
+@property (nonatomic, strong) XMShareView *shareView;
+
 
 @end
 
@@ -46,12 +53,15 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.tableView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_tableView];
-    [_tableView makeConstraints:^(MASConstraintMaker *make) {
+    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(0, 0, 44, 0));
     }];
     // 仿网络请求
     [self NetworkData];
     [self setupRefresh];
+    YYFPSLabel *fps = [[YYFPSLabel alloc] initWithFrame:CGRectMake(5, 70, 60, 30)];
+    [self.view addSubview:fps];
+
 }
 
 #pragma mark - 设置上拉加加载和下拉刷新
@@ -96,6 +106,8 @@
         [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
     } else {
         [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:0]];
+        
+        
     }
 }
 
@@ -156,8 +168,48 @@
 // 点击左边事件
 - (void)left_button_event:(UIButton *)sender
 {
-    [self showSuccessText:@"操作成功"];
+    if(!self.shareView){
+        
+        self.shareView = [[XMShareView alloc] initWithFrame:self.view.bounds];
+        
+        self.shareView.alpha = 0.0;
+        
+        self.shareView.shareTitle = NSLocalizedString(@"刘梦是傻x(～￣▽￣)～", nil);
+        
+        self.shareView.shareText = NSLocalizedString(@"刘梦傻无敌o(￣▽￣)ｄ", nil);
+        
+        self.shareView.shareUrl = @"http://amonxu.com";
+        
+        [self.view addSubview:self.shareView];
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            self.shareView.alpha = 1.0;
+        }];
+        
+        
+    }else{
+        [UIView animateWithDuration:0.5 animations:^{
+            self.shareView.alpha = 1.0;
+        }];
+        
+    }
+}
 
+#pragma mark - 代理回调
+/**
+ *  处理来自微信的请求
+ *
+ *  @param resp 响应体。根据 errCode 作出对应处理。
+ */
+- (void)onResp:(BaseResp *)resp
+{
+    NSString *message;
+    if(resp.errCode == 0) {
+        message = @"分享成功";
+    }else{
+        message = @"分享失败";
+    }
+    showAlert(message);
 }
 
 //点击标题事件，不要可以不重写
@@ -183,7 +235,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 60;
+     return 300;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -191,7 +243,6 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-
     cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
     return cell;
 }

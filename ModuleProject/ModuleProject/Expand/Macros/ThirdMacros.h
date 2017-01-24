@@ -8,36 +8,38 @@
 
 #ifndef ThirdMacros_h
 #define ThirdMacros_h
-/**
- 
-//百度地图SDK的Key
-#define  kBaiduMapKey @"20TTpXTnnp8TodtDXWjZBOvP"
 
-//友盟统计SDK的key
-#define kUmengKey @"53290df956240b6b4a0084b3"
+///  APP KEY
+#define APP_KEY_WEIXIN            @"wxd930ea5d5a258f4f"
 
-//友盟分享
-//--微信
-#define kSocial_WX_ID @"wxdc1e388c3822c80b"
-#define kSocial_WX_Secret @"a393c1527aaccb95f3a4c88d6d1455f6"
-#define kSocial_WX_Url @"http://www.umeng.com/social"
-//--QQ
-#define kSocial_QQ_ID  @"100424468"
-#define kSocial_QQ_Secret @"c7394704798a158208a74ab60104f0ba"
-#define kSocial_QQ_Url @"http://www.umeng.com/social"
-//--新浪微博
-#define kSocial_Sina_Account @"3921700954"
-#define kSocial_Sina_RedirectURL @"http://sns.whalecloud.com/sina2/callback"
+#define APP_KEY_QQ                @"222222"
 
-// 科大讯飞
-#define USER_APPID           @"56ce54a5"
+#define APP_KEY_WEIBO             @"2045436852"
 
-//个推开发者网站中申请App时，注册的AppId、AppKey、AppSecret
-#define kGtAppId           @"0uuwznWonIANoK07JeRWgA"
-#define kGtAppKey          @"6LeO4stbrA7TeyMUJdXlx3"
-#define kGtAppSecret       @"282vl0IwZd9KL3ZpDyoUL7"
+#define APP_KEY_WEIBO_RedirectURL @"http://www.sina.com"
 
-*/
+///  分享图片
+#define SHARE_IMG [UIImage imageNamed:@"logo.jpg"]
+
+#define SHARE_IMG_COMPRESSION_QUALITY 0.5
+
+///  Common size
+#define SIZE_OF_SCREEN    [[UIScreen mainScreen] bounds].size
+
+
+/// View 圆角
+#define ViewRadius(View, Radius)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES]
+
+///  View加边框
+#define ViewBorder(View, BorderColor, BorderWidth )\
+\
+View.layer.borderColor = BorderColor.CGColor;\
+View.layer.borderWidth = BorderWidth;
+
+#define showAlert(_msg){UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:_msg delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定",nil];[alert show];}
 
 
 #endif /* ThirdMacros_h */

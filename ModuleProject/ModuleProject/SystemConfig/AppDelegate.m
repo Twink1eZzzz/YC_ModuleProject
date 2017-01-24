@@ -9,8 +9,18 @@
 #import "AppDelegate.h"
 #import "YCTabBarControllerConfig.h"
 #import "introductoryPagesHelper.h"
+#import "YC_PlusButton.h"
+#import "ThirdMacros.h"
 
-@interface AppDelegate ()
+
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+#import "WeiboSDK.h"
+#import "WXApi.h"
+#import "HomeViewController.h"
+
+
+@interface AppDelegate ()<WeiboSDKDelegate, QQApiInterfaceDelegate>
 
 @end
 
@@ -24,9 +34,12 @@
     // window初始化
     _window = [[UIWindow alloc]init];
     _window.frame = [UIScreen mainScreen].bounds;
+    [YC_PlusButton registerPlusButton];
     YCTabBarControllerConfig *tabBarControllerConfig = [[YCTabBarControllerConfig alloc]init];
     self.window.rootViewController = tabBarControllerConfig.tabBarController;
     [_window makeKeyAndVisible];
+    
+    [self init3rdParty];
 
     //引导页面加载
     [self setupIntroductoryPage];
@@ -36,6 +49,24 @@
      */
     
     return YES;
+}
+
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    if ([[url absoluteString] hasPrefix:@"tencent"]) {
+        
+        return [TencentOAuth HandleOpenURL:url];
+        
+    }else if([[url absoluteString] hasPrefix:@"wb"]) {
+        
+        return [WeiboSDK handleOpenURL:url delegate:self];
+        
+    }else{
+        HomeViewController *homeVC = [[HomeViewController alloc] init];
+        return [WXApi handleOpenURL:url delegate:homeVC];;
+        
+    }
 }
 
 #pragma mark 引导页
@@ -50,6 +81,62 @@
     NSArray *images=@[@"introductoryPage1",@"introductoryPage2",@"introductoryPage3",@"introductoryPage4"];
     [introductoryPagesHelper showIntroductoryPageView:images];
 }
+
+/**
+ *  初始化第三方组件
+ */
+- (void)init3rdParty
+{
+    [WXApi registerApp:APP_KEY_WEIXIN];
+    [WeiboSDK enableDebugMode:YES];
+    [WeiboSDK registerApp:APP_KEY_WEIBO];
+    
+}
+
+#pragma mark - 实现代理回调
+/**
+ *  微博
+ *
+ *  @param response 响应体。根据 WeiboSDKResponseStatusCode 作对应的处理.
+ *  具体参见 `WeiboSDKResponseStatusCode` 枚举.
+ */
+- (void)didReceiveWeiboResponse:(WBBaseResponse *)response
+{
+    NSString *message;
+    switch (response.statusCode) {
+        case WeiboSDKResponseStatusCodeSuccess:
+            message = @"分享成功";
+            break;
+        case WeiboSDKResponseStatusCodeUserCancel:
+            message = @"取消分享";
+            break;
+        case WeiboSDKResponseStatusCodeSentFail:
+            message = @"分享失败";
+            break;
+        default:
+            message = @"分享失败";
+            break;
+    }
+    showAlert(message);
+}
+
+
+/**
+ *  处理来至QQ的响应
+ *
+ *  @param resp 响应体，根据响应结果作对应处理
+ */
+- (void)onResp:(QQBaseResp *)resp
+{
+    NSString *message;
+    if([resp.result integerValue] == 0) {
+        message = @"分享成功";
+    }else{
+        message = @"分享失败";
+    }
+    showAlert(message);
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

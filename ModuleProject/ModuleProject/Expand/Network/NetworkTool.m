@@ -107,6 +107,7 @@ YCSingletonM(NetworkTool)
     }];
 }
 
+
 - (void)DownLoadMethodWithUrl:(NSString *)url DownloadSavePath:(NSString *)downloadsavepath FileProgress:(void (^)(float fractionCompleted))fileProgress Success:(void (^)(id response, NSString *str))success Failure:(void (^)(NSError *error))failure {
     [XMCenter sendRequest:^(XMRequest *request) {
         request.url = url;

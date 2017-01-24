@@ -10,19 +10,19 @@
 
 @interface UIView (Frame)
 // shortcuts for frame properties
-@property (nonatomic, assign) CGPoint origin;
-@property (nonatomic, assign) CGSize size;
+@property (nonatomic, assign) CGPoint YC_origin;
+@property (nonatomic, assign) CGSize YC_size;
 
 // shortcuts for positions
-@property (nonatomic) CGFloat centerX;
-@property (nonatomic) CGFloat centerY;
+@property (nonatomic) CGFloat YC_centerX;
+@property (nonatomic) CGFloat YC_centerY;
 
 
-@property (nonatomic) CGFloat top;
-@property (nonatomic) CGFloat bottom;
-@property (nonatomic) CGFloat right;
-@property (nonatomic) CGFloat left;
+@property (nonatomic) CGFloat YC_top;
+@property (nonatomic) CGFloat YC_bottom;
+@property (nonatomic) CGFloat YC_right;
+@property (nonatomic) CGFloat YC_left;
 
-@property (nonatomic) CGFloat width;
-@property (nonatomic) CGFloat height;
+@property (nonatomic) CGFloat YC_width;
+@property (nonatomic) CGFloat YC_height;
 @end

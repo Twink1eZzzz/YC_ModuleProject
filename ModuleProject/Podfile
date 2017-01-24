@@ -2,27 +2,27 @@ platform :ios, "8.0"
 inhibit_all_warnings!
 
 target 'ModuleProject' do
-
+  # 自定义TabBar
   pod 'CYLTabBarController', '1.10.0'
-  
+  # 指示器
   pod 'SVProgressHUD','2.1.2'
-  
+  # 网络库
   pod 'XMNetworking','1.0.2'
-
+  # 富文本编辑与显示框架
   pod 'YYText','1.0.7'
-
+  # 高性能的 iOS JSON 模型框架
   pod 'YYModel','1.0.4'
-
+  # 空白页或出错页
   pod 'DZNEmptyDataSet','1.8.1'
-
+  # 轮播图
   pod 'SDCycleScrollView','1.65'
-
+  # 控件布局
   pod 'Masonry','1.0.2'
-
+  # 列表高度缓存
   pod 'UITableView+FDTemplateLayoutCell','1.4'
-
+  # 弹出视图
   pod 'MMPopupView','1.7.2'
-
+  # 刷新控件
   pod 'MJRefresh','3.1.12'
 
 
