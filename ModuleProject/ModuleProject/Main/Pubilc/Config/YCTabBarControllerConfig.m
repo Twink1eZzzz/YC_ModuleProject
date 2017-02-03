@@ -11,7 +11,6 @@
 #import "MeViewController.h"
 #import "TestViewController.h"
 #import "Test2ViewController.h"
-#import "YC_NavigationViewController.h"
 #import "KLTNavigationController.h"
 
 @interface YCTabBarControllerConfig ()

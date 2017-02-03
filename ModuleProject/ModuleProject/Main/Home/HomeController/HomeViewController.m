@@ -13,21 +13,18 @@
 #import "YC_RefreshGifHeader.h"
 #import "YC_RefreshGifFooter.h"
 #import "YYFPSLabel.h"
-#import "XMShareView.h"
-#import "WXApi.h"
+#import "YXCustomActionSheet.h"
 #import "ThirdMacros.h"
 
 #define NAVBAR_CHANGE_POINT 50
 
-@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,SDCycleScrollViewDelegate,WXApiDelegate>
+@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,SDCycleScrollViewDelegate>
 
 @property (strong, nonatomic) UITableView *tableView;
 
 @property (strong, nonatomic) UIView *headerView;
 
 @property (strong, nonatomic) SDCycleScrollView *HeaderCycleScrollView;
-
-@property (nonatomic, strong) XMShareView *shareView;
 
 
 @end
@@ -107,7 +104,6 @@
     } else {
         [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:0]];
         
-        
     }
 }
 
@@ -168,48 +164,18 @@
 // 点击左边事件
 - (void)left_button_event:(UIButton *)sender
 {
-    if(!self.shareView){
-        
-        self.shareView = [[XMShareView alloc] initWithFrame:self.view.bounds];
-        
-        self.shareView.alpha = 0.0;
-        
-        self.shareView.shareTitle = NSLocalizedString(@"刘梦是傻x(～￣▽￣)～", nil);
-        
-        self.shareView.shareText = NSLocalizedString(@"刘梦傻无敌o(￣▽￣)ｄ", nil);
-        
-        self.shareView.shareUrl = @"http://amonxu.com";
-        
-        [self.view addSubview:self.shareView];
-        
-        [UIView animateWithDuration:0.5 animations:^{
-            self.shareView.alpha = 1.0;
-        }];
-        
-        
-    }else{
-        [UIView animateWithDuration:0.5 animations:^{
-            self.shareView.alpha = 1.0;
-        }];
-        
-    }
-}
-
-#pragma mark - 代理回调
-/**
- *  处理来自微信的请求
- *
- *  @param resp 响应体。根据 errCode 作出对应处理。
- */
-- (void)onResp:(BaseResp *)resp
-{
-    NSString *message;
-    if(resp.errCode == 0) {
-        message = @"分享成功";
-    }else{
-        message = @"分享失败";
-    }
-    showAlert(message);
+    YXCustomActionSheet *cusSheet = [[YXCustomActionSheet alloc] init];
+    NSArray *contentArray = @[@{@"name":@"微信",@"icon":@"sns_icon_7"},
+                              @{@"name":@"朋友圈",@"icon":@"sns_icon_8"},
+                              @{@"name":@"QQ空间",@"icon":@"sns_icon_5"},
+                              @{@"name":@"QQ",@"icon":@"sns_icon_4"},
+                              @{@"name":@"新浪微博",@"icon":@"sns_icon_3"}];
+    
+    cusSheet.shareText = @"打开的空间啊";
+    cusSheet.shareTitle = @"但是肯定回家啊";
+    cusSheet.shareUrl = @"https://www.baidu.com/";
+    
+    [cusSheet showInView:[UIApplication sharedApplication].keyWindow contentArray:contentArray];
 }
 
 //点击标题事件，不要可以不重写

@@ -17,10 +17,9 @@
 #import <TencentOpenAPI/QQApiInterface.h>
 #import "WeiboSDK.h"
 #import "WXApi.h"
-#import "HomeViewController.h"
 
 
-@interface AppDelegate ()<WeiboSDKDelegate, QQApiInterfaceDelegate>
+@interface AppDelegate ()
 
 @end
 
@@ -52,22 +51,21 @@
 }
 
 
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
-{
-    if ([[url absoluteString] hasPrefix:@"tencent"]) {
-        
-        return [TencentOAuth HandleOpenURL:url];
-        
-    }else if([[url absoluteString] hasPrefix:@"wb"]) {
-        
-        return [WeiboSDK handleOpenURL:url delegate:self];
-        
-    }else{
-        HomeViewController *homeVC = [[HomeViewController alloc] init];
-        return [WXApi handleOpenURL:url delegate:homeVC];;
-        
-    }
-}
+//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+//{
+//    if ([[url absoluteString] hasPrefix:@"tencent"]) {
+//        
+//        return [TencentOAuth HandleOpenURL:url];
+//        
+//    }else if([[url absoluteString] hasPrefix:@"wb"]) {
+//        
+//        return [WeiboSDK handleOpenURL:url delegate:self];
+//        
+//    }else{
+//        return [WXApi handleOpenURL:url delegate:self];;
+//        
+//    }
+//}
 
 #pragma mark 引导页
 -(void)setupIntroductoryPage
@@ -80,6 +78,7 @@
     [USER synchronize];
     NSArray *images=@[@"introductoryPage1",@"introductoryPage2",@"introductoryPage3",@"introductoryPage4"];
     [introductoryPagesHelper showIntroductoryPageView:images];
+
 }
 
 /**
@@ -90,7 +89,6 @@
     [WXApi registerApp:APP_KEY_WEIXIN];
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:APP_KEY_WEIBO];
-    
 }
 
 #pragma mark - 实现代理回调
@@ -100,25 +98,25 @@
  *  @param response 响应体。根据 WeiboSDKResponseStatusCode 作对应的处理.
  *  具体参见 `WeiboSDKResponseStatusCode` 枚举.
  */
-- (void)didReceiveWeiboResponse:(WBBaseResponse *)response
-{
-    NSString *message;
-    switch (response.statusCode) {
-        case WeiboSDKResponseStatusCodeSuccess:
-            message = @"分享成功";
-            break;
-        case WeiboSDKResponseStatusCodeUserCancel:
-            message = @"取消分享";
-            break;
-        case WeiboSDKResponseStatusCodeSentFail:
-            message = @"分享失败";
-            break;
-        default:
-            message = @"分享失败";
-            break;
-    }
-    showAlert(message);
-}
+//- (void)didReceiveWeiboResponse:(WBBaseResponse *)response
+//{
+//    NSString *message;
+//    switch (response.statusCode) {
+//        case WeiboSDKResponseStatusCodeSuccess:
+//            message = @"分享成功";
+//            break;
+//        case WeiboSDKResponseStatusCodeUserCancel:
+//            message = @"取消分享";
+//            break;
+//        case WeiboSDKResponseStatusCodeSentFail:
+//            message = @"分享失败";
+//            break;
+//        default:
+//            message = @"分享失败";
+//            break;
+//    }
+//    showAlert(message);
+//}
 
 
 /**
@@ -126,16 +124,33 @@
  *
  *  @param resp 响应体，根据响应结果作对应处理
  */
-- (void)onResp:(QQBaseResp *)resp
-{
-    NSString *message;
-    if([resp.result integerValue] == 0) {
-        message = @"分享成功";
-    }else{
-        message = @"分享失败";
-    }
-    showAlert(message);
-}
+//- (void)onResp:(QQBaseResp *)resp
+//{
+//    NSString *message;
+//    if([resp.result integerValue] == 0) {
+//        message = @"分享成功";
+//    }else{
+//        message = @"分享失败";
+//    }
+//    showAlert(message);
+//}
+
+#pragma mark - 代理回调
+/**
+ *  处理来自微信的请求
+ *
+ *  @param resp 响应体。根据 errCode 作出对应处理。
+ */
+//- (void)onResp:(BaseResp *)resp
+//{
+//    NSString *message;
+//    if(resp.errCode == 0) {
+//        message = @"分享成功";
+//    }else{
+//        message = @"分享失败";
+//    }
+//    showAlert(message);
+//}
 
 
 
