@@ -11,6 +11,7 @@
 #import "introductoryPagesHelper.h"
 #import "YC_PlusButton.h"
 #import "ThirdMacros.h"
+#import "AppDelegate+YCLaunchAd.h"
 
 
 #import <TencentOpenAPI/TencentOAuth.h>
@@ -19,7 +20,7 @@
 #import "WXApi.h"
 
 
-@interface AppDelegate ()
+@interface AppDelegate ()<WeiboSDKDelegate, QQApiInterfaceDelegate>
 
 @end
 
@@ -28,7 +29,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 网络配置
-    [[NetworkTool sharedNetworkTool] setupConfigWithServer:@"http://192.168.198.237:8080/biz-ws-deploy/" Header:nil Parameters:nil];
+    [[NetworkTool sharedNetworkTool] setupConfigWithServer:BASEURL Header:nil Parameters:nil];
 
     // window初始化
     _window = [[UIWindow alloc]init];
@@ -46,39 +47,21 @@
     /**
      * 根据需求加广告页
      */
+    [self setupYCLaunchAd];
     
     return YES;
 }
 
-
-//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
-//{
-//    if ([[url absoluteString] hasPrefix:@"tencent"]) {
-//        
-//        return [TencentOAuth HandleOpenURL:url];
-//        
-//    }else if([[url absoluteString] hasPrefix:@"wb"]) {
-//        
-//        return [WeiboSDK handleOpenURL:url delegate:self];
-//        
-//    }else{
-//        return [WXApi handleOpenURL:url delegate:self];;
-//        
-//    }
-//}
-
 #pragma mark 引导页
 -(void)setupIntroductoryPage
 {
-    if ([USER objectForKey:@"isNoFirstLaunch"])
-    {
+    if ([kUserDefaults objectForKey:@"isNoFirstLaunch"]) {
         return;
     }
-    [USER setBool:YES forKey:@"isNoFirstLaunch"];
-    [USER synchronize];
+    [kUserDefaults setBool:YES forKey:@"isNoFirstLaunch"];
+    [kUserDefaults synchronize];
     NSArray *images=@[@"introductoryPage1",@"introductoryPage2",@"introductoryPage3",@"introductoryPage4"];
     [introductoryPagesHelper showIntroductoryPageView:images];
-
 }
 
 /**
@@ -91,66 +74,63 @@
     [WeiboSDK registerApp:APP_KEY_WEIBO];
 }
 
+
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    if ([[url absoluteString] hasPrefix:@"tencent"]) {
+        
+        return [QQApiInterface handleOpenURL:url delegate:self];
+        
+    }else if([[url absoluteString] hasPrefix:@"wb"]) {
+        
+        return [WeiboSDK handleOpenURL:url delegate:self];
+    }
+    
+    return NO;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    if ([[url absoluteString] hasPrefix:@"tencent"]) {
+        
+        return [TencentOAuth HandleOpenURL:url];
+        
+    }else if([[url absoluteString] hasPrefix:@"wb"]) {
+        
+        return [WeiboSDK handleOpenURL:url delegate:self];
+        
+    }else{
+        return NO;
+    }
+}
+
 #pragma mark - 实现代理回调
 /**
- *  微博
+ *  微博 (微博如果不做分享结果处理会出错)
  *
  *  @param response 响应体。根据 WeiboSDKResponseStatusCode 作对应的处理.
  *  具体参见 `WeiboSDKResponseStatusCode` 枚举.
  */
-//- (void)didReceiveWeiboResponse:(WBBaseResponse *)response
-//{
-//    NSString *message;
-//    switch (response.statusCode) {
-//        case WeiboSDKResponseStatusCodeSuccess:
-//            message = @"分享成功";
-//            break;
-//        case WeiboSDKResponseStatusCodeUserCancel:
-//            message = @"取消分享";
-//            break;
-//        case WeiboSDKResponseStatusCodeSentFail:
-//            message = @"分享失败";
-//            break;
-//        default:
-//            message = @"分享失败";
-//            break;
-//    }
-//    showAlert(message);
-//}
-
-
-/**
- *  处理来至QQ的响应
- *
- *  @param resp 响应体，根据响应结果作对应处理
- */
-//- (void)onResp:(QQBaseResp *)resp
-//{
-//    NSString *message;
-//    if([resp.result integerValue] == 0) {
-//        message = @"分享成功";
-//    }else{
-//        message = @"分享失败";
-//    }
-//    showAlert(message);
-//}
-
-#pragma mark - 代理回调
-/**
- *  处理来自微信的请求
- *
- *  @param resp 响应体。根据 errCode 作出对应处理。
- */
-//- (void)onResp:(BaseResp *)resp
-//{
-//    NSString *message;
-//    if(resp.errCode == 0) {
-//        message = @"分享成功";
-//    }else{
-//        message = @"分享失败";
-//    }
-//    showAlert(message);
-//}
+- (void)didReceiveWeiboResponse:(WBBaseResponse *)response
+{
+    NSString *message;
+    switch (response.statusCode) {
+        case WeiboSDKResponseStatusCodeSuccess:
+            message = @"分享成功";
+            break;
+        case WeiboSDKResponseStatusCodeUserCancel:
+            message = @"取消分享";
+            break;
+        case WeiboSDKResponseStatusCodeSentFail:
+            message = @"分享失败";
+            break;
+        default:
+            message = @"分享失败";
+            break;
+    }
+    showAlert(message);
+}
 
 
 

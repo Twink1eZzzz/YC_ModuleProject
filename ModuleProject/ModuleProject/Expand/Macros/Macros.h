@@ -20,9 +20,6 @@
 # define YCLog(...);
 #endif
 
-// 用户中心
-#define USER [NSUserDefaults standardUserDefaults]
-
 //不同屏幕尺寸字体适配（320，568是因为效果图为IPHONE5 如果不是则根据实际情况修改）
 #define kScreenWidthRatio  (Main_Screen_Width / 320.0)
 #define kScreenHeightRatio (Main_Screen_Height / 568.0)
@@ -94,6 +91,7 @@
 
 #define COLOR_RGB(rgbValue,a) [UIColor colorWithRed:((float)(((rgbValue) & 0xFF0000) >> 16))/255.0 green:((float)(((rgbValue) & 0xFF00)>>8))/255.0 blue: ((float)((rgbValue) & 0xFF))/255.0 alpha:(a)]
 
+#define MainColor RGB(222,222,222)
 
 //AppDelegate对象
 #define AppDelegateInstance [[UIApplication sharedApplication] delegate]

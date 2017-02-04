@@ -22,10 +22,15 @@
 //define this constant if you want to enable auto-boxing for default syntax
 #define MAS_SHORTHAND_GLOBALS
 #import "Masonry.h"
-
 // 计算cell行高
 #import "UITableView+FDTemplateLayoutCell.h"
 
 
+
+// 正式服务器地址
+#define BASEURL @"http://192.168.198.237:8080/biz-ws-deploy/"
+
+// 测试服务器地址
+#define TESTURL @""
 
 #endif /* PrefixHeader_pch */

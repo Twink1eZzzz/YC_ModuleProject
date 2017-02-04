@@ -34,7 +34,7 @@
         return YES;
     }else if ([name isEqualToString:@"QQ空间"] && (hadInstalledQQ == YES)) {
         return YES;
-    }else if ([name isEqualToString:@"新浪微博"] && (hadInstalledWeibo == YES)){
+    }else if ([name isEqualToString:@"新浪微博"] || (hadInstalledWeibo == YES)){
         return YES;
     }else {
         return NO;
@@ -54,6 +54,11 @@
             if ([self filterDataName:name] == YES) {
                 [InstallArray addObject:contentArray[i]];
             }
+        }
+        
+        if (InstallArray.count == 0) {
+            showAlert(@"请下载分享相关应用");
+            return;
         }
     }
     self.backgroundColor = [UIColor colorWithRed:249/255.0 green:249/255.0 blue:249/255.0 alpha:1.0];

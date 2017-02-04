@@ -1,8 +1,7 @@
 PODS:
   - CYLTabBarController (1.10.0)
   - DZNEmptyDataSet (1.8.1)
-  - LBXScan (1.1.1):
-    - ZXingObjC (~> 3.0)
+  - LBXAlertAction (1.0.3)
   - Masonry (1.0.2)
   - MJRefresh (3.1.12)
   - MMPopupView (1.7.2):
@@ -27,11 +26,12 @@ PODS:
   - ZXingObjC (3.2.1):
     - ZXingObjC/All (= 3.2.1)
   - ZXingObjC/All (3.2.1)
+  - ZYCornerRadius (1.0.2)
 
 DEPENDENCIES:
   - CYLTabBarController (= 1.10.0)
   - DZNEmptyDataSet (= 1.8.1)
-  - LBXScan (= 1.1.1)
+  - LBXAlertAction
   - Masonry (= 1.0.2)
   - MJRefresh (= 3.1.12)
   - MMPopupView (= 1.7.2)
@@ -41,11 +41,13 @@ DEPENDENCIES:
   - XMNetworking (= 1.0.2)
   - YYModel (= 1.0.4)
   - YYText (= 1.0.7)
+  - ZXingObjC (= 3.2.1)
+  - ZYCornerRadius (= 1.0.2)
 
 SPEC CHECKSUMS:
   CYLTabBarController: 2de9a4c26f50d33574398becf8e7b0aaed794240
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  LBXScan: dfb4d8ae8e4cff2aa0c9e1771e43954dce1469a9
+  LBXAlertAction: e904f511f0e44fde323e056691d7a8a99d71faba
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   MMPopupView: fe1dd010824029dfb632fdf1a531db5dd5386020
@@ -57,7 +59,8 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   ZXingObjC: bbf7b8f0cf8933fdd33eb4f9f46e22308552869b
+  ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: 0732b2a9b54b4e5b025e0623da7636bf6818b97e
+PODFILE CHECKSUM: 690c8f9fa28606e6b863ef5b4830a9e9c9fde844
 
 COCOAPODS: 1.0.0
