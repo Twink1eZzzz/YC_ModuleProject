@@ -7,16 +7,22 @@
 //
 
 #import "Test2ViewController.h"
-#import "UINavigationBar+Awesome.h"
+
 #import "SubLBXScanViewController.h"
+#import "ScanResultViewController.h"
+#import "CustomAlterViewController.h"
 #import "MyQRViewController.h"
+#import "ConnectionFailureViewController.h"
+
+
+
+
 #import "LBXScanView.h"
 #import <objc/message.h>
-#import "ScanResultViewController.h"
 #import "LBXScanResult.h"
 #import "LBXScanWrapper.h"
-#import "CustomAlterViewController.h"
 #import "YXCustomActionSheet.h"
+#import "UINavigationBar+Awesome.h"
 
 @interface Test2ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -50,7 +56,8 @@
     
     self.arrayItems = @[@"二维码扫描",
                         @"第三方分享",
-                        @"自定义弹窗"];
+                        @"自定义弹窗",
+                        @"网络连接失败页面/无数据界面"];
 }
 
 - (UIColor *)set_colorBackground
@@ -91,6 +98,9 @@
             break;
         case 2:
             [self CustomAlter];
+            break;
+        case 3:
+            [self NetworkConnectionFailureInterface];
             break;
             
         default:
@@ -192,6 +202,14 @@
 {
     CustomAlterViewController *customAlterVC = [[CustomAlterViewController alloc]init];
     [self.navigationController pushViewController:customAlterVC animated:YES];
+}
+
+#pragma mark - 网络连接失败界面
+- (void)NetworkConnectionFailureInterface
+{
+    ConnectionFailureViewController *ConnectionFailureVC = [[ConnectionFailureViewController alloc]init];
+    [self.navigationController pushViewController:ConnectionFailureVC animated:YES];
+    
 }
 
 @end

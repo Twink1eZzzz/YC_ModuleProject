@@ -152,6 +152,7 @@
 		29D7A33C1E48604300AF3312 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 29D7A3321E48604300AF3312 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		29D7A33D1E48604300AF3312 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D7A3341E48604300AF3312 /* libWeChatSDK.a */; };
 		29D7A33E1E48604300AF3312 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 29D7A3351E48604300AF3312 /* README.txt */; };
+		29D7A3421E4878A700AF3312 /* ConnectionFailureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D7A3411E4878A700AF3312 /* ConnectionFailureViewController.m */; };
 		29E4155F1E35E69D00D7C1FB /* NSBundle+PYSearchExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E415521E35E69D00D7C1FB /* NSBundle+PYSearchExtension.m */; };
 		29E415601E35E69D00D7C1FB /* PYSearch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 29E415531E35E69D00D7C1FB /* PYSearch.bundle */; };
 		29E415611E35E69D00D7C1FB /* PYSearchConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E415561E35E69D00D7C1FB /* PYSearchConst.m */; };
@@ -476,6 +477,8 @@
 		29D7A3361E48604300AF3312 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		29D7A3371E48604300AF3312 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		29D7A3381E48604300AF3312 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		29D7A3401E4878A700AF3312 /* ConnectionFailureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionFailureViewController.h; sourceTree = "<group>"; };
+		29D7A3411E4878A700AF3312 /* ConnectionFailureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionFailureViewController.m; sourceTree = "<group>"; };
 		29E415511E35E69D00D7C1FB /* NSBundle+PYSearchExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+PYSearchExtension.h"; sourceTree = "<group>"; };
 		29E415521E35E69D00D7C1FB /* NSBundle+PYSearchExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+PYSearchExtension.m"; sourceTree = "<group>"; };
 		29E415531E35E69D00D7C1FB /* PYSearch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PYSearch.bundle; sourceTree = "<group>"; };
@@ -647,6 +650,7 @@
 		29B5C9811E44780300317E85 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				29D7A33F1E48787500AF3312 /* ConnectionFailure-连接失败界面 */,
 				29CB98821E45D4E5003092F7 /* ADWebView-开屏广告跳转的网页 */,
 				29CB98251E45729A003092F7 /* CustomAlter-自定义弹窗 */,
 				29B5C9A81E44858100317E85 /* ScanQR-二维码演示 */,
@@ -1478,6 +1482,16 @@
 			path = Wechat;
 			sourceTree = "<group>";
 		};
+		29D7A33F1E48787500AF3312 /* ConnectionFailure-连接失败界面 */ = {
+			isa = PBXGroup;
+			children = (
+				29D7A3401E4878A700AF3312 /* ConnectionFailureViewController.h */,
+				29D7A3411E4878A700AF3312 /* ConnectionFailureViewController.m */,
+			);
+			name = "ConnectionFailure-连接失败界面";
+			path = ConnectionFailure;
+			sourceTree = "<group>";
+		};
 		29E415501E35E69D00D7C1FB /* PYSearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -1962,6 +1976,7 @@
 				29CB98861E45D4E5003092F7 /* WebViewController.m in Sources */,
 				59DDDBD1A828A761A573FDB4 /* KLTNavigationController.m in Sources */,
 				59DDD2636A0A730868FF78CE /* YYFPSLabel.m in Sources */,
+				29D7A3421E4878A700AF3312 /* ConnectionFailureViewController.m in Sources */,
 				59DDD75698B7FF11C8041FE7 /* YYWeakProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
