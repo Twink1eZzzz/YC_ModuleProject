@@ -20,13 +20,11 @@ target 'ModuleProject' do
   pod 'Masonry','1.0.2'
   # 列表高度缓存
   pod 'UITableView+FDTemplateLayoutCell','1.4'
-  # 弹出视图
-  pod 'MMPopupView','1.7.2'
   # 刷新控件
   pod 'MJRefresh','3.1.12'
   # QR
   pod 'ZXingObjC','3.2.1'
-
+  # 系统Alter疯转
   pod 'LBXAlertAction'
   # 高效圆角
   pod 'ZYCornerRadius','1.0.2'

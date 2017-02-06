@@ -150,5 +150,7 @@ _Pragma("clang diagnostic pop")
 //最大的上传图片张数
 #define kupdateMaximumNumberOfImage 12
 
+#define showAlert(_msg){UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:_msg delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定",nil];[alert show];}
+
 
 #endif /* Macros_h */

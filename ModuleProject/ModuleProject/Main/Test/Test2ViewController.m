@@ -16,6 +16,7 @@
 #import "LBXScanResult.h"
 #import "LBXScanWrapper.h"
 #import "CustomAlterViewController.h"
+#import "YXCustomActionSheet.h"
 
 @interface Test2ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -48,6 +49,7 @@
     }];
     
     self.arrayItems = @[@"二维码扫描",
+                        @"第三方分享",
                         @"自定义弹窗"];
 }
 
@@ -85,10 +87,10 @@
             [self ScanQR];
             break;
         case 1:
-            [self CustomAlter];
+            [self share];
             break;
         case 2:
-            
+            [self CustomAlter];
             break;
             
         default:
@@ -166,6 +168,24 @@
     vc.isVideoZoom = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+#pragma mark - 第三方分享
+- (void)share
+{
+    YXCustomActionSheet *cusSheet = [[YXCustomActionSheet alloc] init];
+    NSArray *contentArray = @[@{@"name":@"微信",@"icon":@"sns_icon_7"},
+                              @{@"name":@"朋友圈",@"icon":@"sns_icon_8"},
+                              @{@"name":@"QQ空间",@"icon":@"sns_icon_5"},
+                              @{@"name":@"QQ",@"icon":@"sns_icon_4"},
+                              @{@"name":@"新浪微博",@"icon":@"sns_icon_3"}];
+    
+    cusSheet.shareText = @"打开的空间啊";
+    cusSheet.shareTitle = @"但是肯定回家啊";
+    cusSheet.shareUrl = @"https://www.baidu.com/";
+    
+    [cusSheet showInView:[UIApplication sharedApplication].keyWindow contentArray:contentArray];
+}
+
 
 #pragma mark - 自定义弹窗
 - (void)CustomAlter

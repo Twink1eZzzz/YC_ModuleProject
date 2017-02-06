@@ -20,7 +20,7 @@
 #import "WXApi.h"
 
 
-@interface AppDelegate ()<WeiboSDKDelegate, QQApiInterfaceDelegate>
+@interface AppDelegate ()<WeiboSDKDelegate>
 
 @end
 
@@ -37,17 +37,18 @@
     [YC_PlusButton registerPlusButton];
     YCTabBarControllerConfig *tabBarControllerConfig = [[YCTabBarControllerConfig alloc]init];
     self.window.rootViewController = tabBarControllerConfig.tabBarController;
+    
+    /**
+     * 根据需求加广告页
+     */
+    [self setupYCLaunchAd];
+    
     [_window makeKeyAndVisible];
     
     [self init3rdParty];
 
     //引导页面加载
     [self setupIntroductoryPage];
-
-    /**
-     * 根据需求加广告页
-     */
-    [self setupYCLaunchAd];
     
     return YES;
 }
@@ -78,11 +79,7 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    if ([[url absoluteString] hasPrefix:@"tencent"]) {
-        
-        return [QQApiInterface handleOpenURL:url delegate:self];
-        
-    }else if([[url absoluteString] hasPrefix:@"wb"]) {
+   if([[url absoluteString] hasPrefix:@"wb"]) {
         
         return [WeiboSDK handleOpenURL:url delegate:self];
     }
@@ -92,11 +89,7 @@
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
-    if ([[url absoluteString] hasPrefix:@"tencent"]) {
-        
-        return [TencentOAuth HandleOpenURL:url];
-        
-    }else if([[url absoluteString] hasPrefix:@"wb"]) {
+    if([[url absoluteString] hasPrefix:@"wb"]) {
         
         return [WeiboSDK handleOpenURL:url delegate:self];
         
@@ -130,6 +123,11 @@
             break;
     }
     showAlert(message);
+}
+
+- (void)didReceiveWeiboRequest:(WBBaseRequest *)request
+{
+    
 }
 
 

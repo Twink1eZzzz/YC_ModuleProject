@@ -45,16 +45,16 @@
     
     
     //4.******视频开屏广告 - 本地数据******
-    //[self example04_videoAd_localData];
+//    [self example04_videoAd_localData];
     
     
     //5.******如需自定义跳过按钮,请看这个示例******
-    //[self example05_customSkipButton];
+//    [self example05_customSkipButton];
     
     
     //6.******使用默认配置快速初始化,请看下面两个示例******
-    //[self example06_imageAd_defaultConfiguration];
-    //[self example07_videoAd_defaultConfiguration];
+//    [self example06_imageAd_defaultConfiguration];
+//    [self example07_videoAd_defaultConfiguration];
     
     
     //7.******如果你想提前缓存图片/视频请调下面这两个接口*****
@@ -125,7 +125,7 @@
     //广告frame
     imageAdconfiguration.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width/1242*1786);
     //广告图片URLString/或本地图片名(.jpg/.gif请带上后缀)
-    imageAdconfiguration.imageNameOrURLString = @"image2.jpg";
+    imageAdconfiguration.imageNameOrURLString = @"image4.jpg";
     //缓存机制(仅对网络图片有效)
     imageAdconfiguration.imageOption = XHLaunchAdImageRefreshCached;
     //图片填充模式
@@ -139,7 +139,7 @@
     //后台返回时,是否显示广告
     imageAdconfiguration.showEnterForeground = NO;
     //设置要添加的子视图(可选)
-    //imageAdconfiguration.subViews = [self launchAdSubViews];
+//    imageAdconfiguration.subViews = [self launchAdSubViews];
     //显示开屏广告
     [XHLaunchAd imageAdWithImageAdConfiguration:imageAdconfiguration delegate:self];
     
@@ -221,7 +221,6 @@
     //videoAdconfiguration.subViews = [self launchAdSubViews];
     //显示开屏广告
     [XHLaunchAd videoAdWithVideoAdConfiguration:videoAdconfiguration delegate:self];
-    
 }
 #pragma mark - 自定义跳过按钮-示例
 -(void)example05_customSkipButton
@@ -271,7 +270,7 @@
     //使用默认配置
     XHLaunchImageAdConfiguration *imageAdconfiguration = [XHLaunchImageAdConfiguration defaultConfiguration];
     //广告图片URLString/或本地图片名(.jpg/.gif请带上后缀)
-    imageAdconfiguration.imageNameOrURLString = imageURL3;
+    imageAdconfiguration.imageNameOrURLString = @"image1.jpg";
     //广告点击打开链接
     imageAdconfiguration.openURLString = @"http://www.it7090.com";
     [XHLaunchAd imageAdWithImageAdConfiguration:imageAdconfiguration delegate:self];

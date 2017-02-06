@@ -141,6 +141,17 @@
 		29D71FDF1E25C535002DDF0F /* FeWifiManHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D71FC51E25C535002DDF0F /* FeWifiManHub.m */; };
 		29D71FE01E25C535002DDF0F /* FeWifiManHub.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29D71FC61E25C535002DDF0F /* FeWifiManHub.xib */; };
 		29D71FE11E25C535002DDF0F /* FeZeroLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D71FC91E25C535002DDF0F /* FeZeroLoader.m */; };
+		29D7A3071E48576100AF3312 /* RAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D7A3041E48576100AF3312 /* RAlertView.m */; };
+		29D7A3081E48576100AF3312 /* TextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D7A3061E48576100AF3312 /* TextHelper.m */; };
+		29D7A3181E485B3900AF3312 /* MHActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D7A30B1E485B3900AF3312 /* MHActionSheet.m */; };
+		29D7A3191E485B3900AF3312 /* MHSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D7A30D1E485B3900AF3312 /* MHSheetCell.m */; };
+		29D7A31A1E485B3900AF3312 /* MHSheetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29D7A30E1E485B3900AF3312 /* MHSheetCell.xib */; };
+		29D7A31B1E485B3900AF3312 /* MHSheetFoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D7A3101E485B3900AF3312 /* MHSheetFoot.m */; };
+		29D7A31C1E485B3900AF3312 /* MHSheetFoot.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29D7A3111E485B3900AF3312 /* MHSheetFoot.xib */; };
+		29D7A31D1E485B3900AF3312 /* MHSheetHead.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D7A3131E485B3900AF3312 /* MHSheetHead.m */; };
+		29D7A31E1E485B3900AF3312 /* MHSheetHead.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29D7A3141E485B3900AF3312 /* MHSheetHead.xib */; };
+		29D7A31F1E485B3900AF3312 /* MHSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D7A3161E485B3900AF3312 /* MHSheetView.m */; };
+		29D7A3201E485B3900AF3312 /* MHSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29D7A3171E485B3900AF3312 /* MHSheetView.xib */; };
 		29E4155F1E35E69D00D7C1FB /* NSBundle+PYSearchExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E415521E35E69D00D7C1FB /* NSBundle+PYSearchExtension.m */; };
 		29E415601E35E69D00D7C1FB /* PYSearch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 29E415531E35E69D00D7C1FB /* PYSearch.bundle */; };
 		29E415611E35E69D00D7C1FB /* PYSearchConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E415561E35E69D00D7C1FB /* PYSearchConst.m */; };
@@ -447,6 +458,24 @@
 		29D71FC61E25C535002DDF0F /* FeWifiManHub.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeWifiManHub.xib; sourceTree = "<group>"; };
 		29D71FC81E25C535002DDF0F /* FeZeroLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeZeroLoader.h; sourceTree = "<group>"; };
 		29D71FC91E25C535002DDF0F /* FeZeroLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeZeroLoader.m; sourceTree = "<group>"; };
+		29D7A3031E48576100AF3312 /* RAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAlertView.h; sourceTree = "<group>"; };
+		29D7A3041E48576100AF3312 /* RAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAlertView.m; sourceTree = "<group>"; };
+		29D7A3051E48576100AF3312 /* TextHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextHelper.h; sourceTree = "<group>"; };
+		29D7A3061E48576100AF3312 /* TextHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextHelper.m; sourceTree = "<group>"; };
+		29D7A30A1E485B3900AF3312 /* MHActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHActionSheet.h; sourceTree = "<group>"; };
+		29D7A30B1E485B3900AF3312 /* MHActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHActionSheet.m; sourceTree = "<group>"; };
+		29D7A30C1E485B3900AF3312 /* MHSheetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSheetCell.h; sourceTree = "<group>"; };
+		29D7A30D1E485B3900AF3312 /* MHSheetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSheetCell.m; sourceTree = "<group>"; };
+		29D7A30E1E485B3900AF3312 /* MHSheetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MHSheetCell.xib; sourceTree = "<group>"; };
+		29D7A30F1E485B3900AF3312 /* MHSheetFoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSheetFoot.h; sourceTree = "<group>"; };
+		29D7A3101E485B3900AF3312 /* MHSheetFoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSheetFoot.m; sourceTree = "<group>"; };
+		29D7A3111E485B3900AF3312 /* MHSheetFoot.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MHSheetFoot.xib; sourceTree = "<group>"; };
+		29D7A3121E485B3900AF3312 /* MHSheetHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSheetHead.h; sourceTree = "<group>"; };
+		29D7A3131E485B3900AF3312 /* MHSheetHead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSheetHead.m; sourceTree = "<group>"; };
+		29D7A3141E485B3900AF3312 /* MHSheetHead.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MHSheetHead.xib; sourceTree = "<group>"; };
+		29D7A3151E485B3900AF3312 /* MHSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSheetView.h; sourceTree = "<group>"; };
+		29D7A3161E485B3900AF3312 /* MHSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSheetView.m; sourceTree = "<group>"; };
+		29D7A3171E485B3900AF3312 /* MHSheetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MHSheetView.xib; sourceTree = "<group>"; };
 		29E415511E35E69D00D7C1FB /* NSBundle+PYSearchExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+PYSearchExtension.h"; sourceTree = "<group>"; };
 		29E415521E35E69D00D7C1FB /* NSBundle+PYSearchExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+PYSearchExtension.m"; sourceTree = "<group>"; };
 		29E415531E35E69D00D7C1FB /* PYSearch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PYSearch.bundle; sourceTree = "<group>"; };
@@ -904,6 +933,8 @@
 		29BDA37F1E1DEC5F0059B6C1 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				29D7A3091E485B3900AF3312 /* MHActionSheet */,
+				29D7A3021E48576100AF3312 /* CustomAlert */,
 				29BDA4441E1F4D310059B6C1 /* Singleton */,
 				29BDA4391E1F3F890059B6C1 /* IntroductoryPages */,
 				29BDA40E1E1E46400059B6C1 /* Reachability */,
@@ -1405,6 +1436,38 @@
 			path = Zero;
 			sourceTree = "<group>";
 		};
+		29D7A3021E48576100AF3312 /* CustomAlert */ = {
+			isa = PBXGroup;
+			children = (
+				29D7A3031E48576100AF3312 /* RAlertView.h */,
+				29D7A3041E48576100AF3312 /* RAlertView.m */,
+				29D7A3051E48576100AF3312 /* TextHelper.h */,
+				29D7A3061E48576100AF3312 /* TextHelper.m */,
+			);
+			path = CustomAlert;
+			sourceTree = "<group>";
+		};
+		29D7A3091E485B3900AF3312 /* MHActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				29D7A30A1E485B3900AF3312 /* MHActionSheet.h */,
+				29D7A30B1E485B3900AF3312 /* MHActionSheet.m */,
+				29D7A30C1E485B3900AF3312 /* MHSheetCell.h */,
+				29D7A30D1E485B3900AF3312 /* MHSheetCell.m */,
+				29D7A30E1E485B3900AF3312 /* MHSheetCell.xib */,
+				29D7A30F1E485B3900AF3312 /* MHSheetFoot.h */,
+				29D7A3101E485B3900AF3312 /* MHSheetFoot.m */,
+				29D7A3111E485B3900AF3312 /* MHSheetFoot.xib */,
+				29D7A3121E485B3900AF3312 /* MHSheetHead.h */,
+				29D7A3131E485B3900AF3312 /* MHSheetHead.m */,
+				29D7A3141E485B3900AF3312 /* MHSheetHead.xib */,
+				29D7A3151E485B3900AF3312 /* MHSheetView.h */,
+				29D7A3161E485B3900AF3312 /* MHSheetView.m */,
+				29D7A3171E485B3900AF3312 /* MHSheetView.xib */,
+			);
+			path = MHActionSheet;
+			sourceTree = "<group>";
+		};
 		29E415501E35E69D00D7C1FB /* PYSearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -1684,10 +1747,14 @@
 				29D71FCA1E25C535002DDF0F /* CabinCondensed-Bold.ttf in Resources */,
 				29D71FCC1E25C535002DDF0F /* WifiMan_Sign_1@2x.png in Resources */,
 				29BDA4201E1E55F80059B6C1 /* LaunchScreen.storyboard in Resources */,
+				29D7A3201E485B3900AF3312 /* MHSheetView.xib in Resources */,
 				29D71FD11E25C535002DDF0F /* wifimanhub_grayscale@2x.png in Resources */,
+				29D7A31E1E485B3900AF3312 /* MHSheetHead.xib in Resources */,
+				29D7A31A1E485B3900AF3312 /* MHSheetCell.xib in Resources */,
 				29CB98771E45D426003092F7 /* image0.jpg in Resources */,
 				29E415601E35E69D00D7C1FB /* PYSearch.bundle in Resources */,
 				29D71FCF1E25C535002DDF0F /* WifiMan_Sign_4@2x.png in Resources */,
+				29D7A31C1E485B3900AF3312 /* MHSheetFoot.xib in Resources */,
 				29CB987C1E45D426003092F7 /* image3.jpg in Resources */,
 				29CB98AA1E45D8BA003092F7 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				29CB98801E45D426003092F7 /* video0.mp4 in Resources */,
@@ -1830,6 +1897,7 @@
 				29BDA3921E1E150E0059B6C1 /* YCTabBarControllerConfig.m in Sources */,
 				29D71FD91E25C535002DDF0F /* FeRollingLoader.m in Sources */,
 				29CB985F1E45D168003092F7 /* XHLaunchAdButton.m in Sources */,
+				29D7A3081E48576100AF3312 /* TextHelper.m in Sources */,
 				29D71FD71E25C535002DDF0F /* FeLoadingIcon.m in Sources */,
 				29B5C9A71E4484F600317E85 /* ZXingWrapper.m in Sources */,
 				29D71FD61E25C535002DDF0F /* FeHourGlass.m in Sources */,
@@ -1838,6 +1906,7 @@
 				29BDA3CB1E1E41810059B6C1 /* UIImage+FX.m in Sources */,
 				29D71FDE1E25C535002DDF0F /* FeVietNamLoader.m in Sources */,
 				29B5C99D1E4484F600317E85 /* LBXScanLineAnimation.m in Sources */,
+				29D7A3071E48576100AF3312 /* RAlertView.m in Sources */,
 				29CB98661E45D168003092F7 /* XHLaunchImageView.m in Sources */,
 				29BDA3C81E1E41810059B6C1 /* UIImage+Capture.m in Sources */,
 				29BDA43F1E1F3F890059B6C1 /* introductoryPagesView.m in Sources */,
@@ -1848,6 +1917,8 @@
 				29BDA3D21E1E41810059B6C1 /* UIImage+RoundedCorner.m in Sources */,
 				29E415D91E36006F00D7C1FB /* XMShareWeiboUtil.m in Sources */,
 				29B5C9A11E4484F600317E85 /* LBXScanVideoZoomView.m in Sources */,
+				29D7A3181E485B3900AF3312 /* MHActionSheet.m in Sources */,
+				29D7A31F1E485B3900AF3312 /* MHSheetView.m in Sources */,
 				29D71FD31E25C535002DDF0F /* UIColor+flat.m in Sources */,
 				29D71F461E25C1DD002DDF0F /* AppDelegate.m in Sources */,
 				29BDA4431E1F4B150059B6C1 /* NetworkTool.m in Sources */,
@@ -1875,15 +1946,18 @@
 				29B5C9A31E4484F600317E85 /* LBXScanViewController.m in Sources */,
 				29BDA3C41E1E41810059B6C1 /* UIImage+Alpha.m in Sources */,
 				29BDA4041E1E418C0059B6C1 /* UIView+Shake.m in Sources */,
+				29D7A31D1E485B3900AF3312 /* MHSheetHead.m in Sources */,
 				29BDA3FB1E1E418C0059B6C1 /* UIView+Debug.m in Sources */,
 				59DDD65FD7506584FFFD88CE /* NSDictionary+XHLogHelper.m in Sources */,
 				29B5C97D1E441AC000317E85 /* YXActionSheetButton.m in Sources */,
 				29B5C99E1E4484F600317E85 /* LBXScanNative.m in Sources */,
 				29D71FDF1E25C535002DDF0F /* FeWifiManHub.m in Sources */,
 				59DDD2433B6E92739F579033 /* Test2ViewController.m in Sources */,
+				29D7A31B1E485B3900AF3312 /* MHSheetFoot.m in Sources */,
 				29B5C9AB1E44858100317E85 /* SubLBXScanViewController.m in Sources */,
 				59DDD1486E7A0FA0B83B584C /* TestViewController.m in Sources */,
 				59DDDFA7D98DCC29B7319CCC /* UINavigationBar+Awesome.m in Sources */,
+				29D7A3191E485B3900AF3312 /* MHSheetCell.m in Sources */,
 				59DDD770EEDC60783B6CA3F6 /* AnimationContoller.m in Sources */,
 				29CB98861E45D4E5003092F7 /* WebViewController.m in Sources */,
 				59DDDBD1A828A761A573FDB4 /* KLTNavigationController.m in Sources */,
