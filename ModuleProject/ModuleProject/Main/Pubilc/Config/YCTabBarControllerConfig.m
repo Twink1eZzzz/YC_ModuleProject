@@ -67,7 +67,7 @@
             CYLTabBarItemSelectedImage : @"mycity_highlight",
     };
     NSDictionary *thirdTabBarItemsAttributes = @{
-            CYLTabBarItemTitle : @"消息",
+            CYLTabBarItemTitle : @"示例演示",
             CYLTabBarItemImage : @"message_normal",
             CYLTabBarItemSelectedImage : @"message_highlight",
     };

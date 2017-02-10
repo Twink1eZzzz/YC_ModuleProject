@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2925F6A41E4C5F9E00380264 /* LoadDatashowInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2925F6A31E4C5F9E00380264 /* LoadDatashowInterfaceController.m */; };
 		2965625F1E2338BF00693F88 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2965625C1E2338BF00693F88 /* HomeViewController.m */; };
 		296562621E235AEA00693F88 /* Test3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 296562611E235AEA00693F88 /* Test3ViewController.m */; };
 		29B479D71E34B51600B6BCC5 /* YC_RefreshGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B479D41E34B51600B6BCC5 /* YC_RefreshGifFooter.m */; };
@@ -205,6 +206,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2925F6A21E4C5F9E00380264 /* LoadDatashowInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadDatashowInterfaceController.h; sourceTree = "<group>"; };
+		2925F6A31E4C5F9E00380264 /* LoadDatashowInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadDatashowInterfaceController.m; sourceTree = "<group>"; };
 		2965625B1E2338BF00693F88 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		2965625C1E2338BF00693F88 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		296562601E235AEA00693F88 /* Test3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test3ViewController.h; sourceTree = "<group>"; };
@@ -577,6 +580,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2925F6A11E4C5F8A00380264 /* LoadDatashowInterface-加载数据是显示的占位页面 */ = {
+			isa = PBXGroup;
+			children = (
+				2925F6A21E4C5F9E00380264 /* LoadDatashowInterfaceController.h */,
+				2925F6A31E4C5F9E00380264 /* LoadDatashowInterfaceController.m */,
+			);
+			name = "LoadDatashowInterface-加载数据是显示的占位页面";
+			path = LoadDatashowInterface;
+			sourceTree = "<group>";
+		};
 		296562591E2338BF00693F88 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -650,6 +663,7 @@
 		29B5C9811E44780300317E85 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2925F6A11E4C5F8A00380264 /* LoadDatashowInterface-加载数据是显示的占位页面 */,
 				29D7A33F1E48787500AF3312 /* ConnectionFailure-连接失败界面 */,
 				29CB98821E45D4E5003092F7 /* ADWebView-开屏广告跳转的网页 */,
 				29CB98251E45729A003092F7 /* CustomAlter-自定义弹窗 */,
@@ -1879,6 +1893,7 @@
 				29BDA4021E1E418C0059B6C1 /* UIView+Recursion.m in Sources */,
 				29E415D81E36006F00D7C1FB /* XMShareWechatUtil.m in Sources */,
 				29CB98651E45D168003092F7 /* XHLaunchAdView.m in Sources */,
+				2925F6A41E4C5F9E00380264 /* LoadDatashowInterfaceController.m in Sources */,
 				29E415D71E36006F00D7C1FB /* XMShareUtil.m in Sources */,
 				29CB98611E45D168003092F7 /* XHLaunchAdConfiguration.m in Sources */,
 				29BDA4031E1E418C0059B6C1 /* UIView+Screenshot.m in Sources */,

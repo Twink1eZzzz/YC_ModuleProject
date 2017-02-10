@@ -10,6 +10,8 @@
 #import "LBXAlertAction.h"
 #import "RAlertView.h"
 #import "MHActionSheet.h"
+#import <STPickerArea.h>
+#import <STPickerDate.h>
 
 @interface CustomAlterViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -43,7 +45,9 @@
                        @"自定义弹窗-无按钮",
                        @"自定义弹窗-一个按钮",
                        @"自定义弹窗-两个按钮",
-                       @"自定义ActionSheet"];
+                       @"自定义ActionSheet",
+                       @"地区选择器",
+                       @"时间选择器"];
     
 }
 
@@ -82,6 +86,12 @@
             break;
         case 5:
             [self customActionSheet];
+            break;
+        case 6:
+            [self pickerArea];
+            break;
+        case 7:
+            [self pickerTime];
             break;
         default:
             break;
@@ -149,5 +159,24 @@
         YCLog(@"%@",title);
     }];
 }
+
+#pragma mark - 地区选择器 含代理
+- (void)pickerArea
+{
+    STPickerArea *pickerArea = [[STPickerArea alloc]init];
+//    [pickerArea setDelegate:self];
+    [pickerArea setContentMode:STPickerContentModeBottom];
+    [pickerArea show];
+}
+
+
+#pragma mark - 时间选择器 含代理
+- (void)pickerTime
+{
+    STPickerDate *pickerDate = [[STPickerDate alloc]init];
+//    [pickerDate setDelegate:self];
+    [pickerDate show];
+}
+
 
 @end

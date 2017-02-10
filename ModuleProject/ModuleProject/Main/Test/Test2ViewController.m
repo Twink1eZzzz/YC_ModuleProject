@@ -13,6 +13,7 @@
 #import "CustomAlterViewController.h"
 #import "MyQRViewController.h"
 #import "ConnectionFailureViewController.h"
+#import "LoadDatashowInterfaceController.h"
 
 
 
@@ -57,7 +58,8 @@
     self.arrayItems = @[@"二维码扫描",
                         @"第三方分享",
                         @"自定义弹窗",
-                        @"网络连接失败页面/无数据界面"];
+                        @"网络连接失败页面/无数据界面",
+                        @"加载数据是显示占位页面"];
 }
 
 - (UIColor *)set_colorBackground
@@ -101,6 +103,9 @@
             break;
         case 3:
             [self NetworkConnectionFailureInterface];
+            break;
+        case 4:
+            [self LoadDatashowInterface];
             break;
             
         default:
@@ -210,6 +215,14 @@
     ConnectionFailureViewController *ConnectionFailureVC = [[ConnectionFailureViewController alloc]init];
     [self.navigationController pushViewController:ConnectionFailureVC animated:YES];
     
+}
+
+#pragma mark - 加载数据是显示的占位页面
+- (void)LoadDatashowInterface
+{
+    LoadDatashowInterfaceController *LoadDataShowVC = [[LoadDatashowInterfaceController alloc] init];
+    [self.navigationController pushViewController:LoadDataShowVC animated:YES];
+
 }
 
 @end

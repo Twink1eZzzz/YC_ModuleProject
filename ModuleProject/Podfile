@@ -28,5 +28,7 @@ target 'ModuleProject' do
   pod 'LBXAlertAction'
   # 高效圆角
   pod 'ZYCornerRadius','1.0.2'
+  # 选择器
+  pod 'STPickerView', '2.0'
 
 end

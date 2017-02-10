@@ -86,7 +86,7 @@
     UIColor *textColor = nil;
     
     
-    text = @"No lists";
+    text = @"暂无数据";
     font = [UIFont boldSystemFontOfSize:14.0];
     textColor = RGB(85, 85, 85);
     
@@ -105,7 +105,7 @@
     UIFont *font = nil;
     UIColor *textColor = nil;
     
-    text = @"You aren’t subscribed to any lists yet.";
+    text = @"请点击图标刷新页面";
     font = [UIFont systemFontOfSize:12.0];
     textColor = RGB(85, 85, 85);
     
@@ -126,14 +126,14 @@
 }
 
 // 设置背景图片
-//- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView {
-//    
-//    if (self.isLoading) {
-//        return [UIImage imageNamed:@"loading_imgBlue_78x78"];
-//    } else {
-//        return [UIImage imageNamed:@"placeholder_remote"];
-//    }
-//}
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView {
+
+    if (self.isLoading) {
+        return [UIImage imageNamed:@"loading_imgBlue_78x78"];
+    } else {
+        return [UIImage imageNamed:@"placeholder_fancy"];
+    }
+}
 
 
 // 设置占位图片的背景色

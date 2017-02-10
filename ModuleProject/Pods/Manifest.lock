@@ -9,6 +9,7 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - STPickerView (2.0)
   - SVProgressHUD (2.1.2)
   - UITableView+FDTemplateLayoutCell (1.4)
   - XMNetworking (1.0.2):
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - Masonry (= 1.0.2)
   - MJRefresh (= 3.1.12)
   - SDCycleScrollView (= 1.65)
+  - STPickerView (= 2.0)
   - SVProgressHUD (= 2.1.2)
   - UITableView+FDTemplateLayoutCell (= 1.4)
   - XMNetworking (= 1.0.2)
@@ -49,6 +51,7 @@ SPEC CHECKSUMS:
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  STPickerView: 7b5f79ab9c48a3aad85b413c622c415961cec251
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
   XMNetworking: bcc1d167c4386fb6bfefb0d6c7087f09333c2e09
@@ -57,6 +60,6 @@ SPEC CHECKSUMS:
   ZXingObjC: bbf7b8f0cf8933fdd33eb4f9f46e22308552869b
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: b9ebbe491aac8272908e50ead046f7b896948c8d
+PODFILE CHECKSUM: 376d3effe0fcd4f97109c01470ae5927f15e473b
 
 COCOAPODS: 1.0.0
