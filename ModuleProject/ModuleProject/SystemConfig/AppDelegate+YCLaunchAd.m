@@ -131,7 +131,7 @@
     //图片填充模式
     imageAdconfiguration.contentMode = UIViewContentModeScaleToFill;
     //广告点击打开链接
-    imageAdconfiguration.openURLString = @"http://www.it7090.com";
+    imageAdconfiguration.openURLString = @"https://www.baidu.com";
     //广告显示完成动画
     imageAdconfiguration.showFinishAnimate =ShowFinishAnimateFadein;
     //跳过按钮类型
