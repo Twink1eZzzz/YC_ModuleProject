@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		290CAC721E4DC5510091074B /* SearchControllerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 290CAC711E4DC5510091074B /* SearchControllerController.m */; };
 		2925F6A41E4C5F9E00380264 /* LoadDatashowInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2925F6A31E4C5F9E00380264 /* LoadDatashowInterfaceController.m */; };
 		2965625F1E2338BF00693F88 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2965625C1E2338BF00693F88 /* HomeViewController.m */; };
 		296562621E235AEA00693F88 /* Test3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 296562611E235AEA00693F88 /* Test3ViewController.m */; };
@@ -183,6 +184,7 @@
 		59DDD65FD7506584FFFD88CE /* NSDictionary+XHLogHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DDD697795E18E54FACE6AB /* NSDictionary+XHLogHelper.m */; };
 		59DDD75698B7FF11C8041FE7 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DDD74C0B843794D885A5E0 /* YYWeakProxy.m */; };
 		59DDD770EEDC60783B6CA3F6 /* AnimationContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DDDD2C7549E879924D5C53 /* AnimationContoller.m */; };
+		59DDD9655FCCC6502B207864 /* PYTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DDD32C2AC770D3E4E4F81F /* PYTempViewController.m */; };
 		59DDDBD1A828A761A573FDB4 /* KLTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DDD0C28B394FDEF4CDC6A5 /* KLTNavigationController.m */; };
 		59DDDFA7D98DCC29B7319CCC /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DDDE365BF32A5BAD7B08F5 /* UINavigationBar+Awesome.m */; };
 		91B2C69CBA4B99CA31B18803 /* libPods-ModuleProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD34161FE2C367AC98E8099 /* libPods-ModuleProject.a */; };
@@ -206,6 +208,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		290CAC701E4DC5510091074B /* SearchControllerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchControllerController.h; sourceTree = "<group>"; };
+		290CAC711E4DC5510091074B /* SearchControllerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchControllerController.m; sourceTree = "<group>"; };
 		2925F6A21E4C5F9E00380264 /* LoadDatashowInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadDatashowInterfaceController.h; sourceTree = "<group>"; };
 		2925F6A31E4C5F9E00380264 /* LoadDatashowInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadDatashowInterfaceController.m; sourceTree = "<group>"; };
 		2965625B1E2338BF00693F88 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -523,8 +527,10 @@
 		59DDD12530C6B91A70B0B441 /* KLTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTNavigationController.h; sourceTree = "<group>"; };
 		59DDD13C8785DFF80313F722 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		59DDD211265CA81969299EAD /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		59DDD32C2AC770D3E4E4F81F /* PYTempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYTempViewController.m; sourceTree = "<group>"; };
 		59DDD697795E18E54FACE6AB /* NSDictionary+XHLogHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+XHLogHelper.m"; sourceTree = "<group>"; };
 		59DDD74C0B843794D885A5E0 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
+		59DDD8B8FC6C8E946DD0BAD9 /* PYTempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYTempViewController.h; sourceTree = "<group>"; };
 		59DDDC3D60C4A310057E0DB0 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		59DDDCADA3103A11FDB37EF3 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
 		59DDDD22D084431400F2A022 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
@@ -580,6 +586,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		290CAC6F1E4DC5210091074B /* SearchController-搜索控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				290CAC701E4DC5510091074B /* SearchControllerController.h */,
+				290CAC711E4DC5510091074B /* SearchControllerController.m */,
+				59DDD8B8FC6C8E946DD0BAD9 /* PYTempViewController.h */,
+				59DDD32C2AC770D3E4E4F81F /* PYTempViewController.m */,
+			);
+			name = "SearchController-搜索控制器";
+			path = SearchController;
+			sourceTree = "<group>";
+		};
 		2925F6A11E4C5F8A00380264 /* LoadDatashowInterface-加载数据是显示的占位页面 */ = {
 			isa = PBXGroup;
 			children = (
@@ -663,6 +681,7 @@
 		29B5C9811E44780300317E85 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				290CAC6F1E4DC5210091074B /* SearchController-搜索控制器 */,
 				2925F6A11E4C5F8A00380264 /* LoadDatashowInterface-加载数据是显示的占位页面 */,
 				29D7A33F1E48787500AF3312 /* ConnectionFailure-连接失败界面 */,
 				29CB98821E45D4E5003092F7 /* ADWebView-开屏广告跳转的网页 */,
@@ -1964,6 +1983,7 @@
 				29BDA4281E1F31800059B6C1 /* YC_ProgressHUD.m in Sources */,
 				29D71FDA1E25C535002DDF0F /* FeSpinnerTenDot.m in Sources */,
 				29BDA4061E1E418C0059B6C1 /* UIView+ViewController.m in Sources */,
+				290CAC721E4DC5510091074B /* SearchControllerController.m in Sources */,
 				29D71FDB1E25C535002DDF0F /* FeTenDot.m in Sources */,
 				29CB98601E45D168003092F7 /* XHLaunchAdCache.m in Sources */,
 				29BDA4071E1E418C0059B6C1 /* UIView+Visuals.m in Sources */,
@@ -1993,6 +2013,7 @@
 				59DDD2636A0A730868FF78CE /* YYFPSLabel.m in Sources */,
 				29D7A3421E4878A700AF3312 /* ConnectionFailureViewController.m in Sources */,
 				59DDD75698B7FF11C8041FE7 /* YYWeakProxy.m in Sources */,
+				59DDD9655FCCC6502B207864 /* PYTempViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

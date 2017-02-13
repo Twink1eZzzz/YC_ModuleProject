@@ -14,6 +14,7 @@
 #import "MyQRViewController.h"
 #import "ConnectionFailureViewController.h"
 #import "LoadDatashowInterfaceController.h"
+#import "SearchControllerController.h"
 
 
 
@@ -59,7 +60,8 @@
                         @"第三方分享",
                         @"自定义弹窗",
                         @"网络连接失败页面/无数据界面",
-                        @"加载数据是显示占位页面"];
+                        @"加载数据是显示占位页面",
+                        @"搜索界面"];
 }
 
 - (UIColor *)set_colorBackground
@@ -106,6 +108,9 @@
             break;
         case 4:
             [self LoadDatashowInterface];
+            break;
+        case 5:
+            [self searchController];
             break;
             
         default:
@@ -223,6 +228,13 @@
     LoadDatashowInterfaceController *LoadDataShowVC = [[LoadDatashowInterfaceController alloc] init];
     [self.navigationController pushViewController:LoadDataShowVC animated:YES];
 
+}
+
+#pragma mark - 搜索界面
+- (void)searchController
+{
+    SearchControllerController *searchVC = [[SearchControllerController alloc] init];
+    [self.navigationController pushViewController:searchVC animated:YES];
 }
 
 @end
