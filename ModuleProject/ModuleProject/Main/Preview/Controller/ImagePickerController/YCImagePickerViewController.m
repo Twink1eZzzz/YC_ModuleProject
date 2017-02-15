@@ -17,8 +17,9 @@
 #import "TZVideoPlayerController.h"
 #import "TZPhotoPreviewController.h"
 #import "TZGifPhotoPreviewController.h"
+#import "MHActionSheet.h"
 
-@interface YCImagePickerViewController ()<TZImagePickerControllerDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UIAlertViewDelegate,UINavigationControllerDelegate> {
+@interface YCImagePickerViewController ()<TZImagePickerControllerDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate,UIAlertViewDelegate,UINavigationControllerDelegate> {
     NSMutableArray *_selectedPhotos;
     NSMutableArray *_selectedAssets;
     BOOL _isSelectOriginalPhoto;
@@ -124,8 +125,14 @@
     if (indexPath.row == _selectedPhotos.count) {
         BOOL showSheet = YES;
         if (showSheet) {
-            UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照",@"去相册选择", nil];
-            [sheet showInView:self.view];
+            MHActionSheet *actionSheet = [[MHActionSheet alloc] initSheetWithTitle:nil style:MHSheetStyleWeiChat itemTitles:@[@"拍照",@"去相册选择"]];
+            [actionSheet didFinishSelectIndex:^(NSInteger index, NSString *title) {
+                if (index == 0 ) {
+                    [self takePhoto];
+                } else {
+                    [self pushImagePickerController];
+                }
+            }];
         } else {
             [self pushImagePickerController];
         }
@@ -259,13 +266,16 @@
     AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
     if ((authStatus == AVAuthorizationStatusRestricted || authStatus == AVAuthorizationStatusDenied) && iOS7Later) {
         // 无相机权限 做一个友好的提示
-        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"无法使用相机" message:@"请在iPhone的""设置-隐私-相机""中允许访问相机" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
-        [alert show];
+//        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"无法使用相机" message:@"请在iPhone的""设置-隐私-相机""中允许访问相机" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
+//        [alert show];
+        showAlert(@"请在iPhone的""设置-隐私-相机""中允许访问相机");
+
         // 拍照之前还需要检查相册权限
     } else if ([[TZImageManager manager] authorizationStatus] == 2) { // 已被拒绝，没有相册权限，将无法保存拍的照片
-        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"无法访问相册" message:@"请在iPhone的""设置-隐私-相册""中允许访问相册" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
-        alert.tag = 1;
-        [alert show];
+//        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"无法访问相册" message:@"请在iPhone的""设置-隐私-相册""中允许访问相册" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
+//        alert.tag = 1;
+//        [alert show];
+        showAlert(@"请在iPhone的""设置-隐私-相册""中允许访问相册" );
     } else if ([[TZImageManager manager] authorizationStatus] == 0) { // 正在弹框询问用户是否允许访问相册，监听权限状态
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             return [self takePhoto];
@@ -279,7 +289,7 @@
             }
             [self presentViewController:_imagePickerVc animated:YES completion:nil];
         } else {
-            NSLog(@"模拟器中无法打开照相机,请在真机中使用");
+            showAlert(@"模拟器中无法打开照相机,请在真机中使用");
         }
     }
 }
@@ -334,15 +344,15 @@
     }
 }
 
-#pragma mark - UIActionSheetDelegate
-
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 0) { // take photo / 去拍照
-        [self takePhoto];
-    } else if (buttonIndex == 1) {
-        [self pushImagePickerController];
-    }
-}
+//#pragma mark - UIActionSheetDelegate
+//
+//- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+//    if (buttonIndex == 0) { // take photo / 去拍照
+//        [self takePhoto];
+//    } else if (buttonIndex == 1) {
+//        [self pushImagePickerController];
+//    }
+//}
 
 #pragma mark - UIAlertViewDelegate
 

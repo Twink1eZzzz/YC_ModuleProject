@@ -16,6 +16,7 @@
 #import "LoadDatashowInterfaceController.h"
 #import "SearchControllerController.h"
 #import "YCImagePickerViewController.h"
+#import "YCPhotoBrowserViewController.h"
 
 
 
@@ -63,7 +64,8 @@
                         @"网络连接失败页面/无数据界面",
                         @"加载数据是显示占位页面",
                         @"搜索界面",
-                        @"图片选择器"];
+                        @"图片选择器",
+                        @"图片浏览器"];
 }
 
 - (UIColor *)set_colorBackground
@@ -116,6 +118,9 @@
             break;
         case 6:
             [self ImagePickerController];
+            break;
+        case 7:
+            [self PhotoBrowser];
             break;
             
         default:
@@ -247,6 +252,14 @@
 {
     YCImagePickerViewController *imagePickerVC = [[YCImagePickerViewController alloc] init];
     [self.navigationController pushViewController:imagePickerVC animated:YES];
+}
+
+#pragma mark - 图片浏览器
+- (void)PhotoBrowser
+{
+    YCPhotoBrowserViewController *PhotoBrowserVC = [[YCPhotoBrowserViewController alloc]init];
+    [self.navigationController pushViewController:PhotoBrowserVC animated:YES];
+    
 }
 
 @end
