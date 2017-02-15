@@ -24,11 +24,13 @@ target 'ModuleProject' do
   pod 'MJRefresh','3.1.12'
   # QR
   pod 'ZXingObjC','3.2.1'
-  # 系统Alter疯转
+  # 系统Alter封装
   pod 'LBXAlertAction'
   # 高效圆角
   pod 'ZYCornerRadius','1.0.2'
   # 选择器
   pod 'STPickerView', '2.0'
+  # 图片选择器
+  pod 'TZImagePickerController'
 
 end

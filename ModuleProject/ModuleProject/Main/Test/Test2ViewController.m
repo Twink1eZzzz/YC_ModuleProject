@@ -15,6 +15,7 @@
 #import "ConnectionFailureViewController.h"
 #import "LoadDatashowInterfaceController.h"
 #import "SearchControllerController.h"
+#import "YCImagePickerViewController.h"
 
 
 
@@ -61,7 +62,8 @@
                         @"自定义弹窗",
                         @"网络连接失败页面/无数据界面",
                         @"加载数据是显示占位页面",
-                        @"搜索界面"];
+                        @"搜索界面",
+                        @"图片选择器"];
 }
 
 - (UIColor *)set_colorBackground
@@ -111,6 +113,9 @@
             break;
         case 5:
             [self searchController];
+            break;
+        case 6:
+            [self ImagePickerController];
             break;
             
         default:
@@ -235,6 +240,13 @@
 {
     SearchControllerController *searchVC = [[SearchControllerController alloc] init];
     [self.navigationController pushViewController:searchVC animated:YES];
+}
+
+#pragma mark - 图片选择器
+- (void)ImagePickerController
+{
+    YCImagePickerViewController *imagePickerVC = [[YCImagePickerViewController alloc] init];
+    [self.navigationController pushViewController:imagePickerVC animated:YES];
 }
 
 @end
