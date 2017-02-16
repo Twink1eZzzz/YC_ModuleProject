@@ -111,10 +111,10 @@
 {
     // 情景二：采用网络图片实现
     NSArray *imagesURLStrings = @[
-            @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
-            @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
-            @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg",
-            @"http://b260.photo.store.qq.com/psb?/V133mtjf2EM6MS/YxI3ONpgKEx*Ki8l2e3Xd4Ib0EV4RqIhKuP5pvBNWMs!/b/dEI0CJu0UgAA&bo=.wFTAQAAAAABB4g!&rf=viewer_4"
+            @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487814742&di=798816957e07ffc434a3e153c7d96f4f&imgtype=jpg&er=1&src=http%3A%2F%2Fwww.0989871564.com%2Fcustomer%2FC000351%2F201411218370013362.JPG",
+            @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487220024991&di=a0a555b0b367952f2211d35f10a762e5&imgtype=0&src=http%3A%2F%2Fwww.qnong.com.cn%2Fuploadfile%2F2016%2F0903%2F20160903085231300.jpeg",
+            @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487220124898&di=527789801e460be33b376a25b78a6a94&imgtype=0&src=http%3A%2F%2Fwww.tuq.cn%2Fupload_files%2Fother%2F447_20150731080743_wqnhk.jpg",
+            @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487220024990&di=933614bb2c0a9255f2829526a862547a&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fw%253D580%2Fsign%3Dad4cce30fffaaf5184e381b7bc5494ed%2F5c51c22a6059252db77d7b12369b033b5ab5b9e2.jpg"
     ];
 
     // 情景三：图片配文字
@@ -130,7 +130,6 @@
     _HeaderCycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
     [_tableView reloadData];
 }
-
 
 #pragma mark - 重写BaseViewController设置内容
 // 设置导航栏背景色

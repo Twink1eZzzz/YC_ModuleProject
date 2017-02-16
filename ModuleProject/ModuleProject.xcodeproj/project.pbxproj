@@ -11,6 +11,10 @@
 		2925F6A41E4C5F9E00380264 /* LoadDatashowInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2925F6A31E4C5F9E00380264 /* LoadDatashowInterfaceController.m */; };
 		2965625F1E2338BF00693F88 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2965625C1E2338BF00693F88 /* HomeViewController.m */; };
 		296562621E235AEA00693F88 /* Test3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 296562611E235AEA00693F88 /* Test3ViewController.m */; };
+		297BED6B1E55468200280BF3 /* YCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297BED6A1E55468200280BF3 /* YCLoginViewController.m */; };
+		297BED731E5550E800280BF3 /* HyLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 297BED6E1E5550E800280BF3 /* HyLoginButton.m */; };
+		297BED741E5550E800280BF3 /* HySpinerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 297BED701E5550E800280BF3 /* HySpinerLayer.m */; };
+		297BED751E5550E800280BF3 /* HyTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 297BED721E5550E800280BF3 /* HyTransitions.m */; };
 		29A9D61E1E5404B5008D4CB1 /* YCImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A9D61D1E5404B5008D4CB1 /* YCImagePickerViewController.m */; };
 		29A9D6211E5405B5008D4CB1 /* YCGridViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A9D6201E5405B5008D4CB1 /* YCGridViewFlowLayout.m */; };
 		29A9D6241E5405F2008D4CB1 /* YCTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A9D6231E5405F2008D4CB1 /* YCTestCell.m */; };
@@ -88,7 +92,6 @@
 		29BDA4041E1E418C0059B6C1 /* UIView+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BDA3F01E1E418C0059B6C1 /* UIView+Shake.m */; };
 		29BDA4051E1E418C0059B6C1 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BDA3F21E1E418C0059B6C1 /* UIView+Toast.m */; };
 		29BDA4061E1E418C0059B6C1 /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BDA3F41E1E418C0059B6C1 /* UIView+ViewController.m */; };
-		29BDA4071E1E418C0059B6C1 /* UIView+Visuals.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BDA3F61E1E418C0059B6C1 /* UIView+Visuals.m */; };
 		29BDA4111E1E464F0059B6C1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BDA4101E1E464F0059B6C1 /* Reachability.m */; };
 		29BDA41F1E1E55F80059B6C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29BDA4151E1E4A850059B6C1 /* Assets.xcassets */; };
 		29BDA4201E1E55F80059B6C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29BDA4161E1E4A850059B6C1 /* LaunchScreen.storyboard */; };
@@ -236,6 +239,14 @@
 		2965625C1E2338BF00693F88 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		296562601E235AEA00693F88 /* Test3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test3ViewController.h; sourceTree = "<group>"; };
 		296562611E235AEA00693F88 /* Test3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test3ViewController.m; sourceTree = "<group>"; };
+		297BED691E55468200280BF3 /* YCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCLoginViewController.h; sourceTree = "<group>"; };
+		297BED6A1E55468200280BF3 /* YCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCLoginViewController.m; sourceTree = "<group>"; };
+		297BED6D1E5550E800280BF3 /* HyLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyLoginButton.h; sourceTree = "<group>"; };
+		297BED6E1E5550E800280BF3 /* HyLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyLoginButton.m; sourceTree = "<group>"; };
+		297BED6F1E5550E800280BF3 /* HySpinerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HySpinerLayer.h; sourceTree = "<group>"; };
+		297BED701E5550E800280BF3 /* HySpinerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HySpinerLayer.m; sourceTree = "<group>"; };
+		297BED711E5550E800280BF3 /* HyTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyTransitions.h; sourceTree = "<group>"; };
+		297BED721E5550E800280BF3 /* HyTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyTransitions.m; sourceTree = "<group>"; };
 		29A9D61C1E5404B5008D4CB1 /* YCImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCImagePickerViewController.h; sourceTree = "<group>"; };
 		29A9D61D1E5404B5008D4CB1 /* YCImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCImagePickerViewController.m; sourceTree = "<group>"; };
 		29A9D61F1E5405B5008D4CB1 /* YCGridViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCGridViewFlowLayout.h; sourceTree = "<group>"; };
@@ -394,8 +405,6 @@
 		29BDA3F21E1E418C0059B6C1 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		29BDA3F31E1E418C0059B6C1 /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
 		29BDA3F41E1E418C0059B6C1 /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
-		29BDA3F51E1E418C0059B6C1 /* UIView+Visuals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Visuals.h"; sourceTree = "<group>"; };
-		29BDA3F61E1E418C0059B6C1 /* UIView+Visuals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Visuals.m"; sourceTree = "<group>"; };
 		29BDA40C1E1E438C0059B6C1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		29BDA40F1E1E464F0059B6C1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		29BDA4101E1E464F0059B6C1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -705,6 +714,34 @@
 			path = HomeView;
 			sourceTree = "<group>";
 		};
+		297BED671E55461D00280BF3 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				297BED681E55466000280BF3 /* Controller */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		297BED681E55466000280BF3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		297BED6C1E5550E800280BF3 /* LoginButton */ = {
+			isa = PBXGroup;
+			children = (
+				297BED6D1E5550E800280BF3 /* HyLoginButton.h */,
+				297BED6E1E5550E800280BF3 /* HyLoginButton.m */,
+				297BED6F1E5550E800280BF3 /* HySpinerLayer.h */,
+				297BED701E5550E800280BF3 /* HySpinerLayer.m */,
+				297BED711E5550E800280BF3 /* HyTransitions.h */,
+				297BED721E5550E800280BF3 /* HyTransitions.m */,
+			);
+			path = LoginButton;
+			sourceTree = "<group>";
+		};
 		29A9D6181E5400B8008D4CB1 /* ImagePickerController-图片选择器 */ = {
 			isa = PBXGroup;
 			children = (
@@ -978,6 +1015,7 @@
 				29BDA3641E1DEBA30059B6C1 /* Base */,
 				296562591E2338BF00693F88 /* Home */,
 				29BDA3961E1E15D80059B6C1 /* Me */,
+				297BED671E55461D00280BF3 /* Register */,
 				29BDA36C1E1DEBA30059B6C1 /* Login */,
 				59DDD5F00F332E7067FE20B1 /* Test */,
 			);
@@ -1030,6 +1068,8 @@
 		29BDA36D1E1DEBA30059B6C1 /* LoginController */ = {
 			isa = PBXGroup;
 			children = (
+				297BED691E55468200280BF3 /* YCLoginViewController.h */,
+				297BED6A1E55468200280BF3 /* YCLoginViewController.m */,
 			);
 			path = LoginController;
 			sourceTree = "<group>";
@@ -1044,6 +1084,7 @@
 		29BDA36F1E1DEBA30059B6C1 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
+				297BED6C1E5550E800280BF3 /* LoginButton */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -1289,8 +1330,6 @@
 				29BDA3F21E1E418C0059B6C1 /* UIView+Toast.m */,
 				29BDA3F31E1E418C0059B6C1 /* UIView+ViewController.h */,
 				29BDA3F41E1E418C0059B6C1 /* UIView+ViewController.m */,
-				29BDA3F51E1E418C0059B6C1 /* UIView+Visuals.h */,
-				29BDA3F61E1E418C0059B6C1 /* UIView+Visuals.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -2086,6 +2125,7 @@
 				29BDA4021E1E418C0059B6C1 /* UIView+Recursion.m in Sources */,
 				29E415D81E36006F00D7C1FB /* XMShareWechatUtil.m in Sources */,
 				29CB98651E45D168003092F7 /* XHLaunchAdView.m in Sources */,
+				297BED6B1E55468200280BF3 /* YCLoginViewController.m in Sources */,
 				2925F6A41E4C5F9E00380264 /* LoadDatashowInterfaceController.m in Sources */,
 				29A9D64A1E544EBF008D4CB1 /* PYPhotosPreviewController.m in Sources */,
 				29E415D71E36006F00D7C1FB /* XMShareUtil.m in Sources */,
@@ -2101,6 +2141,7 @@
 				29CB985D1E45D168003092F7 /* UIImageView+XHLaunchAdCache.m in Sources */,
 				29BDA3CC1E1E41810059B6C1 /* UIImage+GIF.m in Sources */,
 				29B5C9A41E4484F600317E85 /* LBXScanViewStyle.m in Sources */,
+				297BED731E5550E800280BF3 /* HyLoginButton.m in Sources */,
 				29D71FDC1E25C535002DDF0F /* FeThreeDotGlow.m in Sources */,
 				29B479D81E34B51600B6BCC5 /* YC_RefreshGifHeader.m in Sources */,
 				29BDA3881E1DF8D30059B6C1 /* BaseViewController.m in Sources */,
@@ -2146,6 +2187,7 @@
 				29D71FD31E25C535002DDF0F /* UIColor+flat.m in Sources */,
 				29D71F461E25C1DD002DDF0F /* AppDelegate.m in Sources */,
 				29BDA4431E1F4B150059B6C1 /* NetworkTool.m in Sources */,
+				297BED741E5550E800280BF3 /* HySpinerLayer.m in Sources */,
 				2965625F1E2338BF00693F88 /* HomeViewController.m in Sources */,
 				29A9D6241E5405F2008D4CB1 /* YCTestCell.m in Sources */,
 				29BDA4111E1E464F0059B6C1 /* Reachability.m in Sources */,
@@ -2166,7 +2208,6 @@
 				29A9D64F1E544EBF008D4CB1 /* PYProgressView.m in Sources */,
 				29A9D64C1E544EBF008D4CB1 /* PYPhotosViewController.m in Sources */,
 				29CB98601E45D168003092F7 /* XHLaunchAdCache.m in Sources */,
-				29BDA4071E1E418C0059B6C1 /* UIView+Visuals.m in Sources */,
 				29A9D6511E544EBF008D4CB1 /* PYPhotoBrowseView.m in Sources */,
 				29B5C9B21E4485E700317E85 /* ScanResultViewController.m in Sources */,
 				29A9D6481E544EBF008D4CB1 /* UIView+PYExtension.m in Sources */,
@@ -2183,6 +2224,7 @@
 				29B5C97D1E441AC000317E85 /* YXActionSheetButton.m in Sources */,
 				29A9D65A1E544EF3008D4CB1 /* DACircularProgressView.m in Sources */,
 				29B5C99E1E4484F600317E85 /* LBXScanNative.m in Sources */,
+				297BED751E5550E800280BF3 /* HyTransitions.m in Sources */,
 				29D71FDF1E25C535002DDF0F /* FeWifiManHub.m in Sources */,
 				59DDD2433B6E92739F579033 /* Test2ViewController.m in Sources */,
 				29D7A31B1E485B3900AF3312 /* MHSheetFoot.m in Sources */,

@@ -32,10 +32,15 @@
     [self setCornerRadius:8.0];
 }
 
-// 根据 提示文字字数，判断 HUD 显示时间
-- (NSTimeInterval)displayDurationForString:(NSString*)string
+//// 根据 提示文字字数，判断 HUD 显示时间
+//- (NSTimeInterval)displayDurationForString:(NSString*)string
+//{
+//    return MIN((float)string.length*0.03 + 0.5, 2.0);
+//}
+
+- (NSTimeInterval)maximumDismissTimeInterval
 {
-    return MIN((float)string.length*0.06 + 0.5, 2.0);
+    return 2;
 }
 
 // 修改 HUD 颜色，需要取消混合效果(使`backgroundColroForStyle`方法有效)

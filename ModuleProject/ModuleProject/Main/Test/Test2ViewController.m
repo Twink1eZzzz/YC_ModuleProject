@@ -17,6 +17,7 @@
 #import "SearchControllerController.h"
 #import "YCImagePickerViewController.h"
 #import "YCPhotoBrowserViewController.h"
+#import "YCLoginViewController.h"
 
 
 
@@ -65,7 +66,13 @@
                         @"加载数据是显示占位页面",
                         @"搜索界面",
                         @"图片选择器",
-                        @"图片浏览器"];
+                        @"图片浏览器",
+                        @"登录界面"];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
 }
 
 - (UIColor *)set_colorBackground
@@ -121,6 +128,9 @@
             break;
         case 7:
             [self PhotoBrowser];
+            break;
+        case 8:
+            [self LoginView];
             break;
             
         default:
@@ -259,7 +269,13 @@
 {
     YCPhotoBrowserViewController *PhotoBrowserVC = [[YCPhotoBrowserViewController alloc]init];
     [self.navigationController pushViewController:PhotoBrowserVC animated:YES];
-    
+}
+
+#pragma mark - 登录界面
+- (void)LoginView
+{
+    YCLoginViewController *LoginVC = [[YCLoginViewController alloc]init];
+    [self presentViewController:LoginVC animated:YES completion:nil];
 }
 
 @end
