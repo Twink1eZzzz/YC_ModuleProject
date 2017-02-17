@@ -34,5 +34,7 @@ target 'ModuleProject' do
   pod 'TZImagePickerController'
   # Core Data 框架
   pod 'MagicalRecord','2.3.2'
+  # 设计师颜色库 搭配色
+  pod 'ChameleonFramework'
 
 end

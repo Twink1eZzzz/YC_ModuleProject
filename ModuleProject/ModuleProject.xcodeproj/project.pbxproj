@@ -20,6 +20,8 @@
 		2958AB151E569E17005115A2 /* CYLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2958AB101E569E17005115A2 /* CYLTabBarController.m */; };
 		2958AB161E569E17005115A2 /* UIViewController+CYLTabBarControllerExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 2958AB121E569E17005115A2 /* UIViewController+CYLTabBarControllerExtention.m */; };
 		2958AB1E1E56CA5A005115A2 /* MarqueeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2958AB1D1E56CA5A005115A2 /* MarqueeLabel.m */; };
+		2958AB221E56F1D8005115A2 /* MPCoachMarks.m in Sources */ = {isa = PBXBuildFile; fileRef = 2958AB211E56F1D8005115A2 /* MPCoachMarks.m */; };
+		2958AB261E56F2DE005115A2 /* YCVectoringInstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2958AB251E56F2DE005115A2 /* YCVectoringInstructionsViewController.m */; };
 		2965625F1E2338BF00693F88 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2965625C1E2338BF00693F88 /* HomeViewController.m */; };
 		296562621E235AEA00693F88 /* Test3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 296562611E235AEA00693F88 /* Test3ViewController.m */; };
 		297BED6B1E55468200280BF3 /* YCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297BED6A1E55468200280BF3 /* YCLoginViewController.m */; };
@@ -273,6 +275,10 @@
 		2958AB121E569E17005115A2 /* UIViewController+CYLTabBarControllerExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CYLTabBarControllerExtention.m"; sourceTree = "<group>"; };
 		2958AB1C1E56CA5A005115A2 /* MarqueeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeLabel.h; sourceTree = "<group>"; };
 		2958AB1D1E56CA5A005115A2 /* MarqueeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeLabel.m; sourceTree = "<group>"; };
+		2958AB201E56F1D8005115A2 /* MPCoachMarks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCoachMarks.h; sourceTree = "<group>"; };
+		2958AB211E56F1D8005115A2 /* MPCoachMarks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCoachMarks.m; sourceTree = "<group>"; };
+		2958AB241E56F2DE005115A2 /* YCVectoringInstructionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCVectoringInstructionsViewController.h; sourceTree = "<group>"; };
+		2958AB251E56F2DE005115A2 /* YCVectoringInstructionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCVectoringInstructionsViewController.m; sourceTree = "<group>"; };
 		2965625B1E2338BF00693F88 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		2965625C1E2338BF00693F88 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		296562601E235AEA00693F88 /* Test3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test3ViewController.h; sourceTree = "<group>"; };
@@ -793,6 +799,25 @@
 			path = HorseRaceLampView;
 			sourceTree = "<group>";
 		};
+		2958AB1F1E56F1D8005115A2 /* MPCoachMarks */ = {
+			isa = PBXGroup;
+			children = (
+				2958AB201E56F1D8005115A2 /* MPCoachMarks.h */,
+				2958AB211E56F1D8005115A2 /* MPCoachMarks.m */,
+			);
+			path = MPCoachMarks;
+			sourceTree = "<group>";
+		};
+		2958AB231E56F2BB005115A2 /* VectoringInstructions-界面引导指示 */ = {
+			isa = PBXGroup;
+			children = (
+				2958AB241E56F2DE005115A2 /* YCVectoringInstructionsViewController.h */,
+				2958AB251E56F2DE005115A2 /* YCVectoringInstructionsViewController.m */,
+			);
+			name = "VectoringInstructions-界面引导指示";
+			path = VectoringInstructions;
+			sourceTree = "<group>";
+		};
 		296562591E2338BF00693F88 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -1012,6 +1037,7 @@
 		29B5C9811E44780300317E85 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2958AB231E56F2BB005115A2 /* VectoringInstructions-界面引导指示 */,
 				297BED9B1E55AC7000280BF3 /* CoreDataViewController-数据库 */,
 				29A9D65C1E5451C9008D4CB1 /* PhotoBrowser-图片浏览器 */,
 				29A9D6181E5400B8008D4CB1 /* ImagePickerController-图片选择器 */,
@@ -1879,6 +1905,7 @@
 		59DDD3C87B8F4C87AE33F33E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2958AB1F1E56F1D8005115A2 /* MPCoachMarks */,
 				2958AB1B1E56CA5A005115A2 /* HorseRaceLampView */,
 			);
 			path = View;
@@ -2244,6 +2271,7 @@
 				2958AB051E5697F1005115A2 /* UIBarButtonItem+WZLBadge.m in Sources */,
 				29A9D6491E544EBF008D4CB1 /* PYPhotosNavigationController.m in Sources */,
 				29CB98631E45D168003092F7 /* XHLaunchAdDownloader.m in Sources */,
+				2958AB221E56F1D8005115A2 /* MPCoachMarks.m in Sources */,
 				29D71FD51E25C535002DDF0F /* FeHandwriting.m in Sources */,
 				29CB985B1E45D168003092F7 /* NSString+XHLaunchAd.m in Sources */,
 				29CB985E1E45D168003092F7 /* XHLaunchAd.m in Sources */,
@@ -2257,6 +2285,7 @@
 				29CB98691E45D32A003092F7 /* AppDelegate+YCLaunchAd.m in Sources */,
 				29BDA4001E1E418C0059B6C1 /* UIView+GestureCallback.m in Sources */,
 				29CB98641E45D168003092F7 /* XHLaunchAdImageManager.m in Sources */,
+				2958AB261E56F2DE005115A2 /* YCVectoringInstructionsViewController.m in Sources */,
 				29B5C99F1E4484F600317E85 /* LBXScanNetAnimation.m in Sources */,
 				29B5C9A01E4484F600317E85 /* LBXScanResult.m in Sources */,
 				29D71FD41E25C535002DDF0F /* FeEqualize.m in Sources */,
@@ -2565,6 +2594,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TimeTech.ModuleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2596,6 +2626,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TimeTech.ModuleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

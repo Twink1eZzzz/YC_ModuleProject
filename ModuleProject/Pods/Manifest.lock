@@ -1,4 +1,7 @@
 PODS:
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
   - DZNEmptyDataSet (1.8.1)
   - LBXAlertAction (1.0.3)
   - MagicalRecord (2.3.2):
@@ -31,6 +34,7 @@ PODS:
   - ZYCornerRadius (1.0.2)
 
 DEPENDENCIES:
+  - ChameleonFramework
   - DZNEmptyDataSet (= 1.8.1)
   - LBXAlertAction
   - MagicalRecord (= 2.3.2)
@@ -48,6 +52,7 @@ DEPENDENCIES:
   - ZYCornerRadius (= 1.0.2)
 
 SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   LBXAlertAction: e904f511f0e44fde323e056691d7a8a99d71faba
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
@@ -65,6 +70,6 @@ SPEC CHECKSUMS:
   ZXingObjC: bbf7b8f0cf8933fdd33eb4f9f46e22308552869b
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: 5a2de8ccae03e5d8fb565da86b5658e88c0bdd47
+PODFILE CHECKSUM: 38db3534bd74ef7cddd5d5d9d037d0f6b4d5377d
 
 COCOAPODS: 1.0.0

@@ -20,6 +20,7 @@
 #import "YCLoginViewController.h"
 #import "YCCoreDataViewController.h"
 #import "MarqueeLabel.h"
+#import "YCVectoringInstructionsViewController.h"
 
 
 
@@ -53,7 +54,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"test2";
+    self.navigationItem.title = @"实例演示(Test2ViewController)";
     self.view.backgroundColor = [UIColor whiteColor];
     self.tableView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_tableView];
@@ -62,17 +63,17 @@
     }];
     
     
-    MarqueeLabel *marqueeView = [[MarqueeLabel alloc]initWithFrame:CGRectMake(0, 0, Main_Screen_Width, 30) duration:15.0 andFadeLength:10.0f];
+    MarqueeLabel *marqueeView = [[MarqueeLabel alloc]initWithFrame:CGRectMake(0, 0, Main_Screen_Width, 35) duration:15.0 andFadeLength:10.0f];
     marqueeView.text = @"事例演示,有什么好的建议请联系我哟！一起进步！邮箱📮:545002666@qq.com";
-    marqueeView.backgroundColor = [UIColor orangeColor];
-    marqueeView.textColor = [UIColor whiteColor];
+    marqueeView.backgroundColor = FlatSandDark;
+    marqueeView.textColor = FlatBlue;
     marqueeView.leadingBuffer = 30.0f;
     marqueeView.trailingBuffer = 20.0f;
     marqueeView.animationCurve = UIViewAnimationOptionCurveEaseInOut;
     marqueeView.marqueeType = MLContinuous;
     
-    UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, Main_Screen_Width, 30)];
-    headerView.backgroundColor = [UIColor orangeColor];
+    UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, Main_Screen_Width, 35)];
+    headerView.backgroundColor = FlatSandDark;
     
     [headerView addSubview:marqueeView];
     
@@ -89,7 +90,8 @@
                         @"图片选择器",
                         @"图片浏览器",
                         @"登录界面",
-                        @"Core Data 数据库"];
+                        @"Core Data 数据库",
+                        @"界面引导指示"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -156,6 +158,9 @@
             break;
         case 9:
             [self CoreData];
+            break;
+        case 10:
+            [self VectoringInstructions];
             break;
             
         default:
@@ -308,6 +313,13 @@
 {
     YCCoreDataViewController *coreDataVC = [[YCCoreDataViewController alloc]init];
     [self.navigationController pushViewController:coreDataVC animated:YES];
+}
+
+#pragma mark - 界面引导指示
+- (void)VectoringInstructions
+{
+    YCVectoringInstructionsViewController *VectoringInstructionsVC = [[YCVectoringInstructionsViewController alloc]init];
+    [self.navigationController pushViewController:VectoringInstructionsVC animated:YES];
 }
 
 
