@@ -2,6 +2,9 @@ PODS:
   - CYLTabBarController (1.10.0)
   - DZNEmptyDataSet (1.8.1)
   - LBXAlertAction (1.0.3)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
   - Masonry (1.0.2)
   - MJRefresh (3.1.12)
   - SDCycleScrollView (1.65):
@@ -32,6 +35,7 @@ DEPENDENCIES:
   - CYLTabBarController (= 1.10.0)
   - DZNEmptyDataSet (= 1.8.1)
   - LBXAlertAction
+  - MagicalRecord (= 2.3.2)
   - Masonry (= 1.0.2)
   - MJRefresh (= 3.1.12)
   - SDCycleScrollView (= 1.65)
@@ -49,6 +53,7 @@ SPEC CHECKSUMS:
   CYLTabBarController: 2de9a4c26f50d33574398becf8e7b0aaed794240
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   LBXAlertAction: e904f511f0e44fde323e056691d7a8a99d71faba
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
@@ -63,6 +68,6 @@ SPEC CHECKSUMS:
   ZXingObjC: bbf7b8f0cf8933fdd33eb4f9f46e22308552869b
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: 54411e28c82947a341a6f6d62084c042d957e0f7
+PODFILE CHECKSUM: 973185645756bfa50d4a736f7f1e3856bb53caf7
 
 COCOAPODS: 1.0.0

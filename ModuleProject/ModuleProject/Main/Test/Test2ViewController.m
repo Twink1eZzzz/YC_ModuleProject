@@ -18,6 +18,7 @@
 #import "YCImagePickerViewController.h"
 #import "YCPhotoBrowserViewController.h"
 #import "YCLoginViewController.h"
+#import "YCCoreDataViewController.h"
 
 
 
@@ -67,7 +68,8 @@
                         @"搜索界面",
                         @"图片选择器",
                         @"图片浏览器",
-                        @"登录界面"];
+                        @"登录界面",
+                        @"Core Data 数据库"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -131,6 +133,9 @@
             break;
         case 8:
             [self LoginView];
+            break;
+        case 9:
+            [self CoreData];
             break;
             
         default:
@@ -277,5 +282,13 @@
     YCLoginViewController *LoginVC = [[YCLoginViewController alloc]init];
     [self presentViewController:LoginVC animated:YES completion:nil];
 }
+
+#pragma mark - CoreDatas数据库
+- (void)CoreData
+{
+    YCCoreDataViewController *coreDataVC = [[YCCoreDataViewController alloc]init];
+    [self.navigationController pushViewController:coreDataVC animated:YES];
+}
+
 
 @end

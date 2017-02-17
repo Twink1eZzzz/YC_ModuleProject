@@ -19,5 +19,6 @@ YC_ModuleProject实际是为了项目初期搭建框架准备的，项目集成�
 * 增加图片选择器
 * 增加图片浏览器
 * 增加登录界面样式
+* 增加coreData数据库，第三方库MagicalRecord
 
 

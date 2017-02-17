@@ -30,6 +30,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 网络配置
     [[NetworkTool sharedNetworkTool] setupConfigWithServer:BASEURL Header:nil Parameters:nil];
+    
+    // Core Data 初始化
+    [MagicalRecord setupCoreDataStack];
 
     // window初始化
     _window = [[UIWindow alloc]init];
@@ -156,6 +159,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [MagicalRecord cleanUp];
 }
 
 

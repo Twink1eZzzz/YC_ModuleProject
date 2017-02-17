@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		290CAC721E4DC5510091074B /* SearchControllerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 290CAC711E4DC5510091074B /* SearchControllerController.m */; };
 		2925F6A41E4C5F9E00380264 /* LoadDatashowInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2925F6A31E4C5F9E00380264 /* LoadDatashowInterfaceController.m */; };
+		2958AAF41E568671005115A2 /* Person+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2958AAF11E568671005115A2 /* Person+CoreDataClass.m */; };
+		2958AAF51E568671005115A2 /* Person+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2958AAF31E568671005115A2 /* Person+CoreDataProperties.m */; };
 		2965625F1E2338BF00693F88 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2965625C1E2338BF00693F88 /* HomeViewController.m */; };
 		296562621E235AEA00693F88 /* Test3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 296562611E235AEA00693F88 /* Test3ViewController.m */; };
 		297BED6B1E55468200280BF3 /* YCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297BED6A1E55468200280BF3 /* YCLoginViewController.m */; };
 		297BED731E5550E800280BF3 /* HyLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 297BED6E1E5550E800280BF3 /* HyLoginButton.m */; };
 		297BED741E5550E800280BF3 /* HySpinerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 297BED701E5550E800280BF3 /* HySpinerLayer.m */; };
 		297BED751E5550E800280BF3 /* HyTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 297BED721E5550E800280BF3 /* HyTransitions.m */; };
+		297BED901E55AAF200280BF3 /* ModuleProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 297BED8E1E55AAF200280BF3 /* ModuleProject.xcdatamodeld */; };
+		297BED9E1E55AC8B00280BF3 /* YCCoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297BED9D1E55AC8B00280BF3 /* YCCoreDataViewController.m */; };
 		29A9D61E1E5404B5008D4CB1 /* YCImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A9D61D1E5404B5008D4CB1 /* YCImagePickerViewController.m */; };
 		29A9D6211E5405B5008D4CB1 /* YCGridViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A9D6201E5405B5008D4CB1 /* YCGridViewFlowLayout.m */; };
 		29A9D6241E5405F2008D4CB1 /* YCTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A9D6231E5405F2008D4CB1 /* YCTestCell.m */; };
@@ -235,6 +239,10 @@
 		290CAC711E4DC5510091074B /* SearchControllerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchControllerController.m; sourceTree = "<group>"; };
 		2925F6A21E4C5F9E00380264 /* LoadDatashowInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadDatashowInterfaceController.h; sourceTree = "<group>"; };
 		2925F6A31E4C5F9E00380264 /* LoadDatashowInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadDatashowInterfaceController.m; sourceTree = "<group>"; };
+		2958AAF01E568671005115A2 /* Person+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+CoreDataClass.h"; sourceTree = "<group>"; };
+		2958AAF11E568671005115A2 /* Person+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+CoreDataClass.m"; sourceTree = "<group>"; };
+		2958AAF21E568671005115A2 /* Person+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2958AAF31E568671005115A2 /* Person+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2965625B1E2338BF00693F88 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		2965625C1E2338BF00693F88 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		296562601E235AEA00693F88 /* Test3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test3ViewController.h; sourceTree = "<group>"; };
@@ -247,6 +255,10 @@
 		297BED701E5550E800280BF3 /* HySpinerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HySpinerLayer.m; sourceTree = "<group>"; };
 		297BED711E5550E800280BF3 /* HyTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyTransitions.h; sourceTree = "<group>"; };
 		297BED721E5550E800280BF3 /* HyTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyTransitions.m; sourceTree = "<group>"; };
+		297BED8F1E55AAF200280BF3 /* ModuleProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ModuleProject.xcdatamodel; sourceTree = "<group>"; };
+		297BED9C1E55AC8B00280BF3 /* YCCoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCCoreDataViewController.h; sourceTree = "<group>"; };
+		297BED9D1E55AC8B00280BF3 /* YCCoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCCoreDataViewController.m; sourceTree = "<group>"; };
+		297BEDA51E55B20E00280BF3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29A9D61C1E5404B5008D4CB1 /* YCImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCImagePickerViewController.h; sourceTree = "<group>"; };
 		29A9D61D1E5404B5008D4CB1 /* YCImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCImagePickerViewController.m; sourceTree = "<group>"; };
 		29A9D61F1E5405B5008D4CB1 /* YCGridViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCGridViewFlowLayout.h; sourceTree = "<group>"; };
@@ -742,6 +754,16 @@
 			path = LoginButton;
 			sourceTree = "<group>";
 		};
+		297BED9B1E55AC7000280BF3 /* CoreDataViewController-数据库 */ = {
+			isa = PBXGroup;
+			children = (
+				297BED9C1E55AC8B00280BF3 /* YCCoreDataViewController.h */,
+				297BED9D1E55AC8B00280BF3 /* YCCoreDataViewController.m */,
+			);
+			name = "CoreDataViewController-数据库";
+			path = CoreDataViewController;
+			sourceTree = "<group>";
+		};
 		29A9D6181E5400B8008D4CB1 /* ImagePickerController-图片选择器 */ = {
 			isa = PBXGroup;
 			children = (
@@ -886,6 +908,7 @@
 		29B5C9811E44780300317E85 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				297BED9B1E55AC7000280BF3 /* CoreDataViewController-数据库 */,
 				29A9D65C1E5451C9008D4CB1 /* PhotoBrowser-图片浏览器 */,
 				29A9D6181E5400B8008D4CB1 /* ImagePickerController-图片选择器 */,
 				290CAC6F1E4DC5210091074B /* SearchController-搜索控制器 */,
@@ -1131,6 +1154,11 @@
 		29BDA37C1E1DEC5F0059B6C1 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				2958AAF01E568671005115A2 /* Person+CoreDataClass.h */,
+				2958AAF11E568671005115A2 /* Person+CoreDataClass.m */,
+				2958AAF21E568671005115A2 /* Person+CoreDataProperties.h */,
+				2958AAF31E568671005115A2 /* Person+CoreDataProperties.m */,
+				297BED8E1E55AAF200280BF3 /* ModuleProject.xcdatamodeld */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -1854,6 +1882,7 @@
 		9EF4E545AF93C6E8BE1E0D20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				297BEDA51E55B20E00280BF3 /* CoreData.framework */,
 				29E415881E35FD2500D7C1FB /* libiconv.tbd */,
 				29E415861E35FD1900D7C1FB /* libstdc++.tbd */,
 				29E415841E35FD0D00D7C1FB /* libz.tbd */,
@@ -2124,6 +2153,7 @@
 				29D71FD41E25C535002DDF0F /* FeEqualize.m in Sources */,
 				29BDA4021E1E418C0059B6C1 /* UIView+Recursion.m in Sources */,
 				29E415D81E36006F00D7C1FB /* XMShareWechatUtil.m in Sources */,
+				2958AAF41E568671005115A2 /* Person+CoreDataClass.m in Sources */,
 				29CB98651E45D168003092F7 /* XHLaunchAdView.m in Sources */,
 				297BED6B1E55468200280BF3 /* YCLoginViewController.m in Sources */,
 				2925F6A41E4C5F9E00380264 /* LoadDatashowInterfaceController.m in Sources */,
@@ -2158,6 +2188,7 @@
 				29BDA3C61E1E41810059B6C1 /* UIImage+BetterFace.m in Sources */,
 				29B5C97E1E441AC000317E85 /* YXCustomActionSheet.m in Sources */,
 				29BDA3F71E1E418C0059B6C1 /* UIView+Animation.m in Sources */,
+				2958AAF51E568671005115A2 /* Person+CoreDataProperties.m in Sources */,
 				29D71FD91E25C535002DDF0F /* FeRollingLoader.m in Sources */,
 				29CB985F1E45D168003092F7 /* XHLaunchAdButton.m in Sources */,
 				29D7A3081E48576100AF3312 /* TextHelper.m in Sources */,
@@ -2189,6 +2220,7 @@
 				29BDA4431E1F4B150059B6C1 /* NetworkTool.m in Sources */,
 				297BED741E5550E800280BF3 /* HySpinerLayer.m in Sources */,
 				2965625F1E2338BF00693F88 /* HomeViewController.m in Sources */,
+				297BED901E55AAF200280BF3 /* ModuleProject.xcdatamodeld in Sources */,
 				29A9D6241E5405F2008D4CB1 /* YCTestCell.m in Sources */,
 				29BDA4111E1E464F0059B6C1 /* Reachability.m in Sources */,
 				29D71FDD1E25C535002DDF0F /* FeVietNamBar.m in Sources */,
@@ -2199,6 +2231,7 @@
 				29B479D71E34B51600B6BCC5 /* YC_RefreshGifFooter.m in Sources */,
 				29BDA3D31E1E41810059B6C1 /* UIImage+Vector.m in Sources */,
 				29A9D61E1E5404B5008D4CB1 /* YCImagePickerViewController.m in Sources */,
+				297BED9E1E55AC8B00280BF3 /* YCCoreDataViewController.m in Sources */,
 				29BDA3CF1E1E41810059B6C1 /* UIImage+PDF.m in Sources */,
 				29BDA4281E1F31800059B6C1 /* YC_ProgressHUD.m in Sources */,
 				29D71FDA1E25C535002DDF0F /* FeSpinnerTenDot.m in Sources */,
@@ -2539,6 +2572,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		297BED8E1E55AAF200280BF3 /* ModuleProject.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				297BED8F1E55AAF200280BF3 /* ModuleProject.xcdatamodel */,
+			);
+			currentVersion = 297BED8F1E55AAF200280BF3 /* ModuleProject.xcdatamodel */;
+			path = ModuleProject.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 29BDA31D1E1DD9980059B6C1 /* Project object */;
 }
