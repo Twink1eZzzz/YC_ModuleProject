@@ -4,8 +4,6 @@ inhibit_all_warnings!
 # 国内使用 pod update --verbose --no-repo-update
 
 target 'ModuleProject' do
-  # 自定义TabBar
-  pod 'CYLTabBarController', '1.10.0'
   # 指示器
   pod 'SVProgressHUD','2.1.2'
   # 网络库
@@ -35,6 +33,6 @@ target 'ModuleProject' do
   # 图片选择器
   pod 'TZImagePickerController'
   # Core Data 框架
-  pod "MagicalRecord",'2.3.2'
+  pod 'MagicalRecord','2.3.2'
 
 end

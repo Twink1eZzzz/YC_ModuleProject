@@ -19,7 +19,7 @@
 #import "YCPhotoBrowserViewController.h"
 #import "YCLoginViewController.h"
 #import "YCCoreDataViewController.h"
-
+#import "MarqueeLabel.h"
 
 
 
@@ -29,6 +29,7 @@
 #import "LBXScanWrapper.h"
 #import "YXCustomActionSheet.h"
 #import "UINavigationBar+Awesome.h"
+
 
 @interface Test2ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -59,6 +60,25 @@
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
+    
+    
+    MarqueeLabel *marqueeView = [[MarqueeLabel alloc]initWithFrame:CGRectMake(0, 0, Main_Screen_Width, 30) duration:15.0 andFadeLength:10.0f];
+    marqueeView.text = @"事例演示,有什么好的建议请联系我哟！一起进步！邮箱📮:545002666@qq.com";
+    marqueeView.backgroundColor = [UIColor orangeColor];
+    marqueeView.textColor = [UIColor whiteColor];
+    marqueeView.leadingBuffer = 30.0f;
+    marqueeView.trailingBuffer = 20.0f;
+    marqueeView.animationCurve = UIViewAnimationOptionCurveEaseInOut;
+    marqueeView.marqueeType = MLContinuous;
+    
+    UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, Main_Screen_Width, 30)];
+    headerView.backgroundColor = [UIColor orangeColor];
+    
+    [headerView addSubview:marqueeView];
+    
+    self.tableView.tableHeaderView = headerView;
+    
+    
     
     self.arrayItems = @[@"二维码扫描",
                         @"第三方分享",

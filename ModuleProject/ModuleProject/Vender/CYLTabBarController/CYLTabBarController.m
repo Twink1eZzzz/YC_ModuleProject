@@ -40,6 +40,7 @@ static void * const CYLSwappableImageViewDefaultOffsetContext = (void*)&CYLSwapp
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // 处理tabBar，使用自定义 tabBar 添加 发布按钮
     [self setUpTabBar];
     // KVO注册监听
@@ -53,6 +54,17 @@ static void * const CYLSwappableImageViewDefaultOffsetContext = (void*)&CYLSwapp
 //Fix issue #93
 - (void)viewDidLayoutSubviews {
     [self.tabBar layoutSubviews];
+    UITabBarItem *firstItem = self.tabBar.items[0];
+    firstItem.badgeCenterOffset = CGPointMake(0, 0);
+    [firstItem showBadgeWithStyle:WBadgeStyleNew value:0 animationType:WBadgeAnimTypeShake];
+    
+    UITabBarItem *secondItem = self.tabBar.items[1];
+    secondItem.badgeCenterOffset = CGPointMake(0, 0);
+    [secondItem showBadgeWithStyle:WBadgeStyleNumber value:100 animationType:WBadgeAnimTypeNone];
+    
+    UITabBarItem *thridItem = self.tabBar.items[2];
+    thridItem.badgeCenterOffset = CGPointMake(0, 0);
+    [thridItem showBadge];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -290,6 +302,25 @@ static void * const CYLSwappableImageViewDefaultOffsetContext = (void*)&CYLSwapp
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
     [[self cyl_tabBarController] updateSelectionStatusIfNeededForTabBarController:tabBarController shouldSelectViewController:viewController];
     return YES;
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    switch (tabBarController.selectedIndex) {
+        case 0:
+            [self.tabBar.items[0] clearBadge];
+            break;
+        case 1:
+            [self.tabBar.items[1] clearBadge];
+            break;
+        case 2:
+            [self.tabBar.items[2] clearBadge];
+            break;
+            
+        default:
+            break;
+    }
+    
 }
 
 @end

@@ -533,7 +533,7 @@ extern NSString * const WeiboSDKGetAidFailNotification;
 
 /**
  返回一个 WBPaymentRequest 对象
- @param message 需要发送给微博客户端程序的消息对象
+ @param order 需要发送给微博客户端程序的消息对象
  @return 返回一个*自动释放的*WBSendMessageToWeiboRequest对象
  */
 + (id)requestWithOrder:(WBOrderObject *)order;

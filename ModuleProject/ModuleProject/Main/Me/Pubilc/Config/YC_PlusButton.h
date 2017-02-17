@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Twinkle. All rights reserved.
 //
 
-#import <CYLTabBarController/CYLTabBarController.h>
+#import "CYLTabBarController.h"
 
 @interface YC_PlusButton : CYLPlusButton<CYLPlusButtonSubclassing>
 

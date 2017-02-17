@@ -17,6 +17,7 @@
 #import "YYModel.h"
 #import "UIView+Frame.h"
 #import <MagicalRecord/MagicalRecord.h>
+#import "WZLBadgeImport.h"
 
 //define this constant if you want to use Masonry without the 'mas_' prefix
 #define MAS_SHORTHAND

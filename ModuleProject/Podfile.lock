@@ -1,5 +1,4 @@
 PODS:
-  - CYLTabBarController (1.10.0)
   - DZNEmptyDataSet (1.8.1)
   - LBXAlertAction (1.0.3)
   - MagicalRecord (2.3.2):
@@ -32,7 +31,6 @@ PODS:
   - ZYCornerRadius (1.0.2)
 
 DEPENDENCIES:
-  - CYLTabBarController (= 1.10.0)
   - DZNEmptyDataSet (= 1.8.1)
   - LBXAlertAction
   - MagicalRecord (= 2.3.2)
@@ -50,7 +48,6 @@ DEPENDENCIES:
   - ZYCornerRadius (= 1.0.2)
 
 SPEC CHECKSUMS:
-  CYLTabBarController: 2de9a4c26f50d33574398becf8e7b0aaed794240
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   LBXAlertAction: e904f511f0e44fde323e056691d7a8a99d71faba
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
@@ -68,6 +65,6 @@ SPEC CHECKSUMS:
   ZXingObjC: bbf7b8f0cf8933fdd33eb4f9f46e22308552869b
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: 973185645756bfa50d4a736f7f1e3856bb53caf7
+PODFILE CHECKSUM: 5a2de8ccae03e5d8fb565da86b5658e88c0bdd47
 
 COCOAPODS: 1.0.0

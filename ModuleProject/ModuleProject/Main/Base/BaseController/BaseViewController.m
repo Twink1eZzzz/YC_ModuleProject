@@ -154,7 +154,7 @@ static NSString* const kURL_Reachability__Address=@"www.baidu.com";
 {
     if ([self respondsToSelector:@selector(set_leftBarButtonItemWithImage)]) {
         UIImage *image = [self set_leftBarButtonItemWithImage];
-        UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStyleBordered target:self  action:@selector(left_click:)];
+        UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStylePlain target:self  action:@selector(left_click:)];
         self.navigationItem.backBarButtonItem = item;
     }
 }
@@ -163,7 +163,7 @@ static NSString* const kURL_Reachability__Address=@"www.baidu.com";
 {
     if ([self respondsToSelector:@selector(set_rightBarButtonItemWithImage)]) {
         UIImage *image = [self set_rightBarButtonItemWithImage];
-        UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStyleBordered target:self  action:@selector(right_click:)];
+        UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStylePlain target:self  action:@selector(right_click:)];
         self.navigationItem.rightBarButtonItem = item;
     }
 }

@@ -35,9 +35,7 @@
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, Main_Screen_Width, Main_Screen_Height) style:UITableViewStylePlain];
         _HeaderCycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, Main_Screen_Width, 250) delegate:self placeholderImage:nil];
-        _headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Main_Screen_Width, 250)];
-        [_headerView addSubview:_HeaderCycleScrollView];
-        _tableView.tableHeaderView = _headerView;
+        _tableView.tableHeaderView = _HeaderCycleScrollView;
         _tableView.dataSource = self;
         _tableView.delegate = self;
     }
