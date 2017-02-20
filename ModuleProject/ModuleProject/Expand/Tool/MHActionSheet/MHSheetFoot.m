@@ -11,6 +11,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     _footButton.backgroundColor = [UIColor whiteColor];
     [_footButton setTitle:@"取消" forState:UIControlStateNormal];
     

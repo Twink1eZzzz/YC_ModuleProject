@@ -49,6 +49,13 @@
 		29A9D65A1E544EF3008D4CB1 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A9D6571E544EF3008D4CB1 /* DACircularProgressView.m */; };
 		29A9D65B1E544EF3008D4CB1 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A9D6591E544EF3008D4CB1 /* DALabeledCircularProgressView.m */; };
 		29A9D65F1E5451F6008D4CB1 /* YCPhotoBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A9D65E1E5451F6008D4CB1 /* YCPhotoBrowserViewController.m */; };
+		29B3D8301E5AC1560036D7A4 /* YC_CoordinateConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B3D82F1E5AC1560036D7A4 /* YC_CoordinateConvert.m */; };
+		29B3D8331E5AC1BF0036D7A4 /* YC_LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B3D8321E5AC1BF0036D7A4 /* YC_LocationManager.m */; };
+		29B3D8371E5AC4C10036D7A4 /* YCLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B3D8361E5AC4C10036D7A4 /* YCLocationViewController.m */; };
+		29B3D8391E5AC5DB0036D7A4 /* YCLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29B3D8381E5AC5DB0036D7A4 /* YCLocationViewController.xib */; };
+		29B3D88E1E5AD5EF0036D7A4 /* SIDADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B3D88D1E5AD5EF0036D7A4 /* SIDADView.m */; };
+		29B3D8921E5AEA7D0036D7A4 /* YCRegularManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B3D8911E5AEA7D0036D7A4 /* YCRegularManager.m */; };
+		29B3D8961E5AF14B0036D7A4 /* SecrityHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B3D8951E5AF14B0036D7A4 /* SecrityHandle.m */; };
 		29B479D71E34B51600B6BCC5 /* YC_RefreshGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B479D41E34B51600B6BCC5 /* YC_RefreshGifFooter.m */; };
 		29B479D81E34B51600B6BCC5 /* YC_RefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B479D61E34B51600B6BCC5 /* YC_RefreshGifHeader.m */; };
 		29B5C97D1E441AC000317E85 /* YXActionSheetButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B5C9781E441AC000317E85 /* YXActionSheetButton.m */; };
@@ -333,6 +340,19 @@
 		29A9D6591E544EF3008D4CB1 /* DALabeledCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DALabeledCircularProgressView.m; sourceTree = "<group>"; };
 		29A9D65D1E5451F6008D4CB1 /* YCPhotoBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCPhotoBrowserViewController.h; sourceTree = "<group>"; };
 		29A9D65E1E5451F6008D4CB1 /* YCPhotoBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCPhotoBrowserViewController.m; sourceTree = "<group>"; };
+		29B3D82E1E5AC1560036D7A4 /* YC_CoordinateConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YC_CoordinateConvert.h; sourceTree = "<group>"; };
+		29B3D82F1E5AC1560036D7A4 /* YC_CoordinateConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YC_CoordinateConvert.m; sourceTree = "<group>"; };
+		29B3D8311E5AC1BF0036D7A4 /* YC_LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YC_LocationManager.h; sourceTree = "<group>"; };
+		29B3D8321E5AC1BF0036D7A4 /* YC_LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YC_LocationManager.m; sourceTree = "<group>"; };
+		29B3D8351E5AC4C10036D7A4 /* YCLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCLocationViewController.h; sourceTree = "<group>"; };
+		29B3D8361E5AC4C10036D7A4 /* YCLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCLocationViewController.m; sourceTree = "<group>"; };
+		29B3D8381E5AC5DB0036D7A4 /* YCLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCLocationViewController.xib; sourceTree = "<group>"; };
+		29B3D88C1E5AD5EF0036D7A4 /* SIDADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIDADView.h; sourceTree = "<group>"; };
+		29B3D88D1E5AD5EF0036D7A4 /* SIDADView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIDADView.m; sourceTree = "<group>"; };
+		29B3D8901E5AEA7D0036D7A4 /* YCRegularManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCRegularManager.h; sourceTree = "<group>"; };
+		29B3D8911E5AEA7D0036D7A4 /* YCRegularManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCRegularManager.m; sourceTree = "<group>"; };
+		29B3D8941E5AF14B0036D7A4 /* SecrityHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecrityHandle.h; sourceTree = "<group>"; };
+		29B3D8951E5AF14B0036D7A4 /* SecrityHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecrityHandle.m; sourceTree = "<group>"; };
 		29B479D31E34B51600B6BCC5 /* YC_RefreshGifFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YC_RefreshGifFooter.h; sourceTree = "<group>"; };
 		29B479D41E34B51600B6BCC5 /* YC_RefreshGifFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YC_RefreshGifFooter.m; sourceTree = "<group>"; };
 		29B479D51E34B51600B6BCC5 /* YC_RefreshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YC_RefreshGifHeader.h; sourceTree = "<group>"; };
@@ -790,21 +810,23 @@
 			path = CYLTabBarController;
 			sourceTree = "<group>";
 		};
-		2958AB1B1E56CA5A005115A2 /* HorseRaceLampView */ = {
+		2958AB1B1E56CA5A005115A2 /* HorseRaceLampView-跑马灯 */ = {
 			isa = PBXGroup;
 			children = (
 				2958AB1C1E56CA5A005115A2 /* MarqueeLabel.h */,
 				2958AB1D1E56CA5A005115A2 /* MarqueeLabel.m */,
 			);
+			name = "HorseRaceLampView-跑马灯";
 			path = HorseRaceLampView;
 			sourceTree = "<group>";
 		};
-		2958AB1F1E56F1D8005115A2 /* MPCoachMarks */ = {
+		2958AB1F1E56F1D8005115A2 /* MPCoachMarks-页面引导指示 */ = {
 			isa = PBXGroup;
 			children = (
 				2958AB201E56F1D8005115A2 /* MPCoachMarks.h */,
 				2958AB211E56F1D8005115A2 /* MPCoachMarks.m */,
 			);
+			name = "MPCoachMarks-页面引导指示";
 			path = MPCoachMarks;
 			sourceTree = "<group>";
 		};
@@ -1001,6 +1023,58 @@
 			path = PhotoBrowser;
 			sourceTree = "<group>";
 		};
+		29B3D82D1E5AC1340036D7A4 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				29B3D82E1E5AC1560036D7A4 /* YC_CoordinateConvert.h */,
+				29B3D82F1E5AC1560036D7A4 /* YC_CoordinateConvert.m */,
+				29B3D8311E5AC1BF0036D7A4 /* YC_LocationManager.h */,
+				29B3D8321E5AC1BF0036D7A4 /* YC_LocationManager.m */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		29B3D8341E5AC4A70036D7A4 /* LocationManager-定位 */ = {
+			isa = PBXGroup;
+			children = (
+				29B3D8351E5AC4C10036D7A4 /* YCLocationViewController.h */,
+				29B3D8361E5AC4C10036D7A4 /* YCLocationViewController.m */,
+				29B3D8381E5AC5DB0036D7A4 /* YCLocationViewController.xib */,
+			);
+			name = "LocationManager-定位";
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		29B3D88B1E5AD5EF0036D7A4 /* SIDADView-广告弹出页面 */ = {
+			isa = PBXGroup;
+			children = (
+				29B3D88C1E5AD5EF0036D7A4 /* SIDADView.h */,
+				29B3D88D1E5AD5EF0036D7A4 /* SIDADView.m */,
+			);
+			name = "SIDADView-广告弹出页面";
+			path = SIDADView;
+			sourceTree = "<group>";
+		};
+		29B3D88F1E5AEA530036D7A4 /* RegularManager-正则判断 */ = {
+			isa = PBXGroup;
+			children = (
+				29B3D8901E5AEA7D0036D7A4 /* YCRegularManager.h */,
+				29B3D8911E5AEA7D0036D7A4 /* YCRegularManager.m */,
+			);
+			name = "RegularManager-正则判断";
+			path = RegularManager;
+			sourceTree = "<group>";
+		};
+		29B3D8931E5AF1290036D7A4 /* Encryption-加密方式 */ = {
+			isa = PBXGroup;
+			children = (
+				29B3D8941E5AF14B0036D7A4 /* SecrityHandle.h */,
+				29B3D8951E5AF14B0036D7A4 /* SecrityHandle.m */,
+			);
+			name = "Encryption-加密方式";
+			path = Encryption;
+			sourceTree = "<group>";
+		};
 		29B479D21E34B51600B6BCC5 /* Refresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -1037,6 +1111,7 @@
 		29B5C9811E44780300317E85 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				29B3D8341E5AC4A70036D7A4 /* LocationManager-定位 */,
 				2958AB231E56F2BB005115A2 /* VectoringInstructions-界面引导指示 */,
 				297BED9B1E55AC7000280BF3 /* CoreDataViewController-数据库 */,
 				29A9D65C1E5451C9008D4CB1 /* PhotoBrowser-图片浏览器 */,
@@ -1315,6 +1390,9 @@
 		29BDA37F1E1DEC5F0059B6C1 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				29B3D8931E5AF1290036D7A4 /* Encryption-加密方式 */,
+				29B3D88F1E5AEA530036D7A4 /* RegularManager-正则判断 */,
+				29B3D82D1E5AC1340036D7A4 /* LocationManager */,
 				29D7A3091E485B3900AF3312 /* MHActionSheet */,
 				29D7A3021E48576100AF3312 /* CustomAlert */,
 				29BDA4441E1F4D310059B6C1 /* Singleton */,
@@ -1905,8 +1983,9 @@
 		59DDD3C87B8F4C87AE33F33E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2958AB1F1E56F1D8005115A2 /* MPCoachMarks */,
-				2958AB1B1E56CA5A005115A2 /* HorseRaceLampView */,
+				29B3D88B1E5AD5EF0036D7A4 /* SIDADView-广告弹出页面 */,
+				2958AB1F1E56F1D8005115A2 /* MPCoachMarks-页面引导指示 */,
+				2958AB1B1E56CA5A005115A2 /* HorseRaceLampView-跑马灯 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2179,6 +2258,7 @@
 				29D7A31E1E485B3900AF3312 /* MHSheetHead.xib in Resources */,
 				29D7A31A1E485B3900AF3312 /* MHSheetCell.xib in Resources */,
 				29CB98771E45D426003092F7 /* image0.jpg in Resources */,
+				29B3D8391E5AC5DB0036D7A4 /* YCLocationViewController.xib in Resources */,
 				29D7A33E1E48604300AF3312 /* README.txt in Resources */,
 				29D71FCF1E25C535002DDF0F /* WifiMan_Sign_4@2x.png in Resources */,
 				29D7A31C1E485B3900AF3312 /* MHSheetFoot.xib in Resources */,
@@ -2272,6 +2352,7 @@
 				29A9D6491E544EBF008D4CB1 /* PYPhotosNavigationController.m in Sources */,
 				29CB98631E45D168003092F7 /* XHLaunchAdDownloader.m in Sources */,
 				2958AB221E56F1D8005115A2 /* MPCoachMarks.m in Sources */,
+				29B3D8371E5AC4C10036D7A4 /* YCLocationViewController.m in Sources */,
 				29D71FD51E25C535002DDF0F /* FeHandwriting.m in Sources */,
 				29CB985B1E45D168003092F7 /* NSString+XHLaunchAd.m in Sources */,
 				29CB985E1E45D168003092F7 /* XHLaunchAd.m in Sources */,
@@ -2284,6 +2365,7 @@
 				29CB985C1E45D168003092F7 /* UIImage+XHLaunchAd.m in Sources */,
 				29CB98691E45D32A003092F7 /* AppDelegate+YCLaunchAd.m in Sources */,
 				29BDA4001E1E418C0059B6C1 /* UIView+GestureCallback.m in Sources */,
+				29B3D8301E5AC1560036D7A4 /* YC_CoordinateConvert.m in Sources */,
 				29CB98641E45D168003092F7 /* XHLaunchAdImageManager.m in Sources */,
 				2958AB261E56F2DE005115A2 /* YCVectoringInstructionsViewController.m in Sources */,
 				29B5C99F1E4484F600317E85 /* LBXScanNetAnimation.m in Sources */,
@@ -2296,6 +2378,7 @@
 				297BED6B1E55468200280BF3 /* YCLoginViewController.m in Sources */,
 				2925F6A41E4C5F9E00380264 /* LoadDatashowInterfaceController.m in Sources */,
 				29A9D64A1E544EBF008D4CB1 /* PYPhotosPreviewController.m in Sources */,
+				29B3D8921E5AEA7D0036D7A4 /* YCRegularManager.m in Sources */,
 				29E415D71E36006F00D7C1FB /* XMShareUtil.m in Sources */,
 				29CB98611E45D168003092F7 /* XHLaunchAdConfiguration.m in Sources */,
 				29BDA4031E1E418C0059B6C1 /* UIView+Screenshot.m in Sources */,
@@ -2308,6 +2391,7 @@
 				29BDA4051E1E418C0059B6C1 /* UIView+Toast.m in Sources */,
 				29B5C9A51E4484F600317E85 /* LBXScanWrapper.m in Sources */,
 				29CB985D1E45D168003092F7 /* UIImageView+XHLaunchAdCache.m in Sources */,
+				29B3D8331E5AC1BF0036D7A4 /* YC_LocationManager.m in Sources */,
 				29BDA3CC1E1E41810059B6C1 /* UIImage+GIF.m in Sources */,
 				29B5C9A41E4484F600317E85 /* LBXScanViewStyle.m in Sources */,
 				297BED731E5550E800280BF3 /* HyLoginButton.m in Sources */,
@@ -2340,6 +2424,7 @@
 				29BDA3CB1E1E41810059B6C1 /* UIImage+FX.m in Sources */,
 				29D71FDE1E25C535002DDF0F /* FeVietNamLoader.m in Sources */,
 				29B5C99D1E4484F600317E85 /* LBXScanLineAnimation.m in Sources */,
+				29B3D8961E5AF14B0036D7A4 /* SecrityHandle.m in Sources */,
 				2958AB141E569E17005115A2 /* CYLTabBar.m in Sources */,
 				29D7A3071E48576100AF3312 /* RAlertView.m in Sources */,
 				2958AB071E5697F1005115A2 /* CAAnimation+WAnimation.m in Sources */,
@@ -2406,6 +2491,7 @@
 				297BED751E5550E800280BF3 /* HyTransitions.m in Sources */,
 				29D71FDF1E25C535002DDF0F /* FeWifiManHub.m in Sources */,
 				59DDD2433B6E92739F579033 /* Test2ViewController.m in Sources */,
+				29B3D88E1E5AD5EF0036D7A4 /* SIDADView.m in Sources */,
 				29D7A31B1E485B3900AF3312 /* MHSheetFoot.m in Sources */,
 				29B5C9AB1E44858100317E85 /* SubLBXScanViewController.m in Sources */,
 				59DDD1486E7A0FA0B83B584C /* TestViewController.m in Sources */,

@@ -10,7 +10,7 @@
 
 typedef void(^HyAnimationCompletion)();
 
-@interface HyLoginButton : UIButton
+@interface HyLoginButton : UIButton<CAAnimationDelegate>
 
 -(void)failedAnimationWithCompletion:(HyAnimationCompletion)completion;
 

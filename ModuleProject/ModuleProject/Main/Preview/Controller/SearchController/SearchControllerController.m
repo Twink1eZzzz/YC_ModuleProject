@@ -10,7 +10,7 @@
 #import "PYSearch.h"
 #import "PYTempViewController.h"
 
-@interface SearchControllerController ()<UITableViewDataSource,UITableViewDelegate>
+@interface SearchControllerController ()<UITableViewDataSource,UITableViewDelegate,PYSearchViewControllerDelegate>
 
 @property (strong,nonatomic) UITableView *tableView;
 

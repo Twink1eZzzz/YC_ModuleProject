@@ -51,20 +51,28 @@ static void * const CYLSwappableImageViewDefaultOffsetContext = (void*)&CYLSwapp
     self.delegate = self;
 }
 
-//Fix issue #93
-- (void)viewDidLayoutSubviews {
-    [self.tabBar layoutSubviews];
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
     UITabBarItem *firstItem = self.tabBar.items[0];
     firstItem.badgeCenterOffset = CGPointMake(0, 0);
-    [firstItem showBadgeWithStyle:WBadgeStyleNew value:0 animationType:WBadgeAnimTypeShake];
+    [firstItem showBadgeWithStyle:WBadgeStyleNew value:2 animationType:WBadgeAnimTypeShake];
     
     UITabBarItem *secondItem = self.tabBar.items[1];
     secondItem.badgeCenterOffset = CGPointMake(0, 0);
-    [secondItem showBadgeWithStyle:WBadgeStyleNumber value:100 animationType:WBadgeAnimTypeNone];
+    [secondItem showBadgeWithStyle:WBadgeStyleNumber value:2 animationType:WBadgeAnimTypeNone];
     
     UITabBarItem *thridItem = self.tabBar.items[2];
     thridItem.badgeCenterOffset = CGPointMake(0, 0);
     [thridItem showBadge];
+}
+
+
+//Fix issue #93
+- (void)viewDidLayoutSubviews {
+    [self.tabBar layoutSubviews];
+    
 }
 
 - (void)viewWillLayoutSubviews {

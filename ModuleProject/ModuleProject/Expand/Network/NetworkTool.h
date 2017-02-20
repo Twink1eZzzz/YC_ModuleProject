@@ -43,6 +43,7 @@ YCSingletonH(NetworkTool) // 单例声明
 
 
 // 上传 请求
+// 上传 请求 支持单、多图片上传
 /**
  * @api 接口
  * @parameters 参数

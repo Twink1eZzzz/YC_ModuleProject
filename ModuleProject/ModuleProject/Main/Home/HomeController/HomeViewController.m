@@ -15,6 +15,7 @@
 #import "YYFPSLabel.h"
 #import "YXCustomActionSheet.h"
 #import "ThirdMacros.h"
+#import "SIDADView.h"
 
 #define NAVBAR_CHANGE_POINT 50
 
@@ -56,7 +57,17 @@
     [self setupRefresh];
     YYFPSLabel *fps = [[YYFPSLabel alloc] initWithFrame:CGRectMake(5, 70, 60, 30)];
     [self.view addSubview:fps];
+    
+    [self adView];
 
+}
+
+#pragma mark - 弹出广告
+- (void)adView
+{
+    SIDADView *adView = [[SIDADView alloc]init];
+    // info 不能为nil 否则view不会显示
+    [adView showInFaceInfo:@{@"title":@"adView"} advertisementImage:[UIImage imageNamed:@"adImage"] borderColor:nil];
 }
 
 #pragma mark - 设置上拉加加载和下拉刷新

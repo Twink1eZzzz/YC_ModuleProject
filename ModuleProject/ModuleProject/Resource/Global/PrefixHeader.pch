@@ -27,11 +27,12 @@
 #import "Masonry.h"
 // 计算cell行高
 #import "UITableView+FDTemplateLayoutCell.h"
-
+// 正则判断
+#import "YCRegularManager.h"
 
 
 // 正式服务器地址
-#define BASEURL @"http://192.168.198.237:8080/biz-ws-deploy/"
+#define BASEURL @""
 
 // 测试服务器地址
 #define TESTURL @""

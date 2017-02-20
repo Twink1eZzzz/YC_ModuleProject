@@ -11,6 +11,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     _headLabel.backgroundColor = [UIColor whiteColor];
     _headLabel.textColor = [UIColor darkGrayColor];
     _headLabel.font = [UIFont systemFontOfSize:18];

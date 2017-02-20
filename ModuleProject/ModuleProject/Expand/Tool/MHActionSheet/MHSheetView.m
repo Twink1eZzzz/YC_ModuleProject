@@ -22,6 +22,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     _divLineHeight.constant = 0.5;
     _tableView.delegate = self;
     _tableView.dataSource = self;

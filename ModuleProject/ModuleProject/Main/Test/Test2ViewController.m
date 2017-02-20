@@ -21,6 +21,7 @@
 #import "YCCoreDataViewController.h"
 #import "MarqueeLabel.h"
 #import "YCVectoringInstructionsViewController.h"
+#import "YCLocationViewController.h"
 
 
 
@@ -91,7 +92,8 @@
                         @"图片浏览器",
                         @"登录界面",
                         @"Core Data 数据库",
-                        @"界面引导指示"];
+                        @"界面引导指示",
+                        @"定位-城市、经纬度"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -161,6 +163,9 @@
             break;
         case 10:
             [self VectoringInstructions];
+            break;
+        case 11:
+            [self LocationSetting];
             break;
             
         default:
@@ -320,6 +325,13 @@
 {
     YCVectoringInstructionsViewController *VectoringInstructionsVC = [[YCVectoringInstructionsViewController alloc]init];
     [self.navigationController pushViewController:VectoringInstructionsVC animated:YES];
+}
+
+#pragma mark - 定位服务
+- (void)LocationSetting
+{
+    YCLocationViewController *locationVC = [[YCLocationViewController alloc]init];
+    [self.navigationController pushViewController:locationVC animated:YES];
 }
 
 
