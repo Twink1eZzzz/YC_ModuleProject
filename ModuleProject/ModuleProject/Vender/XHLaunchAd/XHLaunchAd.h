@@ -4,7 +4,7 @@
 //
 //  Created by zhuxiaohui on 2016/6/13.
 //  Copyright © 2016年 it7090.com. All rights reserved.
-
+//  代码地址:https://github.com/CoderZhuXH/XHLaunchAd
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -65,7 +65,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 -(void)xhLaunchAd:(XHLaunchAd *)launchAd customSkipView:(UIView *)customSkipView duration:(NSInteger)duration;
 
-
 /**
  如果你想用SDWebImage等框架加载网络广告图片,请实现此代理
 
@@ -76,7 +75,6 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)xhLaunchAd:(XHLaunchAd *)launchAd launchAdImageView:(UIImageView *)launchAdImageView URL:(NSURL *)url;
 
 @end
-
 
 @interface XHLaunchAd : NSObject
 

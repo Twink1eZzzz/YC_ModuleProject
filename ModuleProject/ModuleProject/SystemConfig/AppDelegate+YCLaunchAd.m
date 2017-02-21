@@ -111,6 +111,7 @@
 //        [XHLaunchAd imageAdWithImageAdConfiguration:imageAdconfiguration delegate:self];
 //        
 //    } failure:^(NSError *error) {
+//        
 //    }];
 //    
 //}

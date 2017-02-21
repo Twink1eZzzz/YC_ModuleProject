@@ -10,7 +10,7 @@
 
 @interface SecrityHandle : NSObject
 // md5 对字符串进行加密
-+ (NSString *) md5WithString:(NSString *)sourceString;
++ (NSString *)md5WithString:(NSString *)sourceString;
 
 // md5 对NSData类型进行进行加密
 + (NSString *)md5WithSourceData:(NSData *)sourceData;

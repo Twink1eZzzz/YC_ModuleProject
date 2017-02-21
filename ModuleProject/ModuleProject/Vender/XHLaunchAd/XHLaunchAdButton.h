@@ -4,7 +4,7 @@
 //
 //  Created by zhuxiaohui on 2016/6/9.
 //  Copyright © 2016年 it7090.com. All rights reserved.
-
+//  代码地址:https://github.com/CoderZhuXH/XHLaunchAd
 
 #import <UIKit/UIKit.h>
 
@@ -26,9 +26,6 @@ typedef NS_ENUM(NSInteger,SkipType) {
 @property(nonatomic,assign)CGFloat leftRightSpace;
 @property(nonatomic,assign)CGFloat topBottomSpace;
 
-/**
- *  设置skipButton 状态
- */
 -(void)stateWithskipType:(SkipType)skipType andDuration:(NSInteger)duration;
 
 @end
