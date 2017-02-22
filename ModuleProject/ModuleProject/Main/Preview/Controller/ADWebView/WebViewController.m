@@ -26,6 +26,7 @@
 
 - (IBAction)closeAction:(id)sender {
 
+    [self.view dismissLoading];
     [self dismissViewControllerAnimated:YES completion:nil];
 
 }

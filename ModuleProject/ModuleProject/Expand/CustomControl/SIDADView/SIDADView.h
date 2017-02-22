@@ -17,11 +17,6 @@
  *  @param color       弹出视窗的边框颜色
  *
  */
-
-- (void)showWithFaceInfo: (NSDictionary *)info advertisementImage: (UIImage *)image borderColor: (UIColor *)color;
-
-
-//不带NavigationBar呈现方法：
-- (void)showInFaceInfo: (NSDictionary *)info advertisementImage: (UIImage *)image borderColor: (UIColor *)color;
+- (void)showInView:(UIView *)view FaceInfo: (NSDictionary *)info advertisementImage: (UIImage *)image borderColor: (UIColor *)color;
 
 @end

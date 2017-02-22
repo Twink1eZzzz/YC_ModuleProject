@@ -26,30 +26,18 @@
     [self setSuccessImage:[UIImage imageNamed:@"HUD_success"]];
     [self setInfoImage:[UIImage imageNamed:@"HUD_info"]];
     [self setErrorImage:[UIImage imageNamed:@"HUD_error"]];
-    
-    [self setDefaultMaskType:SVProgressHUDMaskTypeClear];
-    [self setDefaultStyle:SVProgressHUDStyleDark];
+    [self setDefaultMaskType:SVProgressHUDMaskTypeNone];
+    [self setDefaultStyle:SVProgressHUDStyleCustom];
     [self setCornerRadius:8.0];
+    [self setBackgroundColor:[UIColor colorWithWhite:0.0 alpha:0.7]];
+    [self setForegroundColor:[UIColor whiteColor]];
+    
 }
 
-//// 根据 提示文字字数，判断 HUD 显示时间
-//- (NSTimeInterval)displayDurationForString:(NSString*)string
-//{
-//    return MIN((float)string.length*0.03 + 0.5, 2.0);
-//}
 
 - (NSTimeInterval)maximumDismissTimeInterval
 {
     return 2;
-}
-
-// 修改 HUD 颜色，需要取消混合效果(使`backgroundColroForStyle`方法有效)
-- (void)updateBlurBounds{
-}
-
-// HUD 颜色
-- (UIColor*)backgroundColorForStyle{
-    return [UIColor colorWithWhite:1 alpha:1.0];
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview

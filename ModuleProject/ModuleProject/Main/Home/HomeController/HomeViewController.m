@@ -58,7 +58,7 @@
     YYFPSLabel *fps = [[YYFPSLabel alloc] initWithFrame:CGRectMake(5, 70, 60, 30)];
     [self.view addSubview:fps];
     
-    [self adView];
+//    [self adView];
 
 }
 
@@ -67,7 +67,7 @@
 {
     SIDADView *adView = [[SIDADView alloc]init];
     // info 不能为nil 否则view不会显示
-    [adView showInFaceInfo:@{@"title":@"adView"} advertisementImage:[UIImage imageNamed:@"adImage"] borderColor:nil];
+    [adView showInView:[UIApplication sharedApplication].keyWindow FaceInfo:@{@"title":@"adView"} advertisementImage:[UIImage imageNamed:@"adImage"] borderColor:nil];
 }
 
 #pragma mark - 设置上拉加加载和下拉刷新
@@ -172,18 +172,22 @@
 // 点击左边事件
 - (void)left_button_event:(UIButton *)sender
 {
-    YXCustomActionSheet *cusSheet = [[YXCustomActionSheet alloc] init];
-    NSArray *contentArray = @[@{@"name":@"微信",@"icon":@"sns_icon_7"},
-                              @{@"name":@"朋友圈",@"icon":@"sns_icon_8"},
-                              @{@"name":@"QQ空间",@"icon":@"sns_icon_5"},
-                              @{@"name":@"QQ",@"icon":@"sns_icon_4"},
-                              @{@"name":@"新浪微博",@"icon":@"sns_icon_3"}];
-    
-    cusSheet.shareText = @"打开的空间啊";
-    cusSheet.shareTitle = @"但是肯定回家啊";
-    cusSheet.shareUrl = @"https://www.baidu.com/";
-    
-    [cusSheet showInView:[UIApplication sharedApplication].keyWindow contentArray:contentArray];
+//    YXCustomActionSheet *cusSheet = [[YXCustomActionSheet alloc] init];
+//    NSArray *contentArray = @[@{@"name":@"微信",@"icon":@"sns_icon_7"},
+//                              @{@"name":@"朋友圈",@"icon":@"sns_icon_8"},
+//                              @{@"name":@"QQ空间",@"icon":@"sns_icon_5"},
+//                              @{@"name":@"QQ",@"icon":@"sns_icon_4"},
+//                              @{@"name":@"新浪微博",@"icon":@"sns_icon_3"}];
+//    
+//    cusSheet.shareText = @"打开的空间啊";
+//    cusSheet.shareTitle = @"但是肯定回家啊";
+//    cusSheet.shareUrl = @"https://www.baidu.com/";
+//    
+//    [cusSheet showInView:[UIApplication sharedApplication].keyWindow contentArray:contentArray];
+    [self showLoading];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self dismissLoading];
+    });
 }
 
 //点击标题事件，不要可以不重写

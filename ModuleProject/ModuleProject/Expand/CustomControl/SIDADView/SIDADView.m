@@ -145,7 +145,8 @@
     return self;
 }
 
-- (void)showInFaceInfo: (NSDictionary *)info advertisementImage: (UIImage *)image borderColor: (UIColor *)color{
+- (void)showInView:(UIView *)view FaceInfo: (NSDictionary *)info advertisementImage: (UIImage *)image borderColor: (UIColor *)color
+{
     
     if (!info) {
         
@@ -159,26 +160,8 @@
         _bgView.layer.borderColor = color.CGColor;
         
     }
-    [[[UIApplication sharedApplication] keyWindow] addSubview:self];
-    
-}
-
-- (void)showWithFaceInfo: (NSDictionary *)info advertisementImage: (UIImage *)image borderColor: (UIColor *)color{
-    
-    if (!info) {
-        
-        return;
-    }
-
-    _titleLable.text  =[self featureTransform:info];
-    _adImageView.image = image;
-    if (color) {
-        
-        _bgView.layer.borderColor = color.CGColor;
-
-    }
-    [[self getCurrentVC].view addSubview:self];
-    
+//    [view bringSubviewToFront:self];
+    [view addSubview:self];
 }
 
 - (void)closeBtnClickEventHandle{

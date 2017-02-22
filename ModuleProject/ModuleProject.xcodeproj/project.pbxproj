@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29072D751E5D2C1500070026 /* YCCornerRadiusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29072D741E5D2C1500070026 /* YCCornerRadiusViewController.m */; };
+		29072D7F1E5D69D700070026 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 29072D7E1E5D69D700070026 /* MBProgressHUD.m */; };
+		29072D831E5D7CEB00070026 /* MBProgressHUD+YC_HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 29072D821E5D7CEB00070026 /* MBProgressHUD+YC_HUD.m */; };
+		29072D881E5D800100070026 /* YCHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29072D861E5D800100070026 /* YCHUDViewController.m */; };
+		29072D891E5D800100070026 /* YCHUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29072D871E5D800100070026 /* YCHUDViewController.xib */; };
 		290CAC721E4DC5510091074B /* SearchControllerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 290CAC711E4DC5510091074B /* SearchControllerController.m */; };
 		2925F6A41E4C5F9E00380264 /* LoadDatashowInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2925F6A31E4C5F9E00380264 /* LoadDatashowInterfaceController.m */; };
 		29377CF21E5BE3F400421641 /* NSObject+runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 29377CF11E5BE3F400421641 /* NSObject+runtime.m */; };
@@ -254,6 +259,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29072D731E5D2C1500070026 /* YCCornerRadiusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCCornerRadiusViewController.h; sourceTree = "<group>"; };
+		29072D741E5D2C1500070026 /* YCCornerRadiusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCCornerRadiusViewController.m; sourceTree = "<group>"; };
+		29072D7D1E5D69D700070026 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		29072D7E1E5D69D700070026 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		29072D811E5D7CEB00070026 /* MBProgressHUD+YC_HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+YC_HUD.h"; sourceTree = "<group>"; };
+		29072D821E5D7CEB00070026 /* MBProgressHUD+YC_HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+YC_HUD.m"; sourceTree = "<group>"; };
+		29072D851E5D800100070026 /* YCHUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCHUDViewController.h; sourceTree = "<group>"; };
+		29072D861E5D800100070026 /* YCHUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCHUDViewController.m; sourceTree = "<group>"; };
+		29072D871E5D800100070026 /* YCHUDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCHUDViewController.xib; sourceTree = "<group>"; };
 		290CAC701E4DC5510091074B /* SearchControllerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchControllerController.h; sourceTree = "<group>"; };
 		290CAC711E4DC5510091074B /* SearchControllerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchControllerController.m; sourceTree = "<group>"; };
 		2925F6A21E4C5F9E00380264 /* LoadDatashowInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadDatashowInterfaceController.h; sourceTree = "<group>"; };
@@ -726,6 +740,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29072D721E5D2BB400070026 /* CornerRadius-圆角 */ = {
+			isa = PBXGroup;
+			children = (
+				29072D731E5D2C1500070026 /* YCCornerRadiusViewController.h */,
+				29072D741E5D2C1500070026 /* YCCornerRadiusViewController.m */,
+			);
+			name = "CornerRadius-圆角";
+			path = CornerRadius;
+			sourceTree = "<group>";
+		};
+		29072D7C1E5D69D700070026 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				29072D7D1E5D69D700070026 /* MBProgressHUD.h */,
+				29072D7E1E5D69D700070026 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		29072D801E5D7C5E00070026 /* MBProgressHUDTool */ = {
+			isa = PBXGroup;
+			children = (
+				29072D811E5D7CEB00070026 /* MBProgressHUD+YC_HUD.h */,
+				29072D821E5D7CEB00070026 /* MBProgressHUD+YC_HUD.m */,
+			);
+			path = MBProgressHUDTool;
+			sourceTree = "<group>";
+		};
+		29072D841E5D7FE000070026 /* HUD-指示器 */ = {
+			isa = PBXGroup;
+			children = (
+				29072D851E5D800100070026 /* YCHUDViewController.h */,
+				29072D861E5D800100070026 /* YCHUDViewController.m */,
+				29072D871E5D800100070026 /* YCHUDViewController.xib */,
+			);
+			name = "HUD-指示器";
+			path = HUD;
+			sourceTree = "<group>";
+		};
 		290CAC6F1E4DC5210091074B /* SearchController-搜索控制器 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1172,6 +1225,8 @@
 		29B5C9811E44780300317E85 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				29072D841E5D7FE000070026 /* HUD-指示器 */,
+				29072D721E5D2BB400070026 /* CornerRadius-圆角 */,
 				29B3D8341E5AC4A70036D7A4 /* LocationManager-定位 */,
 				2958AB231E56F2BB005115A2 /* VectoringInstructions-界面引导指示 */,
 				297BED9B1E55AC7000280BF3 /* CoreDataViewController-数据库 */,
@@ -1399,6 +1454,7 @@
 		29BDA3791E1DEC5F0059B6C1 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				29072D801E5D7C5E00070026 /* MBProgressHUDTool */,
 				29377CEF1E5BE3F400421641 /* NSObject */,
 				29BDA4221E1F30B30059B6C1 /* SVProgressHUDTool */,
 				29BDA3D41E1E418C0059B6C1 /* UIView */,
@@ -1505,6 +1561,7 @@
 		29BDA3841E1DECBD0059B6C1 /* Vender-第三方 */ = {
 			isa = PBXGroup;
 			children = (
+				29072D7C1E5D69D700070026 /* MBProgressHUD */,
 				2958AB091E569E17005115A2 /* CYLTabBarController */,
 				2958AAF61E5697F1005115A2 /* WZLBadge */,
 				29A9D6551E544EF3008D4CB1 /* DACircularProgress */,
@@ -2189,7 +2246,7 @@
 		29BDA31D1E1DD9980059B6C1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = YC;
+				CLASSPREFIX = SD;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Twinkle;
 				TargetAttributes = {
@@ -2269,6 +2326,7 @@
 				29BDA4211E1E55F80059B6C1 /* Info.plist in Resources */,
 				29CB987E1E45D426003092F7 /* LaunchImageAd.json in Resources */,
 				29D71FCD1E25C535002DDF0F /* WifiMan_Sign_2@2x.png in Resources */,
+				29072D891E5D800100070026 /* YCHUDViewController.xib in Resources */,
 				29CB987B1E45D426003092F7 /* image2.jpg in Resources */,
 				29CB987F1E45D426003092F7 /* LaunchVideoAd.json in Resources */,
 				29D71FE01E25C535002DDF0F /* FeWifiManHub.xib in Resources */,
@@ -2402,6 +2460,7 @@
 				29BDA3881E1DF8D30059B6C1 /* BaseViewController.m in Sources */,
 				29BDA42B1E1F34830059B6C1 /* NSObject+YC_HUD.m in Sources */,
 				29BDA39C1E1E15EB0059B6C1 /* MeViewController.m in Sources */,
+				29072D751E5D2C1500070026 /* YCCornerRadiusViewController.m in Sources */,
 				29A9D64D1E544EBF008D4CB1 /* PYPhoto.m in Sources */,
 				29BDA3F91E1E418C0059B6C1 /* UIView+Constraints.m in Sources */,
 				29BDA3C71E1E41810059B6C1 /* UIImage+Blur.m in Sources */,
@@ -2462,6 +2521,7 @@
 				296562621E235AEA00693F88 /* Test3ViewController.m in Sources */,
 				29BDA3C91E1E41810059B6C1 /* UIImage+Color.m in Sources */,
 				29BDA3D31E1E41810059B6C1 /* UIImage+Vector.m in Sources */,
+				29072D831E5D7CEB00070026 /* MBProgressHUD+YC_HUD.m in Sources */,
 				2958AB081E5697F1005115A2 /* UIView+WZLBadge.m in Sources */,
 				29377D121E5BE90F00421641 /* NSBundle+PYSearchExtension.m in Sources */,
 				29A9D61E1E5404B5008D4CB1 /* YCImagePickerViewController.m in Sources */,
@@ -2504,9 +2564,11 @@
 				29B5C9AB1E44858100317E85 /* SubLBXScanViewController.m in Sources */,
 				59DDD1486E7A0FA0B83B584C /* TestViewController.m in Sources */,
 				59DDDFA7D98DCC29B7319CCC /* UINavigationBar+Awesome.m in Sources */,
+				29072D7F1E5D69D700070026 /* MBProgressHUD.m in Sources */,
 				29D7A3191E485B3900AF3312 /* MHSheetCell.m in Sources */,
 				29377D141E5BE90F00421641 /* PYSearchConst.m in Sources */,
 				29A9D6541E544EBF008D4CB1 /* PYPhotoView.m in Sources */,
+				29072D881E5D800100070026 /* YCHUDViewController.m in Sources */,
 				29CB98861E45D4E5003092F7 /* WebViewController.m in Sources */,
 				59DDD2636A0A730868FF78CE /* YYFPSLabel.m in Sources */,
 				29D7A3421E4878A700AF3312 /* ConnectionFailureViewController.m in Sources */,

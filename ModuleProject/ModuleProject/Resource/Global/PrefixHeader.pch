@@ -10,7 +10,6 @@
 #define PrefixHeader_pch
 
 #import "Macros.h"
-#import "NSObject+YC_HUD.h"
 #import "NetworkTool.h"
 #import "YYText.h"
 #import "XMNetworking.h"
@@ -29,6 +28,10 @@
 #import "UITableView+FDTemplateLayoutCell.h"
 // 正则判断
 #import "YCRegularManager.h"
+
+// HUD
+#import "NSObject+YC_HUD.h"
+#import "MBProgressHUD+YC_HUD.h"
 
 
 // 正式服务器地址

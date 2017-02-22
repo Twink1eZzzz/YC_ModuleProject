@@ -22,6 +22,8 @@
 #import "MarqueeLabel.h"
 #import "YCVectoringInstructionsViewController.h"
 #import "YCLocationViewController.h"
+#import "YCCornerRadiusViewController.h"
+#import "YCHUDViewController.h"
 
 
 
@@ -93,7 +95,9 @@
                         @"登录界面",
                         @"Core Data 数据库",
                         @"界面引导指示",
-                        @"定位-城市、经纬度"];
+                        @"定位-城市、经纬度",
+                        @"高效圆角演示",
+                        @"HUD"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -167,7 +171,12 @@
         case 11:
             [self LocationSetting];
             break;
-            
+        case 12:
+            [self CornerRadius];
+            break;
+        case 13:
+            [self HUD];
+            break;
         default:
             break;
     }
@@ -332,6 +341,20 @@
 {
     YCLocationViewController *locationVC = [[YCLocationViewController alloc]init];
     [self.navigationController pushViewController:locationVC animated:YES];
+}
+
+#pragma mark - 圆角
+- (void)CornerRadius
+{
+    YCCornerRadiusViewController *CornerRadiusVC = [[YCCornerRadiusViewController alloc]init];
+    [self.navigationController pushViewController:CornerRadiusVC animated:YES];
+}
+
+#pragma mark - HUD
+- (void)HUD
+{
+    YCHUDViewController *HUDVC = [[YCHUDViewController alloc]init];
+    [self.navigationController pushViewController:HUDVC animated:YES];
 }
 
 

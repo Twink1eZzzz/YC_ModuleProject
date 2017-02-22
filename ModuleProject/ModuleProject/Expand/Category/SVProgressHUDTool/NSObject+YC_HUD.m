@@ -9,6 +9,7 @@
 #import "NSObject+YC_HUD.h"
 #import "YC_ProgressHUD.h"
 
+
 @implementation NSObject (YC_HUD)
 
 - (void)showText:(NSString *)aText
@@ -31,7 +32,6 @@
 {
     [YC_ProgressHUD show];
 }
-
 
 - (void)dismissLoading
 {
