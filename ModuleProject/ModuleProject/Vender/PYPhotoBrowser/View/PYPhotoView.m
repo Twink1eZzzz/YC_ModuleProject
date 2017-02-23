@@ -697,7 +697,7 @@ static CGSize originalSize;
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
 {
-    error ? [self showErrorText:@"保存失败"] : [self showSuccessText:@"保存成功"];
+    error ? [MBProgressHUD showErrorMessage:@"保存失败"] : [MBProgressHUD showSuccessMessage:@"保存成功"];
 }
 
 @end

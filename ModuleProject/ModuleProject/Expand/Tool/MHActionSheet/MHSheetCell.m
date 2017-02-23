@@ -15,6 +15,7 @@
 @implementation MHSheetCell
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
     _divLineHeight.constant = 0.5;
     _tableDivLineHeight.constant = 0.5;
     _myLabel.backgroundColor = [UIColor whiteColor];

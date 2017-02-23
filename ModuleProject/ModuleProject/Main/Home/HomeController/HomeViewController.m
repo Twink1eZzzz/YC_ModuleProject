@@ -184,10 +184,7 @@
 //    cusSheet.shareUrl = @"https://www.baidu.com/";
 //    
 //    [cusSheet showInView:[UIApplication sharedApplication].keyWindow contentArray:contentArray];
-    [self showLoading];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self dismissLoading];
-    });
+
 }
 
 //点击标题事件，不要可以不重写
@@ -195,7 +192,6 @@
 {
     Test3ViewController *test3 = [[Test3ViewController alloc] init];
     [self.navigationController pushViewController:test3 animated:YES];
-    [self dismissLoading];
 }
 
 #pragma mark 自定义代码

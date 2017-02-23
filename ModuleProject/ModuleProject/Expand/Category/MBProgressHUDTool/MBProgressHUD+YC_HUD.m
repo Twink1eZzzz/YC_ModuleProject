@@ -9,16 +9,6 @@
 #import "MBProgressHUD+YC_HUD.h"
 
 @implementation MBProgressHUD (YC_HUD)
-+ (MBProgressHUD*)createMBProgressHUDviewWithMessage:(NSString*)message isWindiw:(BOOL)isWindow
-{
-    UIView  *view = isWindow? (UIView*)[UIApplication sharedApplication].delegate.window:[self getCurrentUIVC].view;
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.label.text=message?message:@"加载中.....";
-    hud.label.font=[UIFont systemFontOfSize:15];
-    hud.removeFromSuperViewOnHide = YES;
-    return hud;
-}
-#pragma mark-------------------- show Tip----------------------------
 
 + (void)showTipMessageInWindow:(NSString*)message
 {
@@ -42,7 +32,6 @@
     hud.mode = MBProgressHUDModeText;
     [hud hideAnimated:YES afterDelay:1];
 }
-#pragma mark-------------------- show Activity----------------------------
 
 + (void)showActivityMessageInWindow:(NSString*)message
 {
@@ -68,7 +57,6 @@
         [hud hideAnimated:YES afterDelay:aTimer];
     }
 }
-#pragma mark-------------------- show Image----------------------------
 
 + (void)showSuccessMessage:(NSString *)Message
 {
@@ -102,6 +90,33 @@
     hud.mode = MBProgressHUDModeCustomView;
     [hud hideAnimated:YES afterDelay:1];
 }
+
++ (void)showPendulumWithMessage:(NSString *)message isWindow:(BOOL)iswindow
+{
+    MBProgressHUD *hud  =  [self createMBProgressHUDviewWithMessage:message isWindiw:iswindow];
+    UIImageView *backview = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+    NSArray *arrays = [[NSArray alloc]initWithObjects:
+                       [UIImage imageNamed:@"loading_1"],
+                       [UIImage imageNamed:@"loading_2"],
+                       [UIImage imageNamed:@"loading_3"],
+                       [UIImage imageNamed:@"loading_4"],
+                       [UIImage imageNamed:@"loading_5"],
+                       [UIImage imageNamed:@"loading_6"],
+                       [UIImage imageNamed:@"loading_7"],
+                       [UIImage imageNamed:@"loading_6"],
+                       [UIImage imageNamed:@"loading_5"],
+                       [UIImage imageNamed:@"loading_4"],
+                       [UIImage imageNamed:@"loading_3"],
+                       [UIImage imageNamed:@"loading_2"],
+                       [UIImage imageNamed:@"loading_1"],
+                       nil];
+    backview.animationImages = arrays;
+    backview.animationDuration = 2;
+    [backview startAnimating];
+    hud.customView = backview;
+    hud.mode = MBProgressHUDModeCustomView;
+}
+
 + (void)hideHUD
 {
     UIView  *winView =(UIView*)[UIApplication sharedApplication].delegate.window;
@@ -152,6 +167,19 @@
         return tabSelectVC;
     }
     return superVC;
+}
+
++ (MBProgressHUD*)createMBProgressHUDviewWithMessage:(NSString*)message isWindiw:(BOOL)isWindow
+{
+    UIView  *view = isWindow? (UIView*)[UIApplication sharedApplication].delegate.window:[self getCurrentUIVC].view;
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    hud.label.text=message?message:@"加载中.....";
+    hud.label.font=[UIFont systemFontOfSize:14];
+    hud.removeFromSuperViewOnHide = YES;
+    hud.bezelView.color = [UIColor colorWithWhite:0 alpha:0.7];
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+    hud.contentColor = [UIColor whiteColor];
+    return hud;
 }
 
 @end

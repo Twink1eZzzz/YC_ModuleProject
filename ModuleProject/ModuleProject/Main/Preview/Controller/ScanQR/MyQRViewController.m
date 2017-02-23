@@ -9,7 +9,7 @@
 #import "MyQRViewController.h"
 #import "LBXScanWrapper.h"
 #import "LBXAlertAction.h"
-#import <ZYCornerRadius/UIImageView+CornerRadius.h>
+#import "UIImageView+CornerRadius.h"
 
 @interface MyQRViewController ()
 

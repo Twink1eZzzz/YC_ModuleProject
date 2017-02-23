@@ -160,7 +160,7 @@
             //网络正常 或者是密码账号正确跳转动画
             [button succeedAnimationWithCompletion:^{
                 if (weakself.switchButton.on) {
-                    [weakself showSuccessText:@"登录成功！"];
+                    [MBProgressHUD showSuccessMessage:@"登录成功！"];
                     [weakself didPresentControllerButtonTouch];
                 }
             }];
@@ -168,7 +168,7 @@
             //网络错误 或者是密码不正确还原动画
             [button failedAnimationWithCompletion:^{
                 if (weakself.switchButton.on) {
-                    [weakself showErrorText:@"登录失败!"];
+                    [MBProgressHUD showErrorMessage:@"登录失败!"];
                     [weakself didPresentControllerButtonTouch];
                 }
             }];

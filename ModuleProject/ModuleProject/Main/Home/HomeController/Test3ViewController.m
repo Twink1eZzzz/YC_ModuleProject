@@ -8,18 +8,17 @@
 
 #import "Test3ViewController.h"
 #import "commodityListModel.h"
-#import "FeEqualize.h"
 #import "UINavigationBar+Awesome.h"
 #import "YC_RefreshGifHeader.h"
 #import "YC_RefreshGifFooter.h"
+
+#import "JHUD+WaitView.h"
 
 @interface Test3ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) NSArray * modelArr;
 
 @property (nonatomic, strong) UITableView *tableView;
-
-@property (strong, nonatomic) FeEqualize *equalizer;
 
 @end
 
@@ -39,7 +38,7 @@
     // 初始化设置
     [self initSetting];
     // 网络请求
-//    [self NetworkData];
+    [self NetworkData];
     [self setupRefresh];
 }
 
@@ -116,20 +115,10 @@
 - (void)initSetting {
     self.view.backgroundColor = [UIColor orangeColor];
     self.tableView.backgroundColor = MainColor;
-    _equalizer = [[FeEqualize alloc] initWithView:self.view title:@"LOADING"];
     [self.view addSubview:_tableView];
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
-    [self.view addSubview:_equalizer];
-    [_equalizer showWhileExecutingBlock:^{
-        // 网络请求
-        [self NetworkData];
-    } completion:^{
-        [_equalizer dismiss];
-    }];
-
-//    [_equalizer show];
 }
 
 #pragma mark - NetworkData
@@ -141,16 +130,26 @@
 //        if ([str isEqualToString:@"000000"]) {
 //            self.modelArr = [NSArray yy_modelArrayWithClass:[commodityListModel class] json:response[@"data"][@"commodityList"]];
 //            [self.tableView reloadData];
-//            [_equalizer dismiss];
 //        }else {
-//            [_equalizer dismiss];
+    
 //        }
 //        YCLog(@"%@-----%@",response,self.modelArr);
 //    } Failure:^(NSError *error) {
 //        YCLog(@"%@",error);
-//        [_equalizer dismiss];
 //    }];
-    sleep(3);
+    [JHUD showCircleAnimation];
+}
+
+- (UIButton *)set_rightButton {
+    UIButton *left_button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 22, 22)];
+    [left_button setImage:[UIImage imageNamed:@"nav_complete"] forState:UIControlStateNormal];
+    [left_button setImage:[UIImage imageNamed:@"nav_complete"] forState:UIControlStateHighlighted];
+    return left_button;
+}
+
+- (void)right_button_event:(UIButton *)sender
+{
+    [JHUD hideView];
 }
 
 

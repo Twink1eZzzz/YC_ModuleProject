@@ -30,7 +30,6 @@
 #import "YCRegularManager.h"
 
 // HUD
-#import "NSObject+YC_HUD.h"
 #import "MBProgressHUD+YC_HUD.h"
 
 

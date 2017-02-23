@@ -7,12 +7,10 @@
 //
 
 #import "LoadDatashowInterfaceController.h"
-#import "FeEqualize.h"
+#import "JHUD+WaitView.h"
 
 
 @interface LoadDatashowInterfaceController ()
-
-@property (strong, nonatomic) FeEqualize *equalizer;
 
 @end
 
@@ -23,18 +21,24 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"加载数据是显示的占位页面";
     self.view.backgroundColor = MainColor;
-    _equalizer = [[FeEqualize alloc] initWithView:self.view title:@"LOADING"];
-    [self.view addSubview:_equalizer];
-    [_equalizer show];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [_equalizer dismiss];
-    });
+    [JHUD showCircleAnimation];
 }
 
 - (UIColor *)set_colorBackground {
     return [UIColor whiteColor];
 }
 
+- (UIButton *)set_rightButton {
+    UIButton *left_button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 22, 22)];
+    [left_button setImage:[UIImage imageNamed:@"nav_complete"] forState:UIControlStateNormal];
+    [left_button setImage:[UIImage imageNamed:@"nav_complete"] forState:UIControlStateHighlighted];
+    return left_button;
+}
+
+- (void)right_button_event:(UIButton *)sender
+{
+    [JHUD hideView];
+}
 
 
 @end

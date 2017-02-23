@@ -29,7 +29,7 @@
 - (void)shareToQQBase:(SHARE_QQ_TYPE)type
 {
     TencentOAuth *tencentOAuth = [[TencentOAuth alloc] initWithAppId:APP_KEY_QQ andDelegate:self];
-    NSLog(@"TencentOAuth accessToken:%@", tencentOAuth.accessToken);
+    YCLog(@"TencentOAuth accessToken:%@", tencentOAuth.accessToken);
     
     NSString *utf8String = self.shareUrl;
     NSString *theTitle = self.shareTitle;

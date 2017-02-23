@@ -168,7 +168,7 @@
 {
     if (buttonIndex == 0) { // 删除
 //        [MBProgressHUD py_showSuccess:@"已删除" toView:self.view];// 计算页数
-        [self showSuccessText:@"已删除"];
+        [MBProgressHUD showSuccessMessage:@"已删除"];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{ // 删除图片
             [self deleteImage];
         });

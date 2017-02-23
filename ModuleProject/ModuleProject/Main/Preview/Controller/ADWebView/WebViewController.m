@@ -26,17 +26,17 @@
 
 - (IBAction)closeAction:(id)sender {
 
-    [self.view dismissLoading];
+    [MBProgressHUD hideHUD];
     [self dismissViewControllerAnimated:YES completion:nil];
 
 }
 -(void)webViewDidStartLoad:(UIWebView *)webView
 {
-    [self.view showLoading];
+    [MBProgressHUD showPendulumWithMessage:nil isWindow:NO];
 }
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    [self.view dismissLoading];
+    [MBProgressHUD hideHUD];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -15,7 +15,6 @@ PODS:
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
   - STPickerView (2.0)
-  - SVProgressHUD (2.1.2)
   - TZImagePickerController (1.7.8)
   - UITableView+FDTemplateLayoutCell (1.4)
   - XMNetworking (1.0.2):
@@ -31,7 +30,6 @@ PODS:
   - ZXingObjC (3.2.1):
     - ZXingObjC/All (= 3.2.1)
   - ZXingObjC/All (3.2.1)
-  - ZYCornerRadius (1.0.2)
 
 DEPENDENCIES:
   - ChameleonFramework
@@ -42,14 +40,12 @@ DEPENDENCIES:
   - MJRefresh (= 3.1.12)
   - SDCycleScrollView (= 1.65)
   - STPickerView (= 2.0)
-  - SVProgressHUD (= 2.1.2)
   - TZImagePickerController
   - UITableView+FDTemplateLayoutCell (= 1.4)
   - XMNetworking (= 1.0.2)
   - YYModel (= 1.0.4)
   - YYText (= 1.0.7)
   - ZXingObjC (= 3.2.1)
-  - ZYCornerRadius (= 1.0.2)
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
@@ -61,15 +57,13 @@ SPEC CHECKSUMS:
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   STPickerView: 7b5f79ab9c48a3aad85b413c622c415961cec251
-  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   TZImagePickerController: 87a138ae5d585225aaa6c8abe2cface0f0ad19dd
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
   XMNetworking: bcc1d167c4386fb6bfefb0d6c7087f09333c2e09
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   ZXingObjC: bbf7b8f0cf8933fdd33eb4f9f46e22308552869b
-  ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: 38db3534bd74ef7cddd5d5d9d037d0f6b4d5377d
+PODFILE CHECKSUM: 9191ec5fcc9b95f978ccf07e834b2e8ed09b8342
 
 COCOAPODS: 1.0.0

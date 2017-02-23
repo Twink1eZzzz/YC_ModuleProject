@@ -102,7 +102,7 @@ static NSString* const kURL_Reachability__Address=@"www.baidu.com";
     //判断网络状态
     switch (self.hostReach.currentReachabilityStatus) {
         case NotReachable:
-            [self showErrorText:@"当前网络连接失败"];
+            [MBProgressHUD showErrorMessage:@"当前网络连接失败"];
             break;
         case ReachableViaWiFi:
             YCLog(@"wifi上网");
@@ -187,9 +187,9 @@ static NSString* const kURL_Reachability__Address=@"www.baidu.com";
 {
     BOOL isright = [self respondsToSelector:@selector(set_rightButton)];
     if (isright) {
-        UIButton *right_button = [self set_rightButton];
-        [right_button addTarget:self action:@selector(right_click:) forControlEvents:UIControlEventTouchUpInside];
-        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:right_button];
+        UIButton *rightbutton = [self set_rightButton];
+        [rightbutton addTarget:self action:@selector(right_click:) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:rightbutton];
         self.navigationItem.rightBarButtonItem = item;
     }
     return isright;

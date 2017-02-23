@@ -34,6 +34,9 @@
 + (void)showCustomIconInWindow:(NSString *)iconName message:(NSString *)message;
 + (void)showCustomIconInView:(NSString *)iconName message:(NSString *)message;
 
+// 个性定制
++ (void)showPendulumWithMessage:(NSString *)message isWindow:(BOOL)iswindow;
+
 
 + (void)hideHUD;
 
