@@ -37,6 +37,7 @@ static NSString* const kURL_Reachability__Address=@"www.baidu.com";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.extendedLayoutIncludesOpaqueBars=YES;
+    self.automaticallyAdjustsScrollViewInsets = YES;
     [self.navigationController setNavigationBarHidden:NO];
     if ([self respondsToSelector:@selector(backgroundImage)]) {
         UIImage *bgimage = [self navBackgroundImage];

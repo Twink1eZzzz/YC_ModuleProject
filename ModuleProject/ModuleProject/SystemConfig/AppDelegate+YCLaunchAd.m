@@ -211,7 +211,7 @@
     //视频填充模式
     videoAdconfiguration.scalingMode = MPMovieScalingModeAspectFill;
     //广告点击打开链接
-    videoAdconfiguration.openURLString =  @"http://www.it7090.com";
+    videoAdconfiguration.openURLString =  @"https://www.baidu.com";
     //跳过按钮类型
     videoAdconfiguration.skipButtonType = SkipTypeTimeText;
     //广告显示完成动画

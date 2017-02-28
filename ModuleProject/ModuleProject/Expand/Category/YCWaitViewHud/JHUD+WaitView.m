@@ -61,23 +61,23 @@
     return hudView;
 }
 
-+ (void)showCustomAnimation {
++ (void)showCustomAnimationWithImagePrefixName:(NSString *)imageprefixname FirstIndex:(int)firstindex LastIndex:(int)lastIndex Msg:(NSString *)msg {
     NSMutableArray * images = [NSMutableArray array];
-    for (int index = 1; index< 8; index++) {
-        NSString * imageName = [NSString stringWithFormat:@"loading_%d.png",index];
+    for (int index = firstindex; index< lastIndex; index++) {
+        NSString * imageName = [NSString stringWithFormat:@"%@%d.png",imageprefixname,index];
         UIImage *image = [UIImage imageNamed:imageName];
         [images addObject:image];
     }
     JHUD *hudView = [self createJHUD];
     hudView.indicatorViewSize = CGSizeMake(110, 10);
     hudView.customAnimationImages = images;
-    hudView.messageLabel.text = @"正在加载...";
+    hudView.messageLabel.text = msg;
     [hudView showAtView:[self getCurrentUIVC].view hudType:JHUDLoadingTypeCustomAnimations];
 }
 
 + (void)showCircleAnimation {
     JHUD *hudView = [self createJHUD];
-    hudView.indicatorBackGroundColor = [[UIColor darkGrayColor] colorWithAlphaComponent:0.1];
+    hudView.indicatorBackGroundColor = [UIColor whiteColor];
     hudView.indicatorForegroundColor = [UIColor lightGrayColor];
     [hudView showAtView:[self getCurrentUIVC].view hudType:JHUDLoadingTypeCircle];
 }

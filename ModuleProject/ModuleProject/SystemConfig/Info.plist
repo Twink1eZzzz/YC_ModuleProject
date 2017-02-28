@@ -101,6 +101,13 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>jpush.cn</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 			<key>NSAllowsArbitraryLoads</key>
 			<true/>
 			<key>sina.cn</key>
@@ -172,7 +179,7 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>获取当前的位置</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>MobileProject需要使用您的麦克风</string>
+	<string>需要使用您的麦克风</string>
 	<key>NSMotionUsageDescription</key>
 	<string>App需要您的同意,才能访问运动与健身</string>
 	<key>NSPhotoLibraryUsageDescription</key>

@@ -56,7 +56,7 @@
     [self NetworkData];
     [self setupRefresh];
     YYFPSLabel *fps = [[YYFPSLabel alloc] initWithFrame:CGRectMake(5, 70, 60, 30)];
-    [self.view addSubview:fps];
+    [kKeyWindow addSubview:fps];
     
 //    [self adView];
 

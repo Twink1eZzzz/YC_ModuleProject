@@ -12,6 +12,15 @@
 		29072D831E5D7CEB00070026 /* MBProgressHUD+YC_HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 29072D821E5D7CEB00070026 /* MBProgressHUD+YC_HUD.m */; };
 		29072D881E5D800100070026 /* YCHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29072D861E5D800100070026 /* YCHUDViewController.m */; };
 		29072D891E5D800100070026 /* YCHUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29072D871E5D800100070026 /* YCHUDViewController.xib */; };
+		290740D61E64019B000A04CB /* jcore-ios-1.1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 290740D31E64019B000A04CB /* jcore-ios-1.1.1.a */; };
+		290740D71E64019B000A04CB /* jpush-ios-3.0.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 290740D41E64019B000A04CB /* jpush-ios-3.0.2.a */; };
+		290740D91E6401C4000A04CB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290740D81E6401C4000A04CB /* CFNetwork.framework */; };
+		290740DB1E6401D7000A04CB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290740DA1E6401D7000A04CB /* CoreFoundation.framework */; };
+		290740DD1E640231000A04CB /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290740DC1E640231000A04CB /* UserNotifications.framework */; };
+		290740DF1E640266000A04CB /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 290740DE1E640266000A04CB /* libresolv.tbd */; };
+		290740EA1E6429AA000A04CB /* JDStatusBarNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 290740E51E6429AA000A04CB /* JDStatusBarNotification.m */; };
+		290740EB1E6429AA000A04CB /* JDStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 290740E71E6429AA000A04CB /* JDStatusBarStyle.m */; };
+		290740EC1E6429AA000A04CB /* JDStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 290740E91E6429AA000A04CB /* JDStatusBarView.m */; };
 		290CAC721E4DC5510091074B /* SearchControllerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 290CAC711E4DC5510091074B /* SearchControllerController.m */; };
 		29237B771E5E877E005709FD /* UIImageView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 29237B761E5E877E005709FD /* UIImageView+CornerRadius.m */; };
 		29237B901E5E89E3005709FD /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29237B7A1E5E89E3005709FD /* libWeiboSDK.a */; };
@@ -248,6 +257,20 @@
 		29072D851E5D800100070026 /* YCHUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCHUDViewController.h; sourceTree = "<group>"; };
 		29072D861E5D800100070026 /* YCHUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCHUDViewController.m; sourceTree = "<group>"; };
 		29072D871E5D800100070026 /* YCHUDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCHUDViewController.xib; sourceTree = "<group>"; };
+		290740D11E63F458000A04CB /* ModuleProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ModuleProject.entitlements; sourceTree = "<group>"; };
+		290740D31E64019B000A04CB /* jcore-ios-1.1.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.1.a"; sourceTree = "<group>"; };
+		290740D41E64019B000A04CB /* jpush-ios-3.0.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.2.a"; sourceTree = "<group>"; };
+		290740D51E64019B000A04CB /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		290740D81E6401C4000A04CB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		290740DA1E6401D7000A04CB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		290740DC1E640231000A04CB /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		290740DE1E640266000A04CB /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		290740E41E6429AA000A04CB /* JDStatusBarNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarNotification.h; sourceTree = "<group>"; };
+		290740E51E6429AA000A04CB /* JDStatusBarNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarNotification.m; sourceTree = "<group>"; };
+		290740E61E6429AA000A04CB /* JDStatusBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarStyle.h; sourceTree = "<group>"; };
+		290740E71E6429AA000A04CB /* JDStatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarStyle.m; sourceTree = "<group>"; };
+		290740E81E6429AA000A04CB /* JDStatusBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarView.h; sourceTree = "<group>"; };
+		290740E91E6429AA000A04CB /* JDStatusBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarView.m; sourceTree = "<group>"; };
 		290CAC701E4DC5510091074B /* SearchControllerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchControllerController.h; sourceTree = "<group>"; };
 		290CAC711E4DC5510091074B /* SearchControllerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchControllerController.m; sourceTree = "<group>"; };
 		29237B751E5E877E005709FD /* UIImageView+CornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CornerRadius.h"; sourceTree = "<group>"; };
@@ -651,6 +674,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				290740DF1E640266000A04CB /* libresolv.tbd in Frameworks */,
+				290740DD1E640231000A04CB /* UserNotifications.framework in Frameworks */,
+				29E415791E35FC9F00D7C1FB /* SystemConfiguration.framework in Frameworks */,
+				29E4157B1E35FCB100D7C1FB /* CoreTelephony.framework in Frameworks */,
+				290740DB1E6401D7000A04CB /* CoreFoundation.framework in Frameworks */,
+				290740D91E6401C4000A04CB /* CFNetwork.framework in Frameworks */,
 				29E415891E35FD2500D7C1FB /* libiconv.tbd in Frameworks */,
 				29E415871E35FD1900D7C1FB /* libstdc++.tbd in Frameworks */,
 				29237B941E5E89E3005709FD /* libWeChatSDK.a in Frameworks */,
@@ -662,9 +691,9 @@
 				29237B921E5E89E3005709FD /* TencentOpenAPI.framework in Frameworks */,
 				29E4157F1E35FCCD00D7C1FB /* CoreText.framework in Frameworks */,
 				29E4157D1E35FCC000D7C1FB /* ImageIO.framework in Frameworks */,
-				29E4157B1E35FCB100D7C1FB /* CoreTelephony.framework in Frameworks */,
-				29E415791E35FC9F00D7C1FB /* SystemConfiguration.framework in Frameworks */,
+				290740D71E64019B000A04CB /* jpush-ios-3.0.2.a in Frameworks */,
 				29237B901E5E89E3005709FD /* libWeiboSDK.a in Frameworks */,
+				290740D61E64019B000A04CB /* jcore-ios-1.1.1.a in Frameworks */,
 				29E415781E35FC9400D7C1FB /* Security.framework in Frameworks */,
 				29D71F3F1E24902E002DDF0F /* CoreGraphics.framework in Frameworks */,
 				29D71F3D1E249022002DDF0F /* QuartzCore.framework in Frameworks */,
@@ -727,6 +756,29 @@
 			);
 			name = "HUD-指示器";
 			path = HUD;
+			sourceTree = "<group>";
+		};
+		290740D21E64019B000A04CB /* JPushLib */ = {
+			isa = PBXGroup;
+			children = (
+				290740D31E64019B000A04CB /* jcore-ios-1.1.1.a */,
+				290740D41E64019B000A04CB /* jpush-ios-3.0.2.a */,
+				290740D51E64019B000A04CB /* JPUSHService.h */,
+			);
+			path = JPushLib;
+			sourceTree = "<group>";
+		};
+		290740E31E6429AA000A04CB /* JDStatusBarNotification */ = {
+			isa = PBXGroup;
+			children = (
+				290740E41E6429AA000A04CB /* JDStatusBarNotification.h */,
+				290740E51E6429AA000A04CB /* JDStatusBarNotification.m */,
+				290740E61E6429AA000A04CB /* JDStatusBarStyle.h */,
+				290740E71E6429AA000A04CB /* JDStatusBarStyle.m */,
+				290740E81E6429AA000A04CB /* JDStatusBarView.h */,
+				290740E91E6429AA000A04CB /* JDStatusBarView.m */,
+			);
+			path = JDStatusBarNotification;
 			sourceTree = "<group>";
 		};
 		290CAC6F1E4DC5210091074B /* SearchController-搜索控制器 */ = {
@@ -866,25 +918,27 @@
 			path = NSObject;
 			sourceTree = "<group>";
 		};
-		29377CF31E5BE90F00421641 /* HorseRaceLampView */ = {
+		29377CF31E5BE90F00421641 /* HorseRaceLampView-跑马灯 */ = {
 			isa = PBXGroup;
 			children = (
 				29377CF41E5BE90F00421641 /* MarqueeLabel.h */,
 				29377CF51E5BE90F00421641 /* MarqueeLabel.m */,
 			);
+			name = "HorseRaceLampView-跑马灯";
 			path = HorseRaceLampView;
 			sourceTree = "<group>";
 		};
-		29377CF61E5BE90F00421641 /* MPCoachMarks */ = {
+		29377CF61E5BE90F00421641 /* MPCoachMarks-界面指示引导 */ = {
 			isa = PBXGroup;
 			children = (
 				29377CF71E5BE90F00421641 /* MPCoachMarks.h */,
 				29377CF81E5BE90F00421641 /* MPCoachMarks.m */,
 			);
+			name = "MPCoachMarks-界面指示引导";
 			path = MPCoachMarks;
 			sourceTree = "<group>";
 		};
-		29377CF91E5BE90F00421641 /* PYSearch */ = {
+		29377CF91E5BE90F00421641 /* PYSearch-搜索 */ = {
 			isa = PBXGroup;
 			children = (
 				29377CFA1E5BE90F00421641 /* NSBundle+PYSearchExtension.h */,
@@ -902,6 +956,7 @@
 				29377D061E5BE90F00421641 /* UIView+PYSearchExtension.h */,
 				29377D071E5BE90F00421641 /* UIView+PYSearchExtension.m */,
 			);
+			name = "PYSearch-搜索";
 			path = PYSearch;
 			sourceTree = "<group>";
 		};
@@ -1364,6 +1419,7 @@
 		29BDA3271E1DD9980059B6C1 /* ModuleProject */ = {
 			isa = PBXGroup;
 			children = (
+				290740D11E63F458000A04CB /* ModuleProject.entitlements */,
 				29BDA4141E1E4A850059B6C1 /* SystemConfig-系统文件 */,
 				29BDA3631E1DEBA30059B6C1 /* Main-主要 */,
 				29BDA3851E1DECDB0059B6C1 /* SDKFile-集成SDK文件 */,
@@ -1604,6 +1660,7 @@
 		29BDA3841E1DECBD0059B6C1 /* Vender-第三方 */ = {
 			isa = PBXGroup;
 			children = (
+				290740E31E6429AA000A04CB /* JDStatusBarNotification */,
 				29237B9B1E5EA505005709FD /* DACircularProgress-进度指示器 */,
 				29072D7C1E5D69D700070026 /* MBProgressHUD-指示器 */,
 				2958AB091E569E17005115A2 /* CYLTabBarController-Tabbar管理 */,
@@ -1620,6 +1677,7 @@
 		29BDA3851E1DECDB0059B6C1 /* SDKFile-集成SDK文件 */ = {
 			isa = PBXGroup;
 			children = (
+				290740D21E64019B000A04CB /* JPushLib */,
 				29237B781E5E89E3005709FD /* ThirdShareSDK */,
 			);
 			name = "SDKFile-集成SDK文件";
@@ -1932,9 +1990,9 @@
 			isa = PBXGroup;
 			children = (
 				29237BA21E5EC75E005709FD /* JHUD */,
-				29377CF31E5BE90F00421641 /* HorseRaceLampView */,
-				29377CF61E5BE90F00421641 /* MPCoachMarks */,
-				29377CF91E5BE90F00421641 /* PYSearch */,
+				29377CF31E5BE90F00421641 /* HorseRaceLampView-跑马灯 */,
+				29377CF61E5BE90F00421641 /* MPCoachMarks-界面指示引导 */,
+				29377CF91E5BE90F00421641 /* PYSearch-搜索 */,
 				29377D081E5BE90F00421641 /* Refresh */,
 				29377D0D1E5BE90F00421641 /* SIDADView */,
 			);
@@ -1975,6 +2033,10 @@
 		9EF4E545AF93C6E8BE1E0D20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				290740DE1E640266000A04CB /* libresolv.tbd */,
+				290740DC1E640231000A04CB /* UserNotifications.framework */,
+				290740DA1E6401D7000A04CB /* CoreFoundation.framework */,
+				290740D81E6401C4000A04CB /* CFNetwork.framework */,
 				297BEDA51E55B20E00280BF3 /* CoreData.framework */,
 				29E415881E35FD2500D7C1FB /* libiconv.tbd */,
 				29E415861E35FD1900D7C1FB /* libstdc++.tbd */,
@@ -2077,6 +2139,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 6479APQB7H;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					29BDA33D1E1DD9980059B6C1 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -2276,6 +2343,7 @@
 				29BDA3C71E1E41810059B6C1 /* UIImage+Blur.m in Sources */,
 				29CB98281E457303003092F7 /* CustomAlterViewController.m in Sources */,
 				29BDA3CD1E1E41810059B6C1 /* UIImage+Merge.m in Sources */,
+				290740EA1E6429AA000A04CB /* JDStatusBarNotification.m in Sources */,
 				29BDA43E1E1F3F890059B6C1 /* introductoryPagesHelper.m in Sources */,
 				29BDA3D01E1E41810059B6C1 /* UIImage+RemoteSize.m in Sources */,
 				29BDA3FF1E1E418C0059B6C1 /* UIView+Frame.m in Sources */,
@@ -2325,6 +2393,7 @@
 				296562621E235AEA00693F88 /* Test3ViewController.m in Sources */,
 				29BDA3C91E1E41810059B6C1 /* UIImage+Color.m in Sources */,
 				29BDA3D31E1E41810059B6C1 /* UIImage+Vector.m in Sources */,
+				290740EB1E6429AA000A04CB /* JDStatusBarStyle.m in Sources */,
 				29072D831E5D7CEB00070026 /* MBProgressHUD+YC_HUD.m in Sources */,
 				2958AB081E5697F1005115A2 /* UIView+WZLBadge.m in Sources */,
 				29377D121E5BE90F00421641 /* NSBundle+PYSearchExtension.m in Sources */,
@@ -2358,6 +2427,7 @@
 				29B5C97D1E441AC000317E85 /* YXActionSheetButton.m in Sources */,
 				29237B9A1E5EA4B8005709FD /* UINavigationBar+Awesome.m in Sources */,
 				29B5C99E1E4484F600317E85 /* LBXScanNative.m in Sources */,
+				290740EC1E6429AA000A04CB /* JDStatusBarView.m in Sources */,
 				297BED751E5550E800280BF3 /* HyTransitions.m in Sources */,
 				29377D111E5BE90F00421641 /* MPCoachMarks.m in Sources */,
 				29237BAB1E5EC75E005709FD /* JHUD.m in Sources */,
@@ -2540,6 +2610,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ModuleProject/SDKFile/ThirdShareSDK/libWeiboSDK",
 					"$(PROJECT_DIR)/ModuleProject/SDKFile/ThirdShareSDK/Wechat",
+					"$(PROJECT_DIR)/ModuleProject/SDKFile/JPushLib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TimeTech.ModuleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2570,6 +2641,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ModuleProject/SDKFile/ThirdShareSDK/libWeiboSDK",
 					"$(PROJECT_DIR)/ModuleProject/SDKFile/ThirdShareSDK/Wechat",
+					"$(PROJECT_DIR)/ModuleProject/SDKFile/JPushLib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TimeTech.ModuleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

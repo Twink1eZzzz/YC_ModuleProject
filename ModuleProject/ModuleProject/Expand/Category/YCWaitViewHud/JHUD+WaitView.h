@@ -10,8 +10,15 @@
 
 @interface JHUD (WaitView)
 
-// 自定义
-+ (void)showCustomAnimation;
+
+/**
+ * 自定义
+ * @param imageprefixname 图片的前缀名称 如：Loading_
+ * @param firstindex 第一张图片的编号
+ * @param lastIndex  最后一张图片的编号
+ * @param msg 加载文字描述
+ */
++ (void)showCustomAnimationWithImagePrefixName:(NSString *)imageprefixname FirstIndex:(int)firstindex LastIndex:(int)lastIndex Msg:(NSString *)msg;
 
 // CircleAnimation样式
 + (void)showCircleAnimation;

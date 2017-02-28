@@ -19,6 +19,8 @@
 #import "TZGifPhotoPreviewController.h"
 #import "MHActionSheet.h"
 
+const NSInteger maxCount = 1;
+
 @interface YCImagePickerViewController ()<TZImagePickerControllerDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate,UIAlertViewDelegate,UINavigationControllerDelegate> {
     NSMutableArray *_selectedPhotos;
     NSMutableArray *_selectedAssets;
@@ -201,8 +203,10 @@
 
 - (void)pushImagePickerController {
 
-    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:5 columnNumber:5 delegate:self pushPhotoPickerVc:YES];
+    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:maxCount columnNumber:4 delegate:self pushPhotoPickerVc:YES];
 
+    imagePickerVc.allowCrop = YES;
+    imagePickerVc.cropRect = CGRectMake(0, Main_Screen_Height/2 - Main_Screen_Width/4, Main_Screen_Width, Main_Screen_Width/2);
 
 //#pragma mark - 四类个性化设置，这些参数都可以不传，此时会走默认设置
 //    imagePickerVc.isSelectOriginalPhoto = _isSelectOriginalPhoto;

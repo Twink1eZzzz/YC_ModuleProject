@@ -20,8 +20,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"加载数据是显示的占位页面";
-    self.view.backgroundColor = MainColor;
+    self.view.backgroundColor = [UIColor whiteColor];
     [JHUD showCircleAnimation];
+    
+//    [JHUD showCustomAnimationWithImagePrefixName:@"loading_" FirstIndex:1 LastIndex:8 Msg:nil];
 }
 
 - (UIColor *)set_colorBackground {

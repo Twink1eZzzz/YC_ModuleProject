@@ -32,7 +32,7 @@
 }
 -(void)webViewDidStartLoad:(UIWebView *)webView
 {
-    [MBProgressHUD showPendulumWithMessage:nil isWindow:NO];
+    [MBProgressHUD showPendulumWithMessage:@"加载中" isWindow:YES];
 }
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
