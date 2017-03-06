@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YCShareAndLoginViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="B22-SF-HBe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8V-7z-hE3">
+                    <rect key="frame" x="141" y="116.5" width="92" height="34"/>
+                    <color key="backgroundColor" red="0.66902792453765869" green="0.73128575086593628" blue="0.94889926910400391" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="第三方分享">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="share:" destination="-1" eventType="touchUpInside" id="eF0-Nj-cQc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgr-dP-JSV">
+                    <rect key="frame" x="141" y="170.5" width="92" height="34"/>
+                    <color key="backgroundColor" red="0.66902792450000004" green="0.73128575090000003" blue="0.9488992691" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="微信登录">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="wechatLogin:" destination="-1" eventType="touchUpInside" id="Xru-8n-33R"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wm-Ux-vvx">
+                    <rect key="frame" x="141" y="224.5" width="92" height="34"/>
+                    <color key="backgroundColor" red="0.66902792450000004" green="0.73128575090000003" blue="0.9488992691" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="QQ登录">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="qqLogin:" destination="-1" eventType="touchUpInside" id="Wgc-Dp-rob"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ini-Ef-b8v">
+                    <rect key="frame" x="141" y="278.5" width="92" height="34"/>
+                    <color key="backgroundColor" red="0.66902792450000004" green="0.73128575090000003" blue="0.9488992691" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="微博登录">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="sinaLogin:" destination="-1" eventType="touchUpInside" id="hSj-cE-bVO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="G8V-7z-hE3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="15x-o9-UcX"/>
+                <constraint firstItem="7wm-Ux-vvx" firstAttribute="width" secondItem="Lgr-dP-JSV" secondAttribute="width" id="3GB-nG-7C2"/>
+                <constraint firstItem="ini-Ef-b8v" firstAttribute="centerX" secondItem="7wm-Ux-vvx" secondAttribute="centerX" id="CmI-FC-5Q5"/>
+                <constraint firstItem="Lgr-dP-JSV" firstAttribute="top" secondItem="G8V-7z-hE3" secondAttribute="bottom" constant="20" id="NXV-Oj-Xdp"/>
+                <constraint firstItem="7wm-Ux-vvx" firstAttribute="centerX" secondItem="Lgr-dP-JSV" secondAttribute="centerX" id="OMn-Xj-b4c"/>
+                <constraint firstItem="ini-Ef-b8v" firstAttribute="top" secondItem="7wm-Ux-vvx" secondAttribute="bottom" constant="20" id="Xwu-bN-deL"/>
+                <constraint firstItem="ini-Ef-b8v" firstAttribute="width" secondItem="7wm-Ux-vvx" secondAttribute="width" id="Zyj-0h-JTX"/>
+                <constraint firstItem="Lgr-dP-JSV" firstAttribute="width" secondItem="G8V-7z-hE3" secondAttribute="width" id="bKC-2c-adc"/>
+                <constraint firstItem="G8V-7z-hE3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.4" id="boG-K9-cmr"/>
+                <constraint firstItem="Lgr-dP-JSV" firstAttribute="centerX" secondItem="G8V-7z-hE3" secondAttribute="centerX" id="fTO-bh-RYU"/>
+                <constraint firstItem="7wm-Ux-vvx" firstAttribute="top" secondItem="Lgr-dP-JSV" secondAttribute="bottom" constant="20" id="ioq-dh-MYq"/>
+            </constraints>
+            <point key="canvasLocation" x="-482" y="-44"/>
+        </view>
+    </objects>
+</document>

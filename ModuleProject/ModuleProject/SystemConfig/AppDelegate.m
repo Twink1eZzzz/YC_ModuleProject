@@ -16,11 +16,8 @@
 #import "JDStatusBarNotification.h"
 
 // QQ、微博、微信分享
-#import <TencentOpenAPI/TencentOAuth.h>
-#import <TencentOpenAPI/QQApiInterface.h>
-#import "WeiboSDK.h"
-#import "WXApi.h"
-
+#import "GSPlatformParamConfigManager.h"
+#import "GSSocialManager.h"
 
 // 引 JPush功能所需头 件
 #import "JPUSHService.h"
@@ -33,7 +30,7 @@ static NSString *appKey = @"AppKey copied from JPush Portal application";
 static NSString *channel = @"Publish channel";
 static BOOL isProduction = FALSE;
 
-@interface AppDelegate ()<WeiboSDKDelegate,JPUSHRegisterDelegate>
+@interface AppDelegate ()<JPUSHRegisterDelegate>
 
 @property (strong, nonatomic) NSDictionary *userInfo;
 
@@ -60,9 +57,7 @@ static BOOL isProduction = FALSE;
     // Core Data 初始化
     [MagicalRecord setupCoreDataStack];
     
-    /**
-     * 根据需求加广告页
-     */
+    // 根据需求加广告页
     [self setupYCLaunchAd];
     
     // 第三方分享注册
@@ -74,6 +69,62 @@ static BOOL isProduction = FALSE;
     return YES;
 }
 
+/*******************************************************************************************************************************************************************************/
+
+#pragma mark 引导页
+-(void)setupIntroductoryPage
+{
+    if ([kUserDefaults objectForKey:@"isNoFirstLaunch"]) {
+        return;
+    }
+    [kUserDefaults setBool:YES forKey:@"isNoFirstLaunch"];
+    [kUserDefaults synchronize];
+    NSArray *images=@[@"introductoryPage1",@"introductoryPage2",@"introductoryPage3",@"introductoryPage4"];
+    [introductoryPagesHelper showIntroductoryPageView:images];
+}
+
+/**
+ *  初始化第三方组件
+ */
+- (void)init3rdParty
+{
+    [[GSPlatformParamConfigManager share] addSinaPlatformConfigAppKey:APP_KEY_WEIBO redirectURI:APP_KEY_WEIBO_RedirectURL];
+    [[GSPlatformParamConfigManager share] addQQPlatformConfigAppID:APP_KEY_QQ];
+    [[GSPlatformParamConfigManager share] addWeChatPlatformConfigAppID:APP_KEY_WEIXIN secret:@""];
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+    YCLog(@"%@",url);
+    
+    BOOL res = [[GSSocialManager share] handleOpenURL:url];
+    if (!res) {
+        //做其他SDK回调处理
+    }
+    return res;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    YCLog(@"%@",url);
+    
+    BOOL res = [[GSSocialManager share] handleOpenURL:url];
+    if (!res) {
+        //做其他SDK回调处理
+    }
+    return res;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    YCLog(@"%@",url);
+    
+    BOOL res = [[GSSocialManager share] handleOpenURL:url];
+    if (!res) {
+        //做其他SDK回调处理
+    }
+    return res;
+}
 
 /*******************************************************************************************************************************************************************************/
 
@@ -107,85 +158,6 @@ static BOOL isProduction = FALSE;
             YCLog(@"registrationID获取失败，code：%d",resCode);
         }
     }];
-}
-
-
-
-#pragma mark 引导页
--(void)setupIntroductoryPage
-{
-    if ([kUserDefaults objectForKey:@"isNoFirstLaunch"]) {
-        return;
-    }
-    [kUserDefaults setBool:YES forKey:@"isNoFirstLaunch"];
-    [kUserDefaults synchronize];
-    NSArray *images=@[@"introductoryPage1",@"introductoryPage2",@"introductoryPage3",@"introductoryPage4"];
-    [introductoryPagesHelper showIntroductoryPageView:images];
-}
-
-/**
- *  初始化第三方组件
- */
-- (void)init3rdParty
-{
-    [WXApi registerApp:APP_KEY_WEIXIN];
-    [WeiboSDK enableDebugMode:YES];
-    [WeiboSDK registerApp:APP_KEY_WEIBO];
-}
-
-
-
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
-{
-   if([[url absoluteString] hasPrefix:@"wb"]) {
-        
-        return [WeiboSDK handleOpenURL:url delegate:self];
-    }
-    
-    return NO;
-}
-
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
-{
-    if([[url absoluteString] hasPrefix:@"wb"]) {
-        
-        return [WeiboSDK handleOpenURL:url delegate:self];
-        
-    }else{
-        return NO;
-    }
-}
-
-#pragma mark - 实现代理回调
-/**
- *  微博 (微博如果不做分享结果处理会出错)
- *
- *  @param response 响应体。根据 WeiboSDKResponseStatusCode 作对应的处理.
- *  具体参见 `WeiboSDKResponseStatusCode` 枚举.
- */
-- (void)didReceiveWeiboResponse:(WBBaseResponse *)response
-{
-    NSString *message;
-    switch (response.statusCode) {
-        case WeiboSDKResponseStatusCodeSuccess:
-            message = @"分享成功";
-            break;
-        case WeiboSDKResponseStatusCodeUserCancel:
-            message = @"取消分享";
-            break;
-        case WeiboSDKResponseStatusCodeSentFail:
-            message = @"分享失败";
-            break;
-        default:
-            message = @"分享失败";
-            break;
-    }
-    showAlert(message);
-}
-
-- (void)didReceiveWeiboRequest:(WBBaseRequest *)request
-{
-    
 }
 
 /*******************************************************************************************************************************************************************************/

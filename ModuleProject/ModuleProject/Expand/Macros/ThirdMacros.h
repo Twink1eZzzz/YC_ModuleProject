@@ -19,8 +19,9 @@
 #define APP_KEY_WEIBO_RedirectURL @"http://www.sina.com"
 
 ///  分享图片
-#define SHARE_IMG [UIImage imageNamed:@"logo.jpg"]
+#define SHARE_IMG [UIImage imageNamed:@"dropdown_loading_01"]
 
+//  分享图片压缩程度
 #define SHARE_IMG_COMPRESSION_QUALITY 0.5
 
 ///  Common size
