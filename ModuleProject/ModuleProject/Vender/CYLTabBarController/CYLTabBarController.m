@@ -51,23 +51,6 @@ static void * const CYLSwappableImageViewDefaultOffsetContext = (void*)&CYLSwapp
     self.delegate = self;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    UITabBarItem *firstItem = self.tabBar.items[0];
-    firstItem.badgeCenterOffset = CGPointMake(0, 0);
-    [firstItem showBadgeWithStyle:WBadgeStyleNew value:2 animationType:WBadgeAnimTypeShake];
-    
-    UITabBarItem *secondItem = self.tabBar.items[1];
-    secondItem.badgeCenterOffset = CGPointMake(0, 0);
-    [secondItem showBadgeWithStyle:WBadgeStyleNumber value:2 animationType:WBadgeAnimTypeNone];
-    
-    UITabBarItem *thridItem = self.tabBar.items[2];
-    thridItem.badgeCenterOffset = CGPointMake(0, 0);
-    [thridItem showBadge];
-}
-
 
 //Fix issue #93
 - (void)viewDidLayoutSubviews {
@@ -196,6 +179,7 @@ static void * const CYLSwappableImageViewDefaultOffsetContext = (void*)&CYLSwapp
                 title = _tabBarItemsAttributes[idx][CYLTabBarItemTitle];
                 normalImageInfo = _tabBarItemsAttributes[idx][CYLTabBarItemImage];
                 selectedImageInfo = _tabBarItemsAttributes[idx][CYLTabBarItemSelectedImage];
+                
             } else {
                 idx--;
             }
@@ -205,6 +189,7 @@ static void * const CYLSwappableImageViewDefaultOffsetContext = (void*)&CYLSwapp
                             normalImageInfo:normalImageInfo
                           selectedImageInfo:selectedImageInfo];
             [viewController cyl_setTabBarController:self];
+            
             idx++;
         }
     } else {
@@ -314,21 +299,7 @@ static void * const CYLSwappableImageViewDefaultOffsetContext = (void*)&CYLSwapp
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
-    switch (tabBarController.selectedIndex) {
-        case 0:
-            [self.tabBar.items[0] clearBadge];
-            break;
-        case 1:
-            [self.tabBar.items[1] clearBadge];
-            break;
-        case 2:
-            [self.tabBar.items[2] clearBadge];
-            break;
-            
-        default:
-            break;
-    }
-    
+    YCLog(@"点击Item");
 }
 
 @end

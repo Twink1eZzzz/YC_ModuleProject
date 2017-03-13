@@ -25,6 +25,13 @@
 
 @implementation KLTNavigationController
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    UIViewController *topVC = self.topViewController;
+    return [topVC preferredStatusBarStyle];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

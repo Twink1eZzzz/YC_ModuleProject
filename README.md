@@ -12,7 +12,7 @@ YC_ModuleProject实际是为了项目初期搭建框架准备的，项目集成�
 * 网络请求是基于AFNetworking的封装,轻量且强大([XMNetworking](https://github.com/kangzubin/XMNetworking))
 * JSON 模型框架([YYModel](https://github.com/ibireme/YYModel))
 * 富文本框架([YYText ](https://github.com/ibireme/YYText))
-* 封装QQ/微信/新浪微博分享功能
+* 封装QQ/微信/新浪微博分享登录功能
 * 自定义弹窗、自定义ActionSheet、自定义PickerView
 * 列表无数据或者无网络时的占位视图
 * 对SVProgressHUD进行二次封装
@@ -30,5 +30,5 @@ YC_ModuleProject实际是为了项目初期搭建框架准备的，项目集成�
 * 增加定位功能
 * 增加加密工具类
 * 增加正则验证工具类
-
+* 增加支付宝支付、微信支付
 

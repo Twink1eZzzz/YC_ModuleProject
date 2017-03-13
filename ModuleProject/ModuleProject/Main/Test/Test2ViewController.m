@@ -25,6 +25,7 @@
 #import "YCCornerRadiusViewController.h"
 #import "YCHUDViewController.h"
 #import "UIImageView+WebCache.h"
+#import "SDPayViewController.h"
 
 
 #import "LBXScanView.h"
@@ -100,7 +101,8 @@
                         @"界面引导指示",
                         @"定位-城市、经纬度",
                         @"高效圆角演示",
-                        @"HUD"];
+                        @"HUD",
+                        @"第三方支付"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -179,6 +181,9 @@
             break;
         case 13:
             [self HUD];
+            break;
+        case 14:
+            [self pay];
             break;
         default:
             break;
@@ -348,6 +353,13 @@
 {
     YCHUDViewController *HUDVC = [[YCHUDViewController alloc]init];
     [self.navigationController pushViewController:HUDVC animated:YES];
+}
+
+#pragma mark - 支付
+- (void)pay
+{
+    SDPayViewController *payVC = [[SDPayViewController alloc]init];
+    [self.navigationController pushViewController:payVC animated:YES];
 }
 
 

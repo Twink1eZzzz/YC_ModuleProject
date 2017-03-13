@@ -28,9 +28,11 @@
 #import "UITableView+FDTemplateLayoutCell.h"
 // 正则判断
 #import "YCRegularManager.h"
-
 // HUD
 #import "MBProgressHUD+YC_HUD.h"
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 
 // 正式服务器地址

@@ -26,11 +26,17 @@
 #import <UserNotifications/UserNotifications.h>
 #endif
 
+// 支付宝
+#import <AlipaySDK/AlipaySDK.h>
+
+// 微信
+#import "WXApi.h"
+
 static NSString *appKey = @"AppKey copied from JPush Portal application";
 static NSString *channel = @"Publish channel";
 static BOOL isProduction = FALSE;
 
-@interface AppDelegate ()<JPUSHRegisterDelegate>
+@interface AppDelegate ()<JPUSHRegisterDelegate,WXApiDelegate>
 
 @property (strong, nonatomic) NSDictionary *userInfo;
 
@@ -93,6 +99,7 @@ static BOOL isProduction = FALSE;
     [[GSPlatformParamConfigManager share] addWeChatPlatformConfigAppID:APP_KEY_WEIXIN secret:@""];
 }
 
+// NOTE: 9.0以后使用新API接口
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
 {
     YCLog(@"%@",url);
@@ -100,6 +107,12 @@ static BOOL isProduction = FALSE;
     BOOL res = [[GSSocialManager share] handleOpenURL:url];
     if (!res) {
         //做其他SDK回调处理
+        if ([url.host isEqualToString:@"safepay"]) {
+            //跳转支付宝钱包进行支付，处理支付结果
+            [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+                YCLog(@"result = %@",resultDic);
+            }];
+        }
     }
     return res;
 }
@@ -111,6 +124,12 @@ static BOOL isProduction = FALSE;
     BOOL res = [[GSSocialManager share] handleOpenURL:url];
     if (!res) {
         //做其他SDK回调处理
+        if ([url.host isEqualToString:@"safepay"]) {
+            //跳转支付宝钱包进行支付，处理支付结果
+            [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+                YCLog(@"result = %@",resultDic);
+            }];
+        }
     }
     return res;
 }
@@ -122,8 +141,22 @@ static BOOL isProduction = FALSE;
     BOOL res = [[GSSocialManager share] handleOpenURL:url];
     if (!res) {
         //做其他SDK回调处理
+        if ([url.host isEqualToString:@"safepay"]) {
+            //跳转支付宝钱包进行支付，处理支付结果
+            [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+                YCLog(@"result = %@",resultDic);
+            }];
+        }
     }
     return res;
+}
+
+- (void)onResp:(BaseResp *)resp
+{
+    if ([resp isKindOfClass:[PayResp class]]) {
+        NSString *strMsg = [NSString stringWithFormat:@"errcode:%d", resp.errCode];
+        showAlert(strMsg);
+    }
 }
 
 /*******************************************************************************************************************************************************************************/

@@ -31,6 +31,12 @@
 
 @implementation HomeViewController
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, Main_Screen_Width, Main_Screen_Height) style:UITableViewStylePlain];
@@ -42,8 +48,10 @@
     return _tableView;
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
     self.tableView.backgroundColor = [UIColor whiteColor];
